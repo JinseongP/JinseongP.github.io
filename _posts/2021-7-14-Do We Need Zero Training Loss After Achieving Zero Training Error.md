@@ -1,5 +1,5 @@
 ---
-title: Do We Need Zero Training Loss After Achieving Zero Training Error?
+title: Do We Need Zero Training Loss After Achieving Zero Training Error? 논문 요약
 excerpt: ICML 2020에 발표된 Takashi Ishida외의 'Do We Need Zero Training Loss After Achieving Zero Training Error?' 를 요악한 글입니다.
 categories:
   - papers
@@ -18,7 +18,7 @@ Year: 2020
 
 # [Flooding]  Do We Need Zero Training Loss After Achieving Zero Training Error?
 
-- ICML 2020,  [https://arxiv.org/abs/2002.08709](https://arxiv.org/abs/2002.08709) (인용 9회)
+- ICML 2020,  [https://arxiv.org/abs/2002.08709](https://arxiv.org/abs/2002.08709) 
 - 느낀 점 : overfitting을 막는 새로운 방법이기 때문에 accept된 것처럼 보이나 이에 대한 이론적인 배경이나 서술이 부족하다고 생각됨.  방법이 매우 간단해서 사용할 수 있는 방법은 많을 것으로 보임.
 
 ## Abstract

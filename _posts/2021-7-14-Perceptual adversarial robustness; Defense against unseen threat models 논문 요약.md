@@ -61,11 +61,11 @@ neural perceptual threat model (NPTM) using LPIPS
 - $g:\mathcal{X\rightarrow Y}$ convolutional image classiﬁer network, images $\mathbf{x}\in \mathcal{X}$
 - $g$ have $L$ layers, internal activations (outputs) of the l-th layer $g_l(\mathbf{x})$
 - **normalizing** and then comparing the internal activations of convolutional neural networks correlates well with **human similarity judgements**. (Zhang et al., 2018)
-- normalized **activations** (layer size and flattered to a singlevector) 
+- normalized **activations** (layer size and flattered to a singlevector)
 $\phi(\mathbf{x}) \triangleq({(\hat{g_1}(\mathbf{x})\over \sqrt{w_1 h_1}},...,{(\hat{g_L}(\mathbf{x})\over \sqrt{w_L h_L}})$, $w$: width, $h$: height
-- LPIPS distance $d(\mathbf{x_1,x_2})\triangleq ||\phi(\mathbf{x_1})-\phi(\mathbf{x_2})||_2$
+- LPIPS distance $d(\mathbf{x_1,x_2})\triangleq \|\phi(\mathbf{x_1})-\phi(\mathbf{x_2})\|_2$
 - perceptual adversarial example
-$f(\tilde{\mathbf{x}})\neq y, d(\mathbf{x,\tilde{x}})=||\phi(\mathbf{x})-\phi(\mathbf{\tilde{x}})||_2 \leq \epsilon$
+$f(\tilde{\mathbf{x}})\neq y, d(\mathbf{x,\tilde{x}})=\|\phi(\mathbf{x})-\phi(\mathbf{\tilde{x}})\|_2 \leq \epsilon$
 
 ## PERCEPTUAL ADVERSARIAL ATTACKS
 
@@ -74,15 +74,15 @@ $f(\tilde{\mathbf{x}})\neq y, d(\mathbf{x,\tilde{x}})=||\phi(\mathbf{x})-\phi(\m
 ### Margin loss
 
 - $L(f(\mathbf{x}),y)\triangleq max_{i\neq y} (z_i(\mathbf{x})-z_y(\mathbf{x}))$ CW margin loss
-- $max_{\tilde{x}}L(f(\tilde{\mathbf{x}}),y) \text{ s.t  } d(\mathbf{x},\tilde{\mathbf{x}})=||\phi(\mathbf{x})-\phi{\mathbf{(\tilde{x})}}||_2\leq\epsilon$  (3)
+- $max_{\tilde{x}}L(f(\tilde{\mathbf{x}}),y) \text{ s.t  } d(\mathbf{x},\tilde{\mathbf{x}})=\|\phi(\mathbf{x})-\phi{\mathbf{(\tilde{x})}}\|_2\leq\epsilon$  (3)
 - classifier network $f(\cdot)$, LPIPS network $g(\cdot)$ are fixed.
 - 둘다 LPIPS → self-bounded attack, 다른 network를 LPIPS → externally-bounded attack
 
 ### Perceptual Projected Gradient Descent (PPGD) ← PGD
 
-- desire to find a step δ to **maximize L(f(x+δ), y) such that d(x+δ, x) =** $||\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})||_2 \leq\eta$where η is the step size.
+- desire to find a step δ to **maximize L(f(x+δ), y) such that d(x+δ, x) =** $\|\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})\|_2 \leq\eta$where η is the step size.
 - $\hat{f}(\mathbf{x}):=L(f(\mathbf{x}),y), J:\text{Jacobian of }\phi(\cdot), \nabla\hat{f}:\text{gradient of } \hat{f} \text{ at } \mathbf{x}$
-- $max_\delta \hat{f}(\mathbf{x})+(\nabla\hat{f})^T\delta \text{     s.t }||J\delta||_2\leq \eta.$ (first order Taylor's approximation of 3)
+- $max_\delta \hat{f}(\mathbf{x})+(\nabla\hat{f})^T\delta \text{     s.t }\|J\delta\|_2\leq \eta.$ (first order Taylor's approximation of 3)
 
 - lemma1: Let $J^+$ pseudoinverse of $J$.
 
@@ -98,8 +98,8 @@ $f(\tilde{\mathbf{x}})\neq y, d(\mathbf{x,\tilde{x}})=||\phi(\mathbf{x})-\phi(\m
 
 ![Untitled%204.png]({{site.url}}/assets/images/2021-7-14-Perceptual adversarial robustness; Defense against unseen threat models 논문 요약/Untitled%204.png){:.center-image}
 
-- $||\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})||_2 \leq \epsilon$ → 0
-- $||\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})||_2 \gt \epsilon$ → **increases linearly by the LPIPS distance** from the original input x
+- $\|\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})\|_2 \leq \epsilon$ → 0
+- $\|\phi(\mathbf{x}+\delta)-\phi(\mathbf{x})\|_2 \gt \epsilon$ → **increases linearly by the LPIPS distance** from the original input x
 - Algorithm
 
 ![Untitled%205.png]({{site.url}}/assets/images/2021-7-14-Perceptual adversarial robustness; Defense against unseen threat models 논문 요약/Untitled%205.png){:.center-image}
@@ -161,7 +161,7 @@ our  proposed  PPGD  and  LPA  attacks  reduce  a  PAT-trained  classiﬁer  to 
 3) 이게 generalization이 잘 되는 defense더라
 4) 그 이유는 distance가 비슷하게 나와서?
 
-[추가] 
+[추가]
 
 hamming distance: 블록 부호 이론에서, 해밍 거리는 곱집합 위에 정의되는 거리 함수이다. 대략, 같은 길이의 두 문자열에서, 같은 위치에서 서로 다른 기호들이 몇 개인지를 센다.
 

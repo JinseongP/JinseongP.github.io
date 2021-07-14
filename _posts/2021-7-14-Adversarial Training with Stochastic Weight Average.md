@@ -87,7 +87,7 @@ Year: 2021
 - SWAAT for 100 epochs on CIFAR-10 and CIFAR-100 to ﬁx the total training length to 200 epochs
 - SWAAT-window is set to four
 - 10 step PGD with $\alpha=2/255,\epsilon=8/255$
-- $\ell_\infin$ constraint
+- $\ell_\infty$ constraint
 
 ### Experiment result
 

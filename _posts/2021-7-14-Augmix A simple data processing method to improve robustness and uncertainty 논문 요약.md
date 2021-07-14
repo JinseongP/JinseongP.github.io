@@ -111,7 +111,7 @@ $JS(p_{orig};p_{augmix1})$ 만도 실험할 수 있는데 이는 결과가 좋�
 
 ![Untitled%2010.png]({{site.url}}/assets/images/2021-7-14-Augmix A simple data processing method to improve robustness and uncertainty 논문 요약/Untitled%2010.png){:.center-image}
 
-아래 두 metric은 잘하는 걸 보여주기 위함. 
+아래 두 metric은 잘하는 걸 보여주기 위함.
 
 # Results
 
