@@ -276,3 +276,4 @@ defaults:
       comments:  true
       share: false
       related: true
+      use_math: true
