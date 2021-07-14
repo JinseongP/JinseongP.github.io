@@ -2,6 +2,6 @@
 title: "Posts"
 layout: categories
 permalink: /posts/
-taxonomy: post
+taxonomy: posts
 author_profile: true
 ---

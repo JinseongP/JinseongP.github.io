@@ -2,6 +2,6 @@
 title: "Papers"
 layout: categories
 permalink: /papers/
-taxonomy: paper
+taxonomy: papers
 author_profile: true
 ---
