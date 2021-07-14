@@ -1,6 +1,6 @@
 ---
-title: Fawkes: Protecting Privacy against Unauthorized Deep Learning Models 논문 요약
-excerpt: USENIX 2020에 발표된 Shawn Shan외의 'Fawkes: Protecting Privacy against Unauthorized Deep Learning Models' 논문을 요약한 글입니다.
+title: Fawkes; Protecting Privacy against Unauthorized Deep Learning Models 논문 요약
+excerpt: USENIX 2020에 발표된 Shawn Shan외의 'Fawkes; Protecting Privacy against Unauthorized Deep Learning Models' 논문을 요약한 글입니다.
 categories:
   - papers
 tags:
