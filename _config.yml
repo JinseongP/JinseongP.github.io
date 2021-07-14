@@ -194,6 +194,8 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  toc_label: "목차"
+
 
 
 # Sass/SCSS
@@ -278,3 +280,5 @@ defaults:
       share: false
       related: true
       use_math: true
+      toc: true
+      toc_sticky: true
