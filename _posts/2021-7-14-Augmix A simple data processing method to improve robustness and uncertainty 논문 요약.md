@@ -1,6 +1,6 @@
 ---
 title: Augmix A simple data processing method to improve robustness and uncertainty 논문 요약
-excerpt: ICLR 2020에 발표된 Dan Hendrycks외의 'Augmix: A simple data processing method to improve robustness and uncertainty' 논문을 요약한 글입니다.
+excerpt: ICLR 2020에 발표된 Dan Hendrycks외의 'Augmix A simple data processing method to improve robustness and uncertainty' 논문을 요약한 글입니다.
 categories:
   - papers
 tags:
