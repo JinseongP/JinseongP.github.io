@@ -4,5 +4,7 @@ main:
     url: /categories/posts
   - title: "Papers"
     url: /categories/papers
+  - title: "Categories/papers"
+    url: /categories/papers/
   - title: "GitHub"
     url: https://github.com/jinseongp
