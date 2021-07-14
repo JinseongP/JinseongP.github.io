@@ -1,13 +1,13 @@
 ---
-title: Averaging Weights Leads to Wider Optima and Better Generalization
+title: Averaging Weights Leads to Wider Optima and Better Generalization 논문 요약
 excerpt: UAI 2018에 발표된 Pavel Izmailov외의 'Averaging Weights Leads to Wider Optima and Better Generalization' 논문을 요약한 글입니다.
 categories:
   - papers
 tags:
   - DL
-  - generalization
+  - Generalization
 ---
-# [SWA] AveragingWeights Leads to Wider Optima and Better Generalization
+# [SWA] Averaging Weights Leads to Wider Optima and Better Generalization
 
 Author: Pavel Izmailov, Dmitrii Podoprikhin, Timur Garipov, Dmitry Vetrov, Andrew Gordon Wilson
 Publish: UAI (Conference on Uncertainty in Artificial Intelligence)
@@ -16,7 +16,7 @@ Sub-Topic: Overfitting
 Topic: DL
 Year: 2018
 
-# Introduction
+## Introduction
 
 ### Related Work:
 Fast Geometric Ensembling (FGE) : ensemble models' predictions
@@ -55,7 +55,7 @@ Since ensembling SGD, SWA has flatter minima
 
 → **Flat minima를 찾는 방법!**
 
-# Method
+## Method
 
 ### Stochastic weight averaging
 
@@ -71,7 +71,7 @@ Since ensembling SGD, SWA has flatter minima
 
 ![Untitled%205.png]({{site.url}}/assets/images/2021-7-14-Averaging Weights Leads to Wider Optima and Better Generalization/Untitled%205.png){:.center-image}
 
-# Experiments
+## Experiments
 
 ### Gap between Test error and Train loss
 
@@ -92,7 +92,7 @@ SWA has flat minima
 
 ![Untitled%208.png]({{site.url}}/assets/images/2021-7-14-Averaging Weights Leads to Wider Optima and Better Generalization/Untitled%208.png){:.center-image}
 
-# Conclusion
+## Conclusion
 
 - PyTorch 1.6 버전에서 공식적으로 지원
 
@@ -110,4 +110,4 @@ SWA has flat minima
     opt.swap_swa_sgd()
     ```
 
-- i**mproves generalization performance at virtually no additional cost over conventional training.**
+- **improves generalization performance at virtually no additional cost over conventional training.**

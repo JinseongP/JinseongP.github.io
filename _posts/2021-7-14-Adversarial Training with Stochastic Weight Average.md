@@ -1,5 +1,5 @@
 ---
-title: Adversarial Training with Stochastic Weight Average
+title: Adversarial Training with Stochastic Weight Average 논문 요약
 excerpt: Joong-Won Hwang외의 'Adversarial Training with Stochastic Weight Average' 논문을 요약한 글입니다.
 categories:
   - papers
@@ -16,9 +16,7 @@ Sub-Topic: Adversarial Training
 Topic: Adv
 Year: 2021
 
-[Audio adversarial 정리](https://www.notion.so/Audio-adversarial-75062b69e1a94e2f96cfa2f3dd5fbbd6) 
-
-# Introduction
+## Introduction
 
 ### Ensemble methods and overfitting
 
@@ -37,10 +35,10 @@ Year: 2021
 
     computational cost to be remain similar to single model though it has performance of ensemble
 
-- Grefenstette et al. 2018; Wang, Shi, and Osher 2019 
+- Grefenstette et al. 2018; Wang, Shi, and Osher 2019
 :they train the members of ensemble jointly with the adversarial examples generated with respect to the whole ensemble model. In other word, they train the ensemble model like single huge network.
 
-# Method
+## Method
 
 - $x_{adv}(m(\theta),x)=argmax_{x' \in B(x)}L(m_i(\theta_i,x'),y)$
 
@@ -82,7 +80,7 @@ Year: 2021
 2. resampling with hard example mining (HEM) : evaluate 할 때 train set도 검사해서 $E$로 misclassification한 sample mark → next epoch에서 triple probability to be sampled (compuatation cost 증가)
 3. online-hard example mining (OHEM) : HEM의 misclassification을 train할 때 검사 (cost 동일)
 
-# Experiments
+## Experiments
 
 ### Settings
 
@@ -109,7 +107,7 @@ Year: 2021
 
 ![Untitled%208.png]({{site.url}}/assets/images/2021-7-14-Adversarial Training with Stochastic Weight Average/Untitled%208.png){:.center-image}
 
-# Conclusion
+## Conclusion
 
 - most effective ensemble method with efficient memory and time
 - 성능이 좋은건지 확인해볼 필요 있음
