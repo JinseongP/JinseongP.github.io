@@ -1,7 +1,7 @@
 ---
 title: "Posts"
-layout: categories
-permalink: /posts/
+permalink: /categories/posts
+layout: category
 taxonomy: posts
 author_profile: true
 ---

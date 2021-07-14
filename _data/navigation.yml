@@ -1,8 +1,8 @@
 # main links
 main:
   - title: "Posts"
-    url: /posts/
+    url: /categories/posts/
   - title: "Papers"
-    url: /papers/
+    url: /categories/papers/
   - title: "GitHub"
     url: https://github.com/jinseongp

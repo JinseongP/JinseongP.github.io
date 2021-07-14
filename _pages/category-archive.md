@@ -1,7 +1,6 @@
 ---
 title: "Papers"
 layout: categories
-permalink: /papers/
-taxonomy: papers
+permalink: /categories/
 author_profile: true
 ---
