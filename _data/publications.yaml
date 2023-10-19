@@ -1,0 +1,62 @@
+papers:
+ - title: "Exploring Generative AI for Modeling the Dynamics of Asset Price Process"
+    authors: "<b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee"
+    venue: "Preprint"
+    paper_pdf: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4491342"
+    selected: n
+
+ - title: "Stability Analysis of Sharpness-Aware Minimization"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2301.06308"
+    selected: n
+
+ - title: "Exploring the Effect of Multi-step Ascent in Sharpness-Aware Minimization"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2302.10181"
+    selected: n
+
+ - title: "Fantastic Robustness Measures: The Secrets of Robust Generalization"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
+    venue: "Advances in Neural Information Processing Systems (NeurIPS), 2023"
+    paper_pdf: "https://neurips.cc/virtual/2023/poster/72546"
+    selected: y
+
+  - title: "Differentially Private Sharpness-Aware Training"
+    authors: "<b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Jaewook Lee"
+    venue: "International Conference on Machine Learning (ICML), 2023"
+    paper_pdf: "https://proceedings.mlr.press/v202/park23g.html"
+    selected: y
+
+  - title: "Implicit Jacobian regularization weighted with impurity of probability output"
+    authors: "Sungyoon Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee"
+    venue: "International Conference on Machine Learning (ICML), 2023"
+    paper_pdf: "https://proceedings.mlr.press/v202/lee23q.html"
+    selected: y
+
+  - title: "Generating Transferable Adversarial Examples for Speech Classification"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee"
+    venue: "Pattern Recognition, 2023"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0031320322007658"
+    selected: y
+
+  - title: "Efficient differentially private kernel support vector classifier for multi-class classification"
+    authors: "<b><u>Jinseong Park</u></b>, Yujin Choi, Junyoung Byun, Jaewook Lee, Saerom Park"
+    venue: "Information Sciences, 2023"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0020025522011951"
+    selected: y
+
+  - title: "Exploring Diverse Feature Extractions for Adversarial Audio Detection"
+    authors: "Yujin Choi, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim"
+    venue: "IEEE Access, 2023"
+    paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10005309"
+    selected: n
+
+  - title: "Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples"
+    authors: "Sungyoon Lee, Woojin Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee"
+    venue: "Advances in Neural Information Processing Systems (NeurIPS), 2021"
+    paper_pdf: "https://proceedings.neurips.cc/paper/2021/hash/07c5807d0d927dcd0980f86024e5208b-Abstract.html"
+    code: "https://github.com/sungyoon-lee/LossLandscapeMatters"
+    selected: y
+
