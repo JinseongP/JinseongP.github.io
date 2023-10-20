@@ -1,10 +1,5 @@
 papers:
- - title: "Exploring Generative AI for Modeling the Dynamics of Asset Price Process"
-    authors: "<b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee"
-    venue: "Preprint"
-    paper_pdf: "https://papers.ssrn.com/sol3/papers.cfm\?abstract_id=4491342"
-    selected: n
-
+ 
  - title: "Stability Analysis of Sharpness-Aware Minimization"
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
     venue: "Preprint"
