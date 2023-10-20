@@ -5,72 +5,61 @@ layout: default
 <div class="docs-section" id="about">
   <h4>About</h4>
     <p>
-      I am a 1st year Ph.D. student at Korea Advanced Institute of Science and Technology (<a href="https://www.kaist.ac.kr/en/">KAIST</a>), advised by Prof. <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>.
-      Prior to this, I received M.S. in Artificial Intelligence at KAIST and B.S. in Industrial Engineering and Mathematical Sciences (minor) at Seoul National University (<a href="https://en.snu.ac.kr/">SNU</a>).
-      My research interests focus on developing algorithms for specific data types, specifically (i) tabular data and (ii) molecular data. More recently, I am interested in utilizing foundation models (e.g., large language models, text-to-molecule models) to learn better representations.
+      I am a 2nd year Ph.D. student at at Seoul National University (<a href="https://en.snu.ac.kr/">SNU</a>), advised by Prof. Jaewook Lee in Statistical Learning & Computational Finance (<a href="http://slcf.snu.ac.kr/">SLCF</a>) Lab.
+      Prior to this, I received M.S. in Industrial Engineering at SNU and B.S. in Industrial and Management Engineering at Pohang University of Science and Technology (<a href="https://www.postech.ac.kr/eng/">POSTECH</a>).
+
+      My research interests focus on developing algorithms for improving the generalization performance of deep learning with privacy (e.g., differential privacy) and security (e.g., adversarial attack). More recently, I am interested in discovering well-generalizing optimization (e.g., sharpness and flatness) and utilizing generative models (e.g., diffusion models) for data amplification. 
+
+      I'm always seeking new research collaborations and valuable internship experiences. If you're interested in my research field, please feel free to contact me at the email address provided above.
     </p>
 </div>
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
-  <p> (*: Equal contribution) </p>
+
+  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  <!--<sup>†</sup> indicates equal contribution.-->
+  </p>
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
+
   <div class="tab-content">
     <div class="tab-pane active" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
         <div class="paper">
-          <div class="row">
-            <!-- <div class="four columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
-            </div> -->
-            <div class="twelve columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p>{{ paper.venue }}</p>
-              {% if paper.venue1 %}
-                <p>{{ paper.venue1 }}</p>
-              {% endif %}
-              {% if paper.venue2 %}
-                <p>{{ paper.venue2 }}</p>
-              {% endif %}
-              {% if paper.venue3 %}
-                <p>{{ paper.venue3 }}</p>
-              {% endif %}
-              {% if paper.venue4 %}
-                <p>{{ paper.venue4 }}</p>
-              {% endif %}
-              {% if paper.venue5 %}
-                <p>{{ paper.venue5 }}</p>
-              {% endif %}
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-                {% endif %}
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
 
-                {% if paper.project_page %}
-                  <a class="button" href="{{ paper.project_page }}" target="_blank">Project</a>
-                {% endif %}
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
 
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
 
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
 
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                {% endif %}
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
 
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-              </div>
-            </div>
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
           </div>
         </div>
       {% endfor %}
@@ -79,56 +68,56 @@ layout: default
     <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
         <div class="paper">
-          <div class="row">
-            <!-- <div class="four columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
-            </div> -->
-            <div class="eight columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-                {% endif %}
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
 
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
 
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
 
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                {% endif %}
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
 
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-              </div>
-            </div>
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
           </div>
         </div>
-    {% endfor %}
+      {% endfor %}
     </div>
-
+  </div>
 </div>
 
 <!-- ========== Education ========== -->
 <div class="docs-section" id="education">
   <h4>Education</h4>
         <div class="paper">
-          <p class="title"><b>Korea Advanced Institute of Science and Technology (KAIST)</b></p>
-          <p> Ph.D. in Artificial Intelligence<b style="float:right;">Sep. 2023 - Present</b></p>
-          <p> M.S. in Artificial Intelligence<b style="float:right;">Mar. 2022 - Aug. 2023</b></p>
+          <p class="title"><b>Seoul National University (SNU)</b></p>
+          <p> Ph.D. in Industrial Engineering<b style="float:right;">Mar. 2022 - Present</b></p>
+          <p> M.S. in Industrial Engineering<b style="float:right;">Mar. 2020 - Feb. 2022</b></p>
+        </div>
+        <div class="paper">
+          <p class="title"><b>Technische Universit ̈at Graz</b></p>
+          <p>B.S. in Mechanical Engineering (Student exchange programme)<b style="float:right;">Mar. 2019 - Aug. 2019</b></p>
         </div>
         <div class="paper">
           <p class="title"><b>Seoul National University (SNU)</b></p>
-          <p>B.S. in Industrial Engineering and Mathematical Sciences (minor)<b style="float:right;">Mar. 2016 - Feb. 2022</b></p>
+          <p>B.S. in Industrial and Management Engineering<b style="float:right;">Mar. 2016 - Feb. 2020</b></p>
         </div>
 </div>
 
@@ -136,25 +125,21 @@ layout: default
 <div class="docs-section" id="experience">
   <h4>Experience</h4>
         <div class="paper">
-          <p class="title"><b>Seoul National University (SNU)<b style="float:right;">Mar. 2021 - Feb. 2022</b></b></p>
-          <p> Research Intern, hosted by Prof. <a href="http://www.math.snu.ac.kr/~jhcheon/xe2/">Jung Hee Cheon</a> </p>
+          <p class="title"><b>Industrial Data Engineering & Analytics (IDEA) Lab.<b style="float:right;">Sep. 2019 - Dec. 2019</b></b></p>
+          <p> Research Intern, hosted by Prof. Hyunbo Cho at POSTECH</p>
         </div>
         <div class="paper">
-          <p class="title"><b>Korea Advanced Institute of Science and Technology (KAIST)<b style="float:right;">Dec. 2020 - Jun. 2021</b></b></p>
-          <p> Research Intern, hosted by Prof. <a href="https://dsail.kaist.ac.kr/professor/">Chanyoung Park</a> </p>
+          <p class="title"><b>LNG industry research project with POSCO Energy.<b style="float:right;">Sep. 2019 - Dec. 2019</b></b></p>
+          <p> Researcher, with Prof. Ribin Seo at POSTECH</p>
         </div>
         <div class="paper">
-          <p class="title"><b>SK Hynix<b style="float:right;">Dec. 2020 - Feb. 2021</b></b></p>
-          <p> Intern, AI Solution </p>
-        </div>
-        <div class="paper">
-          <p class="title"><b>Industrial & Mathematical Data Analytics Research Center (IMDARC)<b style="float:right;">Sep. 2020 - Dec. 2020</b></b></p>
-          <p> Research Intern, hosted by Prof. <a href="http://www.math.snu.ac.kr/~woongkook/">Woong Kook</a> </p>
+          <p class="title"><b>SK Telecom<b style="float:right;">Jun. 2018 - Aug. 2018</b></b></p>
+          <p> Intern, R\&D Digital Transformation Team</p>
         </div>
 </div>
 
 
-<!-- ========== Honors and Awards ========== -->
+<!-- ========== Honors and Awards ========== 
 <div class="docs-section" id="honors">
   <h4>Honors and Awards</h4>
         <div class="paper">
@@ -165,17 +150,17 @@ layout: default
           <p> <b>Special Prize ($1,000)</b>, National Cryptograpy Contest <b style="float:right;">Oct. 2021</b></p>
           <p> <b>Recipient ($6,000)</b>, Hanseong Scholarship for Gifted Students <b style="float:right;">2014 - 2016</b></p>
         </div>
-</div>
+</div>-->
 
-<!-- ========== Academic Services ========== -->
+<!-- ========== Academic Services ========== 
 <div class="docs-section" id="services">
   <h4>Academic Services</h4>
         <div class="paper">
           <p> <b>Workshop Reviewer</b> TRL@NeurIPS'23</p>
         </div>
-</div>
+</div>-->
 
-<!-- ========== Invited Talks ========== -->
+<!-- ========== Invited Talks ========== 
 <div class="docs-section" id="invited">
   <h4>Invited Talks</h4>
         <div class="paper">
@@ -194,7 +179,7 @@ layout: default
           <p>Korean Mathematical Society Fall Meeting (Virtual)<b style="float:right;">Oct. 2021</b></p>
           <p>Special Prize, National Cryptography Contest, 2021</p>
         </div>
-</div>
+</div>-->
 
 
 <!-- ========== RESUME ========== -->
