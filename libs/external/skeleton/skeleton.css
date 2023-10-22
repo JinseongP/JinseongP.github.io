@@ -371,7 +371,9 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
-
+.u-max-80-width {
+  max-width: 80%;
+  box-sizing: border-box; }
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
