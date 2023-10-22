@@ -43,6 +43,12 @@ papers:
     paper_pdf: "https://www.sciencedirect.com/science/article/pii/S1568494623004854"
     selected: y
 
+  - title: "Enhancing non-linear asset volatility forecasting models with investor sentiment and Explainable AI"
+    authors: "Seungju Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee"
+    venue: "[W] Korea Computer Congress (KCC) XAI Workshop, 2023, Best Paper Award (2/37)"
+    paper_pdf: "http://xai.kaist.ac.kr/xai-workshop/2023/"
+    selected: n
+
   - title: "Generating Transferable Adversarial Examples for Speech Classification"
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee"
     venue: "[J] Pattern Recognition, 2023"
