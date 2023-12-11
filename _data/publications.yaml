@@ -21,7 +21,7 @@ papers:
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
     venue: "[C] Advances in Neural Information Processing Systems (NeurIPS), 2023"
     paper_pdf: "https://neurips.cc/virtual/2023/poster/72546"
-    code: "https://github.com/Harry24k"
+    code: "https://github.com/Harry24k/MAIR"
     selected: y
 
   - title: "Differentially Private Sharpness-Aware Training"
