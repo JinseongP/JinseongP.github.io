@@ -17,6 +17,13 @@ papers:
     paper_pdf: "https://arxiv.org/abs/2302.10181"
     selected: n
 
+  - title: "Fair Sampling in Diffusion Models through Switching Mechanism"
+    authors: "Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>,, Hoki Kim, Jaewook Lee, Saeroom Park"
+    venue: "[C] Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024"
+    paper_pdf: "https://arxiv.org/abs/2401.03140"
+    code: "https://github.com/uzn36/AttributeSwitching"
+    selected: y
+
   - title: "Fantastic Robustness Measures: The Secrets of Robust Generalization"
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
     venue: "[C] Advances in Neural Information Processing Systems (NeurIPS), 2023"
