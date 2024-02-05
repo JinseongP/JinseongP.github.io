@@ -128,7 +128,7 @@ layout: default
   </ul>
 
   <div class="tab-content">
-    <div class="tab-pane active" id="posts-selected">
+    <!-- <div class="tab-pane active" id="posts-selected">
       {% assign selected_posts = site.data.posts.posts | where: "selected", "y" %}
       {% for post in selected_posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
@@ -151,7 +151,7 @@ layout: default
                 </div>
 
             </div>
-          </div>
+          </div> -->
 
         {% if index_modulo == 2 %}
           </div>
@@ -169,17 +169,17 @@ layout: default
           <div class="four columns">
             <div class="post-container">
 
-                <div class="post-image-container">
+                <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
                     <img src="{{ post.thumbnail }}" class="u-max-full-width" />
                   </a>
-                </div>
+                </div> -->
 
                 <div class="post-caption">
                   <a href="{{ post.url }}">
                     <b>{{ post.title }}</b> <br/>
-                    {{ post.subtitle }}
                   </a>
+                  {{ post.subtitle }}
                 </div>
 
             </div>
