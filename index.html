@@ -160,20 +160,17 @@ layout: default
 
     <div class="tab-pane" id="posts-all">
       {% for post in site.data.posts.posts %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
+        <!-- {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
           <div class="row">
-        {% endif %}
-
+        {% endif %} -->
           <div class="four columns">
             <div class="post-container">
-
                 <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
                     <img src="{{ post.thumbnail }}" class="u-max-full-width" />
                   </a>
                 </div> -->
-
                 <div class="post-caption">
                   <a href="{{ post.url }}">
                     <b>{{ post.title }}</b> <br/>
