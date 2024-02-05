@@ -118,7 +118,7 @@ layout: default
   </div>
 </div>
 
-<!-- ========== postS========== -->
+<!-- ========== posts========== -->
 <div class="docs-section" id="posts">
   <h4>Posts</h4>
 
@@ -131,11 +131,6 @@ layout: default
     <div class="tab-pane active" id="posts-review">
       {% assign review_posts = site.data.posts.posts | where: "review", "y" %}
       {% for post in review_posts %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
           <div class="four columns">
             <div class="post-container">
                 <!-- <div class="post-image-container">
