@@ -128,14 +128,15 @@ layout: default
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="posts-all">
-      {% for post in site.data.posts.posts %}
+      {% assign posts = site.data.posts.posts %}
+      {% for post in posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
           <div class="row">
         {% endif %}
 
           <div class="four columns">
-            <!-- <div class="post-container"> -->
+            <div class="post-container">
 
                 <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
@@ -150,7 +151,7 @@ layout: default
                   {{ post.subtitle }}
                 </div>
 
-            <!-- </div> -->
+            </div>
           </div>
 
         {% if index_modulo == 2 %}
@@ -168,7 +169,7 @@ layout: default
       {% endif %}
 
         <div class="four columns">
-          <!-- <div class="post-container"> -->
+          <div class="post-container">
 
               <!-- <div class="post-image-container">
                 <a href="{{ post.url }}">
@@ -183,7 +184,7 @@ layout: default
                 {{ post.subtitle }}
               </div>
 
-          <!-- </div> -->
+          </div>
         </div>
 
       {% if index_modulo == 2 %}
