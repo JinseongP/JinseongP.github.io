@@ -118,6 +118,80 @@ layout: default
   </div>
 </div>
 
+<!-- ========== postS========== -->
+<div class="docs-section" id="posts">
+  <h4>Posts</h4>
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#posts-selected">Selected</div></li>
+    <li><div class="button" data-ref="#posts-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="posts-selected">
+      {% assign selected_posts = site.data.posts.posts | where: "selected", "y" %}
+      {% for post in selected_posts %}
+        {% assign index_modulo = forloop.index0 | modulo:3 %}
+        {% if index_modulo == 0 %}
+          <div class="row">
+        {% endif %}
+
+          <div class="four columns">
+            <div class="post-container">
+
+                <div class="post-image-container">
+                  <a href="{{ post.url }}">
+                    <img src="{{ post.thumbnail }}" class="u-max-full-width" />
+                  </a>
+                </div>
+
+                <div class="post-caption">
+                  <b>{{ post.title }}</b> <br/>
+                  {{ post.subtitle }}
+                </div>
+
+            </div>
+          </div>
+
+        {% if index_modulo == 2 %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="posts-all">
+      {% for post in site.data.posts.posts %}
+        {% assign index_modulo = forloop.index0 | modulo:3 %}
+        {% if index_modulo == 0 %}
+          <div class="row">
+        {% endif %}
+
+          <div class="four columns">
+            <div class="post-container">
+
+                <div class="post-image-container">
+                  <a href="{{ post.url }}">
+                    <img src="{{ post.thumbnail }}" class="u-max-full-width" />
+                  </a>
+                </div>
+
+                <div class="post-caption">
+                  <b>{{ post.title }}</b> <br/>
+                  {{ post.subtitle }}
+                </div>
+
+            </div>
+          </div>
+
+        {% if index_modulo == 2 %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
 <!-- ========== Education ========== -->
 <div class="docs-section" id="education">
   <h4>Education</h4>

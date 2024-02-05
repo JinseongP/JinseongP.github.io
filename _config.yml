@@ -1,7 +1,7 @@
-source:      .
-destination: ./_site
-includes:    ./_includes
+# source:      .
+# destination: ./_site
+# includes:    ./_includes
 
 collections:
-  projects:
+  projects: ##projects
     output: true
