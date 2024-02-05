@@ -200,7 +200,7 @@ layout: default
     <li><div class="button" data-ref="#posts-all">All</div></li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="posts-selected">
+    <div class="tab-pane active" id="posts-review">
       {% assign selected_posts = site.data.posts.posts | where: "review", "y" %}
       {% for post in selected_posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
@@ -211,14 +211,16 @@ layout: default
           <div class="four columns">
             <div class="post-container">
 
-                <div class="post-image-container">
+                <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
                     <img src="{{ post.thumbnail }}" class="u-max-full-width" />
                   </a>
-                </div>
+                </div> -->
 
                 <div class="post-caption">
-                  <b>{{ post.title }}</b> <br/>
+                  <a href="{{ post.url }}">
+                    <b>{{ post.title }}</b> <br/>
+                  </a>
                   {{ post.subtitle }}
                 </div>
 
@@ -241,14 +243,16 @@ layout: default
           <div class="four columns">
             <div class="post-container">
 
-                <div class="post-image-container">
+                <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
                     <img src="{{ post.thumbnail }}" class="u-max-full-width" />
                   </a>
-                </div>
+                </div> -->
 
                 <div class="post-caption">
-                  <b>{{ post.title }}</b> <br/>
+                  <a href="{{ post.url }}">
+                    <b>{{ post.title }}</b> <br/>
+                  </a>
                   {{ post.subtitle }}
                 </div>
 
