@@ -128,14 +128,14 @@ layout: default
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="posts-all">
-      {% for post in site.data.posts.articles %}
+      {% for post in site.data.posts.posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
           <div class="row">
         {% endif %}
 
           <div class="four columns">
-            <div class="post-container">
+            <!-- <div class="post-container"> -->
 
                 <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
@@ -150,7 +150,7 @@ layout: default
                   {{ post.subtitle }}
                 </div>
 
-            </div>
+            <!-- </div> -->
           </div>
 
         {% if index_modulo == 2 %}
@@ -160,7 +160,7 @@ layout: default
     </div>
   </div>
   <div class="tab-pane" id="posts-review">
-    {% assign selected_posts = site.data.posts.articles | where: "review", "y" %}
+    {% assign selected_posts = site.data.posts.posts | where: "review", "y" %}
     {% for post in selected_posts %}
       {% assign index_modulo = forloop.index0 | modulo:3 %}
       {% if index_modulo == 0 %}
@@ -168,7 +168,7 @@ layout: default
       {% endif %}
 
         <div class="four columns">
-          <div class="post-container">
+          <!-- <div class="post-container"> -->
 
               <!-- <div class="post-image-container">
                 <a href="{{ post.url }}">
@@ -183,7 +183,7 @@ layout: default
                 {{ post.subtitle }}
               </div>
 
-          </div>
+          <!-- </div> -->
         </div>
 
       {% if index_modulo == 2 %}
