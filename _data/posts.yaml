@@ -5,7 +5,7 @@ posts:
     url: "posts/2020-transfer-domain-to-google-cloud.html"
     review: y
 
-  posts:
+posts:
   - title: "BBB"
     subtitle: "BBB"
     # thumbnail: "/assets/posts/2020-transfer-domain-to-google-cloud/figures/opening-figure.png"

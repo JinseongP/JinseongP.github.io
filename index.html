@@ -132,25 +132,25 @@ layout: default
       {% assign review_posts = site.data.posts.posts | where: "review", "y" %}
       {% for post in review_posts %}
       {% if index_modulo == 0 %}
-      <div class="row">
+        <div class="row">
       {% endif %}
-          <div class="four columns">
-            <div class="post-container">
-                <!-- <div class="post-image-container">
-                  <a href="{{ post.url }}">
-                    <img src="{{ post.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div> -->
-                <div class="post-caption">
-                  <a href="{{ post.url }}">
-                    <b>{{ post.title }}</b> <br/>
-                  </a>
-                  {{ post.subtitle }}
-                </div>
-            </div>
+        <div class="four columns">
+          <div class="post-container">
+              <!-- <div class="post-image-container">
+                <a href="{{ post.url }}">
+                  <img src="{{ post.thumbnail }}" class="u-max-full-width" />
+                </a>
+              </div> -->
+              <div class="post-caption">
+                <a href="{{ post.url }}">
+                  <b>{{ post.title }}</b> <br/>
+                </a>
+                {{ post.subtitle }}
+              </div>
           </div>
-        {% if index_modulo == 2 %}
         </div>
+        {% if index_modulo == 2 %}
+          </div>
         {% endif %}
       {% endfor %}
     </div>
