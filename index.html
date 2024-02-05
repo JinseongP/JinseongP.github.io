@@ -128,8 +128,7 @@ layout: default
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="posts-all">
-      {% assign all_posts = site.data.posts.posts %}
-      {% for post in all_posts %}
+      {% for post in site.data.posts.posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
           <div class="row">
