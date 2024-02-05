@@ -4,3 +4,4 @@ posts:
     # thumbnail: "/assets/posts/2020-transfer-domain-to-google-cloud/figures/opening-figure.png"
     url: "posts/2020-transfer-domain-to-google-cloud.html"
     selected: y
+    review: y

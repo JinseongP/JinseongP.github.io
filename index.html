@@ -123,14 +123,14 @@ layout: default
   <h4>Posts</h4>
 
   <ul class="tab-nav">
-    <li><div class="button active" data-ref="#posts-selected">Selected</div></li>
+    <li><div class="button active" data-ref="#posts-review">Paper Reviews</div></li>
     <li><div class="button" data-ref="#posts-all">All</div></li>
   </ul>
 
   <div class="tab-content">
-    <!-- <div class="tab-pane active" id="posts-selected">
-      {% assign selected_posts = site.data.posts.posts | where: "selected", "y" %}
-      {% for post in selected_posts %}
+    <div class="tab-pane active" id="posts-review">
+      {% assign review_posts = site.data.posts.posts | where: "review", "y" %}
+      {% for post in review_posts %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
           <div class="row">
@@ -138,20 +138,19 @@ layout: default
 
           <div class="four columns">
             <div class="post-container">
-
-                <div class="post-image-container">
+                <!-- <div class="post-image-container">
                   <a href="{{ post.url }}">
                     <img src="{{ post.thumbnail }}" class="u-max-full-width" />
                   </a>
-                </div>
-
+                </div> -->
                 <div class="post-caption">
-                  <b>{{ post.title }}</b> <br/>
+                  <a href="{{ post.url }}">
+                    <b>{{ post.title }}</b> <br/>
+                  </a>
                   {{ post.subtitle }}
                 </div>
-
             </div>
-          </div> -->
+          </div>
 
         {% if index_modulo == 2 %}
           </div>
