@@ -9,3 +9,4 @@ cv: "/assets/cv/CV_JinseongPark.pdf"
 google_scholar: "https://scholar.google.com/citations?user=o4-E5z0AAAAJ\\&hl=en"
 github: "https://github.com/jinseongP"
 # google_analystics_tracking_id: 'UA-179986332-1'
+posts_to_show: 6
