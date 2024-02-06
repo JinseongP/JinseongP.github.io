@@ -1,16 +1,23 @@
-# JinseongP.github.io
-
-**#** **How to push.**
+# Personal website
 
 
+## Codespaces
 
-git add -A
+1. Open new codespace
+2. Install lvips
+   
+```
+sudo apt update && sudo apt install libvips-tools
+```
 
+3. Install gems
+   
+```
+bundle install
+```
 
+4. Run jekyll
 
-git commit -m "update info"
-
-
-
-git push origin
-
+```
+bundle exec jekyll serve
+```
