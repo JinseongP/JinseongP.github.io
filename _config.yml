@@ -1,7 +1,14 @@
-# source:      .
-# destination: ./_site
-# includes:    ./_includes
+source: .
+destination: ./_site
+includes: ./_includes
+baseurl: null
+relative_url: "https://mmeendez8.github.io"
 
-collections:
-  projects: ##projects
-    output: true
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
