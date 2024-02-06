@@ -115,51 +115,9 @@ title: Personal Webpage
     </ul>
   </div>
 
-
-  <!-- ========== RESUME ========== -->
-  <div class="section" id="resume">
-    <h2>Vitæ</h2>
-
-    <ul class="vitae-content">
-      {% for exp in site.data.experience.experiences %}
-      <li class="vitae-item">
-
-        <div class="vitae-time-place">
-          <div class="vitae-place">
-            {{ exp.location }}
-          </div> 
-          <div class="vitae-time">
-            {{ exp.time }}
-          </div>
-        </div>
-
-        {% if forloop.first %}
-        <div class="vitae-actual vitae-image ">
-        {% else %}
-        <div class="vitae-image">
-        {% endif %}
-          <div class="vitae-image-placeholder">
-            {% picture exp-logos {{ exp.image }} --alt {{ exp.company }} %}
-          </div>
-        </div>
-
-        <div class="vitae-panel">
-          <div class="vitae-position">
-            <h3 class="vitae-title">{{ exp.title }} - <a target="_blank" rel="noopener" href="{{exp.url}}">{{ exp.company }}</a> </h3>
-          </div>
-          <div class="vitae-description">
-            <p> {{ exp.description }} </p>
-          </div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-
-  </div>
-
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
-  <h4>Publications</h4>
+  <h2>Publications</h2>
 
   <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>. Preprint papers can be found in the 'ALL' tabs.
     <br/>
@@ -247,39 +205,46 @@ title: Personal Webpage
   </div>
 </div>
 
-  <!-- ========== Publications ========== -->
-  <!-- <div class="section" id="publications">
-    <h2>Publications</h2>
 
-    <ul class="publications-content">
-      {% for paper in site.data.publications.publications %}
-      <li class="publications-item">
-        <h3 class="publication-title">{{ paper.title }}</h3>
-        <a target="_blank" rel="noopener" href="{{paper.paper}}">
-          <p class="publication-venue">{{ paper.venue }}</p>
-        </a>
-        <p class="publication-authors">{{ paper.authors }}</p>
-      </li>
-      {% endfor %}
-      </ul>
-  </div> -->
+<!-- ========== RESUME ========== -->
+<div class="section" id="resume">
+  <h2>Vitæ</h2>
 
-<!-- ========== Education ========== -->
-<div class="docs-section" id="education">
-  <h4>Education</h4>
-        <div class="paper">
-          <p class="title"><b>Seoul National University (SNU)</b></p>
-          <p> Ph.D. in Industrial Engineering<b style="float:right;">Mar. 2022 - Present</b></p>
-          <p> M.S. in Industrial Engineering<b style="float:right;">Mar. 2020 - Feb. 2022</b></p>
+  <ul class="vitae-content">
+    {% for exp in site.data.experience.experiences %}
+    <li class="vitae-item">
+
+      <div class="vitae-time-place">
+        <div class="vitae-place">
+          {{ exp.location }}
+        </div> 
+        <div class="vitae-time">
+          {{ exp.time }}
         </div>
-        <div class="paper">
-          <p class="title"><b>Technische Universität Graz</b></p>
-          <p>B.S. in Mechanical Engineering (Student exchange programme)<b style="float:right;">Mar. 2019 - Aug. 2019</b></p>
+      </div>
+
+      {% if forloop.first %}
+      <div class="vitae-actual vitae-image ">
+      {% else %}
+      <div class="vitae-image">
+      {% endif %}
+        <div class="vitae-image-placeholder">
+          {% picture exp-logos {{ exp.image }} --alt {{ exp.company }} %}
         </div>
-        <div class="paper">
-          <p class="title"><b>Pohang University of Science and Technology (POSTECH)</b></p>
-          <p>B.S. in Industrial and Management Engineering<b style="float:right;">Mar. 2016 - Feb. 2020</b></p>
+      </div>
+
+      <div class="vitae-panel">
+        <div class="vitae-position">
+          <h3 class="vitae-title">{{ exp.title }} - <a target="_blank" rel="noopener" href="{{exp.url}}">{{ exp.company }}</a> </h3>
         </div>
+        <div class="vitae-description">
+          <p> {{ exp.description }} </p>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
 </div>
 
 <!-- ========== Experience ========== -->
@@ -304,6 +269,25 @@ title: Personal Webpage
 </div>
 
 
+  <!-- ========== Publications ========== -->
+  <!-- <div class="section" id="publications">
+    <h2>Publications</h2>
+
+    <ul class="publications-content">
+      {% for paper in site.data.publications.publications %}
+      <li class="publications-item">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <a target="_blank" rel="noopener" href="{{paper.paper}}">
+          <p class="publication-venue">{{ paper.venue }}</p>
+        </a>
+        <p class="publication-authors">{{ paper.authors }}</p>
+      </li>
+      {% endfor %}
+      </ul>
+  </div> -->
+
+
+
   <!-- ========== Other Projects ========== -->
 <!-- 
   <div class="section" id="other-projects">
@@ -323,5 +307,47 @@ title: Personal Webpage
   </div>
 
 </div> -->
+
+<!-- ========== Honors and Awards ========== 
+<div class="docs-section" id="honors">
+  <h4>Honors and Awards</h4>
+        <div class="paper">
+          <p> <b>Grand Prize ($5,000)</b>, KAIST-Samsung Electronics Industry-Academia Cooperation Paper Award <b style="float:right;">Aug. 2023</b></p>
+          <p> <b>Travel Award ($1,000)</b>, International Conference on Learning Representations (ICLR) <b style="float:right;">May. 2023</b></p>
+          <p> <b>Recipient ($3,000)</b>, Google Conference Scholarships (APAC) <b style="float:right;">May. 2023</b></p>
+          <p> <b>Bronze Prize ($5,000)</b>, Samsung Humantech Paper Awards <b style="float:right;">Feb. 2023</b></p>
+          <p> <b>Special Prize ($1,000)</b>, National Cryptograpy Contest <b style="float:right;">Oct. 2021</b></p>
+          <p> <b>Recipient ($6,000)</b>, Hanseong Scholarship for Gifted Students <b style="float:right;">2014 - 2016</b></p>
+        </div>
+</div>-->
+
+<!-- ========== Academic Services ========== 
+<div class="docs-section" id="services">
+  <h4>Academic Services</h4>
+        <div class="paper">
+          <p> <b>Workshop Reviewer</b> TRL@NeurIPS'23</p>
+        </div>
+</div>-->
+
+<!-- ========== Invited Talks ========== 
+<div class="docs-section" id="invited">
+  <h4>Invited Talks</h4>
+        <div class="paper">
+          <p class="title"><b>Semi-supervised Tabular Classification via In-context Learning of Large Language Models</b></p>
+          <p>Samsung Advanced Institue of Technology (Suwon, Korea)<b style="float:right;">Jun. 2023</b></p>
+        </div>
+        <div class="paper">
+          <p class="title"><b>STUNT: Few-shot Tabular Learning with Self-generated Tasks from Unlabeled Tables</b></p>
+          <p>AI Expo Korea (Seoul, Korea)<b style="float:right;">May. 2023</b></p>
+          <p>International Conference on Learning Representations (Kigali, Rwanda)<b style="float:right;">May. 2023</b></p>
+          <p>Samsung Electronics Co., Ltd. (Virtual)<b style="float:right;">Mar. 2023</b></p>
+          <p>MOGAM Institute for Biomedical Research (Virtual)<b style="float:right;">Mar. 2023</b></p>
+        </div>
+        <div class="paper">
+          <p class="title"><b>Privacy-preserving Median Selection and Secure Aggregation in Federated Learning</b></p>
+          <p>Korean Mathematical Society Fall Meeting (Virtual)<b style="float:right;">Oct. 2021</b></p>
+          <p>Special Prize, National Cryptography Contest, 2021</p>
+        </div>
+</div>-->
 
 <script type="text/javascript" src="{{ '/libs/custom/myjs.js' | prepend: site.baseurl }}" defer></script>

@@ -3,7 +3,7 @@ layout: post
 title: "A demo on sport field registration"
 subtitle: "Extract the homography that relates the sport field to the image"
 description: ""
-image: "/assets/images/fullsize/posts/2024-02-02-amf-pitch-calibration/thumbnail.jpg"
+image: "/assets/images/posts/2024-02-02-amf-pitch-calibration/thumbnail.jpg"
 selected: n
 mathjax: n
 ---
@@ -38,7 +38,7 @@ The pitch template is a controlled image we use to model the real-world pitch. B
 The starting point is to understand how are the dimensions of an American football pitch and [this](https://turftank.com/us/academy/how-big-is-a-football-field/) page is an excellent resource. It's worth noting that we focused solely on NFL dimensions, as NCAA fields differ slightly.
 
 <div class="post-center-image">
-    {% picture pimage /assets/images/fullsize/posts/2024-02-02-amf-pitch-calibration/pitchdims.png --alt AMF Pitch dimensions example %}
+    {% picture pimage /assets/images/posts/2024-02-02-amf-pitch-calibration/pitchdims.png --alt AMF Pitch dimensions example %}
 </div>
 
 {:refdef: class="image-caption"}
@@ -77,7 +77,7 @@ I created a simple image with the same resolution as the NFL pitch, *120 x 53.3 
 I repeated this process for all pitch elements, resulting in the image below:
 
 <div class="post-center-image">
-    {% picture pimage /assets/images/fullsize/posts/2024-02-02-amf-pitch-calibration/pitchtemplate.png --alt NFL resulting pitch template image %}
+    {% picture pimage /assets/images/posts/2024-02-02-amf-pitch-calibration/pitchtemplate.png --alt NFL resulting pitch template image %}
 </div>
 
 {:refdef: class="image-caption"}

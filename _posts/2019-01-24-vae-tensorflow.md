@@ -2,7 +2,7 @@
 layout: post
 title:  "VAEs! Generating images with Tensorflow"
 subtitle: "Learn how to code a Variational Autoencoder"
-image: "/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/thumbnail.jpg"
+image: "/assets/images/posts/2019-01-24-vae-tensorflow/thumbnail.jpg"
 description: "This post explains how to code a Variational Autoencoder from scratch using Tensorflow. You can also visualize the latent space and learn how image representations are distributed there "
 selected: y
 mathjax: y
@@ -41,7 +41,7 @@ The **mean** and **standard deviation** of our Gaussian will be computed through
 Tip: we can see how our network looks using TensorBoard! ([full code on Github](https://github.com/mmeendez8/Autoencoder){:target="_blank"}{:rel="noopener noreferrer"})
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/tensorboard.jpg --alt Tensorboard graph view %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/tensorboard.jpg --alt Tensorboard graph view %}
 </div>
 
 ## Decoder
@@ -53,7 +53,7 @@ When we speak about decoding images and neural networks, we must have a word in 
 Note that `FLAGS.inputs_decoder` references the number of neurons in our dense layers which will determine the size of the image before the transpose convolution layers. In this case I will use the same structure as in the encoder, so the number of neurons will be 49 and the input image size to the first tranposed conv layer will be `7x7`. It’s also interesting to point that the last layer uses a [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function){:target="_blank"}{:rel="noopener noreferrer"} activation, **so we force our outputs to be between 0 and 1**.
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/sigmoid.jpg --alt Sigmoid function plot %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/sigmoid.jpg --alt Sigmoid function plot %}
 </div>
 
 ## Cost function
@@ -75,10 +75,10 @@ Let’s start with a simple example and check that the network is working as it 
 Below, we can see how our network learns to transform the input image in the latent space of 5 dimensions, to recover them then to the original space. Note how as more epochs have passed, we obtain better results and a better loss.
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/mnist.jpg --alt Mnist recovery %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/mnist.jpg --alt Mnist recovery %}
 </div>
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/fashion_mnist.jpg --alt Fashion Mnist recovery %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/fashion_mnist.jpg --alt Fashion Mnist recovery %}
 </div>
 {:refdef: class="image-caption"}
 *Image recovering vs epoch number for MNIST and Fashion MNIST datasets*
@@ -95,7 +95,7 @@ In the previous section we used a 5 dimensional latent space but we can reduce t
 In a first moment all images are close to the prior (all point are located around 0). But during training the encoder learns to approximate the posterior distribution, so it will locate the latent variables in different parts of the space having into account their labels (equal label -> close region in the space). Let’s have a look first and then discuss more about this!
 
 {:refdef: class="image-caption"}
-![MNIST latent space evolution during 20 epochs](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/mnist_evol_20_epochs.gif)
+![MNIST latent space evolution during 20 epochs](/assets/images/posts/2019-01-24-vae-tensorflow/mnist_evol_20_epochs.gif)
 {: refdef}
 {:refdef: class="image-caption"}
 *MNIST latent space evolution during 20 epochs*
@@ -106,7 +106,7 @@ Isn’t this cool? Numbers that are similar are placed in a similar region of th
 Same thing happens with clothes. Similar garments as shirts, t-shirt and even dresses (which can be seen as an intersection between shirts and trousers) will be located in similar regions and the same thing happens with boots, sneakers and sandals!
 
 {:refdef: class="image-caption"}
-![Fashion MNIST latent space evolution during 20 epochs](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/fashion_mnist_evol_20_epochs.gif)
+![Fashion MNIST latent space evolution during 20 epochs](/assets/images/posts/2019-01-24-vae-tensorflow/fashion_mnist_evol_20_epochs.gif)
 {: refdef}
 {:refdef: class="image-caption"}
 *Fashion MNIST latent space evolution during 20 epochs*
@@ -115,14 +115,14 @@ Same thing happens with clothes. Similar garments as shirts, t-shirt and even dr
 These two dimensional plots can also help us to understand the KL divergence term. In my previous post I explained where does it come from and also that acts as a penalization (or regularization term) over the encoder when this one outputs probabilities that are not following an unit norm. Without this term the encoder can use the whole space and place equal labels in very different regions. Imagine for example two images of a number 1. Instead of being close one to each other in the space, the encoder could place them far away. This would result in a problem to generate unseen samples, since the space will be large and it will have ‘holes’ of information, empty areas that do not correspond to any number and are related with noise.
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/latent-wt-kl.jpg --alt Latent space without KL reg %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/latent-wt-kl.jpg --alt Latent space without KL reg %}
 </div>
 {:refdef: class="image-caption"}
 *Latent space without KL reg*
 {: refdef}
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/latent-with-kl.jpg --alt Latent space with KL reg %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/latent-with-kl.jpg --alt Latent space with KL reg %}
 </div>
 {:refdef: class="image-caption"}
 *Latent space with KL reg*
@@ -135,7 +135,7 @@ Look the x and y axis. On the left plot, there is not regularization, so points 
 We can generate random samples that belong to our latent space. These points have not been used during training (they would correspond with a white space in previous plots). Our network decoder though, has learnt to reconstruct valid images that are related with those points without seem them. So let’s create a grid of points as the following one:
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2019-01-24-vae-tensorflow/grid.jpg --alt Two dimensional grid of points %}
+{% picture pimage /assets/images/posts/2019-01-24-vae-tensorflow/grid.jpg --alt Two dimensional grid of points %}
 </div>
 
 Each of this points can be passed to the decoder which will return us a valid images. With a few lines we can check how is our encoder doing through the training and evaluate the quality of the results. Ideally, all labels would be represented in our grid.
@@ -143,11 +143,11 @@ Each of this points can be passed to the decoder which will return us a valid im
 <script src="https://gist.github.com/mmeendez8/aa5b73d6d64cf5e1ceba31472a1ebf64.js"></script>
 
 {:refdef: class="image-caption"}
-![](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/mnist_evolution.gif)
+![](/assets/images/posts/2019-01-24-vae-tensorflow/mnist_evolution.gif)
 {: refdef}
 
 {:refdef: class="image-caption"}
-![Comparsion between grid space generated images and latent space distribution](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/mnist_latent_evolution.gif)
+![Comparsion between grid space generated images and latent space distribution](/assets/images/posts/2019-01-24-vae-tensorflow/mnist_latent_evolution.gif)
 {: refdef}
 {:refdef: class="image-caption"}
 *Comparsion between grid space generated images and latent space distribution*
@@ -156,17 +156,17 @@ Each of this points can be passed to the decoder which will return us a valid im
 What about the fashion dataset? Results are even more fun! Look how the different garment are positioned by ‘similarity’ in the space. Also the grid generated images look super real!
 
 {:refdef: class="image-caption"}
-![](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/fashion_mnist_evolution.gif)
+![](/assets/images/posts/2019-01-24-vae-tensorflow/fashion_mnist_evolution.gif)
 {: refdef}
 
 {:refdef: class="image-caption"}
-![](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/fashion_mnist_latent_evolution.gif)
+![](/assets/images/posts/2019-01-24-vae-tensorflow/fashion_mnist_latent_evolution.gif)
 {: refdef}
 
 After 50 epochs of training and using the grid technique and the fashion MNIST dataset we achieve these results:
 
 {:refdef: class="image-caption"}
-![Fake images generated using mesh grid points](/assets/images/fullsize/posts/2019-01-24-vae-tensorflow/fake_images_using_grid.jpg)
+![Fake images generated using mesh grid points](/assets/images/posts/2019-01-24-vae-tensorflow/fake_images_using_grid.jpg)
 {: refdef}
 {:refdef: class="image-caption"}
 *Fake images generated using mesh grid points*

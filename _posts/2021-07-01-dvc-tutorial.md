@@ -2,7 +2,7 @@
 layout: post
 title:  "Version control your dataset with DVC"
 subtitle: "Use DVC and Git for tracking changes on your machine learning dataset"
-image: "/assets/images/fullsize/posts/2021-07-01-dvc-tutorial/thumbnail.jpg"
+image: "/assets/images/posts/2021-07-01-dvc-tutorial/thumbnail.jpg"
 description: "Learn how to use DVC with a Google Drive remote for tracking changes on your dataset and create Continuous Integration pipelines at Github to test your data as you do with code."
 selected: y
 ---
@@ -69,7 +69,7 @@ pyodi paint-annotations data/coco_sample/annotations/train_sample.json data/coco
 This will paint the first 10 images of the dataset and save them into `output/painted_images` folder.
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2021-07-01-dvc-tutorial/painted_coco_sample.jpg --alt Coco image with painted detections  %}
+{% picture pimage /assets/images/posts/2021-07-01-dvc-tutorial/painted_coco_sample.jpg --alt Coco image with painted detections  %}
 </div>
 
 ## Version the data
@@ -259,7 +259,7 @@ git push
 ```
 
 <div class="post-center-image">
-{% picture pimage /assets/images/fullsize/posts/2021-07-01-dvc-tutorial/ci.jpg --alt Github CI results caption  %}
+{% picture pimage /assets/images/posts/2021-07-01-dvc-tutorial/ci.jpg --alt Github CI results caption  %}
 </div>
 
 That's it! Our test completed successfully!
