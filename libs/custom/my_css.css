@@ -560,13 +560,13 @@ table thead {
   }
 }
 
-.footer p{
-  margin-bottom: 0px;
-  font-size: 0.5em;
-}
-
 .footer i{
   font-size: 2.5em;
+}
+
+.footer p{
+  margin-bottom: 0px;
+  font-size: 1.5rem;
 }
 
 .footer-icons, .footer-sign{
