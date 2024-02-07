@@ -1,37 +1,141 @@
----
-layout: default
-title: Personal Webpage
----
-<!-- ========== Header ========== -->
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta charset="utf-8">
+  <title>Jinseong Park | Personal Webpage</title>
+  <meta name="author" content="Jinseong Park">
+  <meta property="og:website" content="Jinseong Park Personal Homepage">
+  
+  
+  <meta name="description" property="og:description" content="Industrial Enginerring">
+  
+
+  
+  <meta name="image" property="og:image" content="https://jinseongp.github.io/assets/images/profile-pics/tmp.jpg">
+  
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton/normalize.css>
+  <link rel="stylesheet" href=/libs/external/skeleton/skeleton.css>
+
+  <!-- preload fonts -->
+  <link rel="preload" href="/libs/external/fonts/Graphik-Regular.woff2"" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/libs/external/fonts/Graphik-Semibold.woff2"" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/libs/external/fonts/Tiempos-Headline-Semibold.woff2"" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href=/libs/custom/my_css.css>
+  <link rel="stylesheet" href=/libs/external/fonts/fonts.css>
+
+  <!-- hack for non critical css https://web.dev/defer-non-critical-css/ -->
+  <link rel="preload" href=/libs/custom/syntax.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href=/libs/custom/syntax.css></noscript>
+  
+  <!-- non critical lighthouse css -->
+  <link rel="preload" href=/libs/external/lightbox/lightbox.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href=/libs/external/lightbox/lightbox.css></noscript>
+
+  <!-- Fontello
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet"
+    href=/libs/external/fontello-bb2d1770/css/fontello.css>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href=/libs/icon.png>
+  <link rel="shortcut icon" type="image/png" href=/libs/icon.png>
+
+  <!-- Skeleton tabs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton_tabs/skeleton-tabs.css>
+  <script src=/libs/external/skeleton_tabs/skeleton-tabs.js></script>
+
+  <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHYVFNF1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LMHYVFNF1J');
+</script>
+    <!-- Twitter cards -->
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:title" content="Personal Webpage">
+  
+  
+  <meta name="twitter:description" content="Industrial Enginerring">
+  
+  
+
+  
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="https://jinseongp.github.io/assets/images/profile-pics/tmp.jpg">
+  
+
+  <!-- end of Twitter cards -->
+  
+
+  <!-- Mathjax -->
+  
+</head>
+
+<body>
+    <!-- <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#about>About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#news>News</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#posts>Posts</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#publications>Publications</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#vitae>Vitæ</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#experience>Experience</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- ========== Header ========== -->
 <div class="container">
 
   <div class="header-container">
 
     <div class="header-img">
-      <a href="{{ site.baseurl }}/">
-        {% picture profile {{ site.baseurl }}{{ site.data.main_info.profile_pic }} --alt Site main picture %}
+      <a href="/">
+        <img src="/generated/assets/images/profile-pics/jinseong-800-db3790b99.jpg" alt="Site main picture" srcset="/generated/assets/images/profile-pics/jinseong-300-8f9a09e57.webp 300w" width="2474" height="2474">
+
       </a>
     </div>
 
     <div class="header-title">
-      <h1>{{ site.data.main_info.name }}</h1>
-      <p>{{ site.data.main_info.title }}</p>
-      <p>{{ site.data.main_info.email }}</p>
+      <h1>Jinseong Park</h1>
+      <p>Ph.D. Candidate at Seoul National University</p>
+      <p>jinseong [AT] snu.ac.kr</p>
 
-      <a href='{{site.data.main_info.cv}}' target="_blank" rel="noopener">
-        <i class="fa ai ai-cv-square" aria-hidden="true"></i>
+      <a href='/assets/cv/CV_JinseongPark.pdf' target="_blank" rel="noopener">
+        <i class="icon-linkedin-squared" aria-hidden="true"></i>
       </a>
 
-      <a href='{{site.data.main_info.linkedin}}' target="_blank" rel="noopener">
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      <a href='https://linkedin.com/in/jinseongP' target="_blank" rel="noopener">
+        <i class="icon-linkedin-squared" aria-hidden="true"></i>
       </a>
 
-      <a href='{{site.data.main_info.github}}' target="_blank" rel="noopener">
-        <i class="fa fa-github-square" aria-hidden="true"></i>
+      <a href='https://github.com/jinseongP' target="_blank" rel="noopener">
+        <i class="icon-github-circled" aria-hidden="true"></i>
       </a>
 
-      <a href='{{site.data.main_info.google_scholar}}' target="_blank" rel="noopener">
-        <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>
+      <a href='https://scholar.google.com/citations?user=o4-E5z0AAAAJ\&hl=en' target="_blank" rel="noopener">
+        <i class="icon-linkedin-squared" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -58,11 +162,19 @@ title: Personal Webpage
     <h2>News</h2>
 
     <ul>
-      {% for new in site.data.news.news %}
+      
       <li>
-        <p><span class="bio-highlight"><b>{{new.month}} {{new.year}}</b></span>. {{new.text}}</p>
+        <p><span class="bio-highlight"><b>January 2024</b></span>. One paper concering fairness of diffusion model is accepted to AAAI 2024. I am attending AAAI 2024 in person!</p>
       </li>
-      {% endfor %}
+      
+      <li>
+        <p><span class="bio-highlight"><b>December 2023</b></span>. One paper concerning robust generalization is accepted to NeurIPS 2023.</p>
+      </li>
+      
+      <li>
+        <p><span class="bio-highlight"><b>July 2023</b></span>.  Two papers concering privacy and generalization are accepted to ICML 2023. I am attending ICML 2023 in person!</p>
+      </li>
+      
     </ul>
 
   </div>
@@ -72,37 +184,190 @@ title: Personal Webpage
     <h2>Posts</h2>
 
     <ul class="posts" id="posts-selected">
-      {% assign post_count = 0 %}
-      {% assign selected_posts = site.posts | where: "selected", "y"  %}
-      {% assign post_classes = 'post ' %}
       
-      {% for post in selected_posts %}
-        <li class="{{ post_classes }}">
+      
+      
+      
+      
+        <li class="post ">
 
-          {% if post.external-url %}
-            <a href="{{ post.external-url }}" target=”_blank”> 
-          {% else %}
-            <a href="{{ post.url }}">
-          {% endif %}
+          
+            <a href="/2024/02/06/test.html">
+          
 
             <div class="post-image-placeholder">
-              {% picture posts-grid {{ post.image }} --alt {{ post.description }} %}
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
             </div>
-            <h3 class="post-title">{{ post.title }}</h3>
-            <p class="post-description"> {{ post.subtitle }} </p> 
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
           </a>    
         </li>
         
         <!-- increment post counter -->
-        {% assign post_count = post_count | plus: 1 %}
+        
         
         <!-- add see more link and set next posts to class hidden -->
-        {% if post_count == {{site.data.main_info.posts_to_show }} %}
-          <a href="#" class="see-more-link">See more posts</a>
-          {% assign post_classes = post_classes | append: 'hidden' %}
-        {% endif %}
+        
 
-      {% endfor %}
+      
+        <li class="post ">
+
+          
+            <a href="/2024/02/06/test-copy.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
+        <li class="post ">
+
+          
+            <a href="/2024/02/06/test-copy-7.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
+        <li class="post ">
+
+          
+            <a href="/2024/02/06/test-copy-6.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
+        <li class="post ">
+
+          
+            <a href="/2024/02/06/test-copy-5.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
+        <li class="post ">
+
+          
+            <a href="/2024/02/06/test-copy-4.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+          <a href="#" class="see-more-link">See more posts</a>
+          
+        
+
+      
+        <li class="post hidden">
+
+          
+            <a href="/2024/02/06/test-copy-3.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
+        <li class="post hidden">
+
+          
+            <a href="/2024/02/06/test-copy-2.html">
+          
+
+            <div class="post-image-placeholder">
+              <img loading="lazy" src="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-2c1587934.jpg" alt="Test" srcset="/generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-400-cb6960f9e.webp 400w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-600-cb6960f9e.webp 600w, /generated/assets/images/posts/2023-11-22-deploy-mlflow-terraform/thumbnail-800-cb6960f9e.webp 800w" sizes="(min-width: 768px) 25vw, (max-width: 767px) calc(100vw - 38px), 400px" width="1300" height="975">
+
+            </div>
+            <h3 class="post-title">Test</h3>
+            <p class="post-description"> Test </p> 
+          </a>    
+        </li>
+        
+        <!-- increment post counter -->
+        
+        
+        <!-- add see more link and set next posts to class hidden -->
+        
+
+      
     </ul>
   </div>
 
@@ -110,7 +375,7 @@ title: Personal Webpage
 <div class="docs-section" id="publications">
   <h2>Publications</h2>
 
-  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>. Preprint papers can be found in the 'ALL' tabs.
+  <p>Most recent publications on <a href="https://scholar.google.com/citations?user=o4-E5z0AAAAJ\&hl=en" target="_blank">Google Scholar</a>. Preprint papers can be found in the 'ALL' tabs.
     <br/>
     <b>[J]: Journal, [C]: Conference, [W]: Workshop. </b> <sup>†</sup> indicates equal contribution.
   </p>
@@ -122,79 +387,496 @@ title: Personal Webpage
 
   <div class="tab-content">
     <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
+      
+      
         <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
+          <p class="title"><b>Fair Sampling in Diffusion Models through Switching Mechanism</b></p>
+          <p>Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>, Hoki Kim, Jaewook Lee, Saeroom Park</p>
+          <p><i>[C] Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024</i></p>
            <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+            
+              <a class="button" href="https://arxiv.org/abs/2401.03140" target="_blank">Paper</a>
+            
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
+            
 
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
+            
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+            
 
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
+            
+              <a class="button" href="https://github.com/uzn36/AttributeSwitching" target="_blank">Code</a>
+            
 
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
+            
 
           </div>
         </div>
-      {% endfor %}
+      
+        <div class="paper">
+          <p class="title"><b>Fantastic Robustness Measures: The Secrets of Robust Generalization</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee</p>
+          <p><i>[C] Advances in Neural Information Processing Systems (NeurIPS), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://openreview.net/forum?id=AGVBqJuL0T" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/Harry24k/MAIR" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Differentially Private Sharpness-Aware Training</b></p>
+          <p><b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Jaewook Lee</p>
+          <p><i>[C] International Conference on Machine Learning (ICML), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.mlr.press/v202/park23g.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/JinseongP/DPSAT" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Implicit Jacobian regularization weighted with impurity of probability output</b></p>
+          <p>Sungyoon Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[C] International Conference on Machine Learning (ICML), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.mlr.press/v202/lee23q.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Fast sharpness-aware training for periodic time series classification and forecasting</b></p>
+          <p><b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Woojin Lee, Jaewook Lee</p>
+          <p><i>[J] Applied Soft Computing, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S1568494623004854" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Generating Transferable Adversarial Examples for Speech Classification</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[J] Pattern Recognition, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S0031320322007658" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Efficient differentially private kernel support vector classifier for multi-class classification</b></p>
+          <p><b><u>Jinseong Park</u></b>, Yujin Choi, Junyoung Byun, Jaewook Lee, Saerom Park</p>
+          <p><i>[J] Information Sciences, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S0020025522011951" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/JinseongP/DP-SVDD" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples</b></p>
+          <p>Sungyoon Lee, Woojin Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[C] Advances in Neural Information Processing Systems (NeurIPS), 2021</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.neurips.cc/paper/2021/hash/07c5807d0d927dcd0980f86024e5208b-Abstract.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/sungyoon-lee/LossLandscapeMatters" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
     </div>
 
     <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers %}
+      
         <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
+          <p class="title"><b>Exploring Generative AI for Modeling the Dynamics of Asset Price Process</b></p>
+          <p><b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee</p>
+          <p><i>Preprint</i></p>
            <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+            
+              <a class="button" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4491342" target="_blank">Paper</a>
+            
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
+            
 
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
+            
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+            
 
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
+            
 
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
+            
 
           </div>
         </div>
-      {% endfor %}
+      
+        <div class="paper">
+          <p class="title"><b>Stability Analysis of Sharpness-Aware Minimization</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee</p>
+          <p><i>Preprint</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://arxiv.org/abs/2301.06308" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Exploring the Effect of Multi-step Ascent in Sharpness-Aware Minimization</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee</p>
+          <p><i>Preprint</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://arxiv.org/abs/2302.10181" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Fair Sampling in Diffusion Models through Switching Mechanism</b></p>
+          <p>Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>, Hoki Kim, Jaewook Lee, Saeroom Park</p>
+          <p><i>[C] Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://arxiv.org/abs/2401.03140" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/uzn36/AttributeSwitching" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Fantastic Robustness Measures: The Secrets of Robust Generalization</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee</p>
+          <p><i>[C] Advances in Neural Information Processing Systems (NeurIPS), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://openreview.net/forum?id=AGVBqJuL0T" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/Harry24k/MAIR" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Differentially Private Sharpness-Aware Training</b></p>
+          <p><b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Jaewook Lee</p>
+          <p><i>[C] International Conference on Machine Learning (ICML), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.mlr.press/v202/park23g.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/JinseongP/DPSAT" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Implicit Jacobian regularization weighted with impurity of probability output</b></p>
+          <p>Sungyoon Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[C] International Conference on Machine Learning (ICML), 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.mlr.press/v202/lee23q.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Fast sharpness-aware training for periodic time series classification and forecasting</b></p>
+          <p><b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Woojin Lee, Jaewook Lee</p>
+          <p><i>[J] Applied Soft Computing, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S1568494623004854" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Enhancing non-linear asset volatility forecasting models with investor sentiment and Explainable AI</b></p>
+          <p>Seungju Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[W] Korea Computer Congress (KCC) XAI Workshop, 2023, Best Paper Award (2/37)</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="http://xai.kaist.ac.kr/xai-workshop/2023/" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Generating Transferable Adversarial Examples for Speech Classification</b></p>
+          <p>Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[J] Pattern Recognition, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S0031320322007658" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Efficient differentially private kernel support vector classifier for multi-class classification</b></p>
+          <p><b><u>Jinseong Park</u></b>, Yujin Choi, Junyoung Byun, Jaewook Lee, Saerom Park</p>
+          <p><i>[J] Information Sciences, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://www.sciencedirect.com/science/article/pii/S0020025522011951" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/JinseongP/DP-SVDD" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Exploring Diverse Feature Extractions for Adversarial Audio Detection</b></p>
+          <p>Yujin Choi, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim</p>
+          <p><i>[J] IEEE Access, 2023</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://ieeexplore.ieee.org/abstract/document/10005309" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </div>
+      
+        <div class="paper">
+          <p class="title"><b>Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples</b></p>
+          <p>Sungyoon Lee, Woojin Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee</p>
+          <p><i>[C] Advances in Neural Information Processing Systems (NeurIPS), 2021</i></p>
+           <div class="paper-buttons">
+            
+              <a class="button" href="https://proceedings.neurips.cc/paper/2021/hash/07c5807d0d927dcd0980f86024e5208b-Abstract.html" target="_blank">Paper</a>
+            
+
+            
+
+            
+
+            
+
+            
+              <a class="button" href="https://github.com/sungyoon-lee/LossLandscapeMatters" target="_blank">Code</a>
+            
+
+            
+
+          </div>
+        </div>
+      
     </div>
   </div>
-  <br/>
 </div>
 
 
@@ -203,38 +885,97 @@ title: Personal Webpage
   <h2>Vitæ</h2>
 
   <ul class="vitae-content">
-    {% for exp in site.data.experience.experiences %}
+    
     <li class="vitae-item">
 
       <div class="vitae-time-place">
         <div class="vitae-place">
-          {{ exp.location }}
+          Seoul, Korea
         </div> 
         <div class="vitae-time">
-          {{ exp.time }}
+          Mar'20 - now
         </div>
       </div>
 
-      {% if forloop.first %}
+      
       <div class="vitae-actual vitae-image ">
-      {% else %}
-      <div class="vitae-image">
-      {% endif %}
+      
         <div class="vitae-image-placeholder">
-          {% picture exp-logos {{ exp.image }} --alt {{ exp.company }} %}
+          <img loading="lazy" src="/generated/assets/images/vitae/snu-296-6884e5694.webp" alt="Seoul National University (SNU)" srcset="/generated/assets/images/vitae/snu-120-6884e5694.webp 120w" width="296" height="300">
+
         </div>
       </div>
 
       <div class="vitae-panel">
         <div class="vitae-position">
-          <h3 class="vitae-title">{{ exp.title }} - <a target="_blank" rel="noopener" href="{{exp.url}}">{{ exp.company }}</a> </h3>
+          <h3 class="vitae-title">Ph.D. and M.S. in Industrial Engineering - <a target="_blank" rel="noopener" href="https://en.snu.ac.kr/">Seoul National University (SNU)</a> </h3>
         </div>
         <div class="vitae-description">
-          <p> {{ exp.description }} </p>
+          <p> Advised by Prof. Jaewook Lee in Statistical Learning & Computational Finance (SLCF) Lab. <br />Ph.D. (Mar. 2022 - Present) and  M.S. (Mar. 2020 - Feb. 2022). </p>
         </div>
       </div>
     </li>
-    {% endfor %}
+    
+    <li class="vitae-item">
+
+      <div class="vitae-time-place">
+        <div class="vitae-place">
+          Graz, Austria
+        </div> 
+        <div class="vitae-time">
+          Mar'19 - Aug'19
+        </div>
+      </div>
+
+      
+      <div class="vitae-image">
+      
+        <div class="vitae-image-placeholder">
+          <img loading="lazy" src="/generated/assets/images/vitae/tugraz-778-9a6f90c83.webp" alt="Technische Universität Graz" srcset="/generated/assets/images/vitae/tugraz-120-9a6f90c83.webp 120w" width="778" height="778">
+
+        </div>
+      </div>
+
+      <div class="vitae-panel">
+        <div class="vitae-position">
+          <h3 class="vitae-title">B.S. in Mechanical Engineering (Study Abroad) - <a target="_blank" rel="noopener" href="https://www.tugraz.at/en/home">Technische Universität Graz</a> </h3>
+        </div>
+        <div class="vitae-description">
+          <p>  </p>
+        </div>
+      </div>
+    </li>
+    
+    <li class="vitae-item">
+
+      <div class="vitae-time-place">
+        <div class="vitae-place">
+          Pohang, Korea
+        </div> 
+        <div class="vitae-time">
+          Mar'16 - Feb'20
+        </div>
+      </div>
+
+      
+      <div class="vitae-image">
+      
+        <div class="vitae-image-placeholder">
+          <img loading="lazy" src="/generated/assets/images/vitae/postech-400-ec18b54f4.webp" alt="Pohang University of Science and Technology (POSTECH)" srcset="/generated/assets/images/vitae/postech-120-ec18b54f4.webp 120w" width="400" height="400">
+
+        </div>
+      </div>
+
+      <div class="vitae-panel">
+        <div class="vitae-position">
+          <h3 class="vitae-title">B.S. in Industrial and Management Engineering - <a target="_blank" rel="noopener" href="https://www.postech.ac.kr/eng/">Pohang University of Science and Technology (POSTECH)</a> </h3>
+        </div>
+        <div class="vitae-description">
+          <p>  </p>
+        </div>
+      </div>
+    </li>
+    
   </ul>
 
 </div>
@@ -266,15 +1007,7 @@ title: Personal Webpage
     <h2>Publications</h2>
 
     <ul class="publications-content">
-      {% for paper in site.data.publications.publications %}
-      <li class="publications-item">
-        <h3 class="publication-title">{{ paper.title }}</h3>
-        <a target="_blank" rel="noopener" href="{{paper.paper}}">
-          <p class="publication-venue">{{ paper.venue }}</p>
-        </a>
-        <p class="publication-authors">{{ paper.authors }}</p>
-      </li>
-      {% endfor %}
+      
       </ul>
   </div> -->
 
@@ -286,15 +1019,47 @@ title: Personal Webpage
     <h2>Other Projects</h2>
 
     <ul class="other-projects-content">
-      {% for project in site.data.other_projects.other_projects %}
+      
       <li class="other-projects-item">
-        <a target="_blank" rel="noopener" href="{{project.code}}">
-          <h3 class="other-project-title">{{ project.title }}</h3>
+        <a target="_blank" rel="noopener" href="https://github.com/Gradiant/pyodi">
+          <h3 class="other-project-title">Pyodi: Python Object Detection Insights</h3>
         </a>
-        <p class="other-project-description">{{ project.description }}</p>
-        <p>Tags: <span class="bio-highlight">{{ project.tags }}</span></p>
+        <p class="other-project-description">A simple tool for explore your object detection dataset. The goal of this library is to provide simple and intuitive visualizations from your dataset and automatically find the best parameters for generating a specific grid of anchors that can fit you data characteristics</p>
+        <p>Tags: <span class="bio-highlight">#deep-learning #computer-vision #object-detection #pytorch</span></p>
       </li>
-      {% endfor %}
+      
+      <li class="other-projects-item">
+        <a target="_blank" rel="noopener" href="https://github.com/mmeendez8/Pegasas">
+          <h3 class="other-project-title">Feature construction and classification on Time Series</h3>
+        </a>
+        <p class="other-project-description">Collaborated with Federal Aviation Administration (FAA) in PEGASAS project with the aim of enhance general aviation safety. Developed a model which could classify flights in different categories (using data obtained from airborne sensors) through an unsupervised learning stage and an active learning procedure. Tools: Python, Scikit-Learn, Pandas, C, OpenMPI, Java <br />Presented in PEGASAS 2017 meeting at Texas A&M University</p>
+        <p>Tags: <span class="bio-highlight">#machine-learning #scikit-learn</span></p>
+      </li>
+      
+      <li class="other-projects-item">
+        <a target="_blank" rel="noopener" href="https://github.com/mmeendez8/InstrumentRecognition">
+          <h3 class="other-project-title">Instrument recognition using Neural Networks</h3>
+        </a>
+        <p class="other-project-description">System for musical instrument recognition using NNs with over 10000 audio samples based on Fourier Transform input features. Created our own NN library in Python from scratch.</p>
+        <p>Tags: <span class="bio-highlight">#python #numpy #fftransform</span></p>
+      </li>
+      
+      <li class="other-projects-item">
+        <a target="_blank" rel="noopener" href="https://github.com/mmeendez8/CorruptionSimulationTwitter">
+          <h3 class="other-project-title">Corruption simulation in Social Networks (Twitter)</h3>
+        </a>
+        <p class="other-project-description">Analysis using Twitter public API where we focused in understanding how politicians relate in the social network. We performed a Monte Carlo simulation of corruption behavior spreading with the aim of observing how corruption flows starting from some seed users that were imprisoned or involved in some case.</p>
+        <p>Tags: <span class="bio-highlight">#twitter #python #numpy</span></p>
+      </li>
+      
+      <li class="other-projects-item">
+        <a target="_blank" rel="noopener" href="https://github.com/mmeendez8/SafeFlight">
+          <h3 class="other-project-title">Flight Safe Android App</h3>
+        </a>
+        <p class="other-project-description">Developed Android app for collecting AHRS data during flights to facilitate the creation of a dataset for future experiments. This app was used by pilots and students that flew from Purdue’s airport.</p>
+        <p>Tags: <span class="bio-highlight">#java #android #sensors</span></p>
+      </li>
+      
       </ul>
   </div>
 
@@ -342,4 +1107,42 @@ title: Personal Webpage
         </div>
 </div>-->
 
-<script type="text/javascript" src="{{ '/libs/custom/myjs.js' | prepend: site.baseurl }}" defer></script>
+<script type="text/javascript" src="/libs/custom/myjs.js" defer></script>
+
+    <div class="footer">
+      <div class="footer-sign">
+      <p> <a  href=/index.html#top>Jinseong Park </a></p>
+      </div>
+
+      <div class="footer-thanks">
+        <p>based on  <a href="https://mmeendez8.github.io/" target="_blank" rel="noopener">Miguel Méndez templates</a><br>
+          (<a href="http://web.media.mit.edu/~msaveski" target="_blank" rel="noopener">Martin Saveski</a> and <a href='https://marinaaisa.com/' target="_blank" rel="noopener">Marina Aisa</a>)</p>
+      </div>
+
+      <div class="footer-icons">
+        <a href='/assets/cv/CV_JinseongPark.pdf' target="_blank" rel="noopener">
+          <i class="icon-medium" aria-hidden="true"></i>
+        </a>
+
+        <a href='https://linkedin.com/in/jinseongP' target="_blank" rel="noopener">
+          <i class="icon-linkedin-squared" aria-hidden="true"></i>
+        </a>
+
+        <a href='https://github.com/jinseongP' target="_blank" rel="noopener">
+          <i class="icon-github-circled" aria-hidden="true"></i>
+        </a>
+
+        <a href='https://scholar.google.com/citations?user=o4-E5z0AAAAJ\&hl=en' target="_blank" rel="noopener">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src=/libs/external/lightbox/lightbox.js defer></script>
+</body>
+
+</html>
