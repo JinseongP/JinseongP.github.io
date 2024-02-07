@@ -211,7 +211,7 @@ table thead {
 }
 
 .header-title i {
-  font-size: 2em; /* Adjust the size as needed */
+  font-size: 3.5em;
 }
 /*  ================ Sections  ================ */
 
@@ -561,11 +561,12 @@ table thead {
 }
 
 .footer p{
+  margin-bottom: 0px;
   font-size: 2em;
 }
 
 .footer i{
-  margin-bottom: 0px;
+  font-size: 2.5em;
 }
 
 .footer-icons, .footer-sign{
