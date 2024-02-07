@@ -40,6 +40,20 @@ h5,.h5{
   font-family: Graphik,Arial,sans-serif;  
 }
 
+/*  ================ Paper  ================ */
+
+.paper p {
+  margin-bottom: 2px }
+.paper-buttons {
+  margin-top: 5px }
+.paper .button {
+  display: inline-block;
+  height: 25px;
+  padding: 0 25px;
+  font-weight: 100;
+  line-height: 25px;
+  text-transform: none; }
+
 /*  ================ Common Elements  ================ */
 
 html {
