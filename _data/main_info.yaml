@@ -1,0 +1,13 @@
+name: "Jinseong Park"
+title: "Ph.D. Candidate at Seoul National University"
+description: "Industrial Enginerring"
+email: "jinseong [AT] snu.ac.kr"
+profile_pic: "/assets/images/profile-pics/jinseong.jpg"
+default_pic: "/assets/images/profile-pics/tmp.jpg"
+linkedin: "https://linkedin.com/in/jinseongP"
+cv: "/assets/cv/CV_JinseongPark.pdf"
+google_scholar: "https://scholar.google.com/citations?user=o4-E5z0AAAAJ\\&hl=en"
+github: "https://github.com/jinseongP"
+# rss: "/feed.xml"
+# google_analystics_tracking_id: "UA-133014227-1"
+posts_to_show: 6
