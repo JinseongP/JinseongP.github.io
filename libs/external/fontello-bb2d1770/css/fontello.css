@@ -60,3 +60,5 @@
 .icon-medium:before { content: '\f23a'; } /* '' */
 .icon-twitter-squared:before { content: '\f304'; } /* '' */
 .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+.icon-cv-square:before { content: "\e90a";}
+.icon-google-scholar-square:before { content: "\e9f9"; }
