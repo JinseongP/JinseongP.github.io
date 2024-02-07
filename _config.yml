@@ -1,0 +1,14 @@
+source: .
+destination: ./_site
+includes: ./_includes
+baseurl: null
+relative_url: "https://jinseongp.github.io"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
