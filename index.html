@@ -122,7 +122,7 @@ title: Personal Webpage
     <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
     <li><div class="button" data-ref="#papers-all">All</div></li>
   </ul> -->
-  <h3> Selected </h3>
+  <h3> [Selected] </h3>
   <div class="tab-content">
     <div class="tab-pane active" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
@@ -162,12 +162,12 @@ title: Personal Webpage
     </div>
     <br/>
   </div>
-<!-- 
-  <h3> Preprints and all papers </h3>
+
+  <h3> [Preprints and all papers] </h3>
   <div class="tab-content">
-    <div class="tab-pane active" id="papers-not-selected">
-      {% assign not_selected_papers = site.data.publications.papers | where: "selected", "n" %}
-      {% for paper in not_selected_papers %}
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where: "selected", "n" %}
+      {% for paper in selected_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p>{{ paper.authors }}</p>
@@ -202,8 +202,7 @@ title: Personal Webpage
       {% endfor %}
     </div>
     <br/>
-  </div> -->
-
+  </div>
 
     <!-- <div class="tab-content">
       <div class="tab-pane active" id="papers-all">
