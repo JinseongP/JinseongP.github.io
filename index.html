@@ -114,7 +114,7 @@ title: Personal Webpage
     <br/>
     <b>[J]: Journal, [C]: Conference, [W]: Workshop. </b> <sup>†</sup> indicates equal contribution.
   </p>
-
+<!-- 
   <ul class="tab-nav">
     <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
     <li><div class="button" data-ref="#papers-all">All</div></li>
@@ -157,8 +157,10 @@ title: Personal Webpage
         </div>
       {% endfor %}
     </div>
-
-    <div class="tab-pane" id="papers-all">
+    <div class="tab-pane" id="papers-all"> --> 
+    
+      <div class="tab-content">
+      <div class="tab-pane active" id="papers-all">
       {% for paper in site.data.publications.papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
