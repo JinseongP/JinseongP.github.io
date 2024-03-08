@@ -23,7 +23,7 @@ papers:
     selected: y
 
   - title: "Fair Sampling in Diffusion Models through Switching Mechanism"
-    authors: "Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>, Hoki Kim, Jaewook Lee, Saeroom Park"
+    authors: "Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>, Hoki Kim, Jaewook Lee, Saerom Park"
     venue: "[C] Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024"
     paper_pdf: "https://arxiv.org/abs/2401.03140"
     code: "https://github.com/uzn36/AttributeSwitching"
