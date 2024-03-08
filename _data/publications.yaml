@@ -17,6 +17,11 @@ papers:
     paper_pdf: "https://arxiv.org/abs/2302.10181"
     selected: n
 
+  - title: "In-distribution Public Data Synthesis with Diffusion Models for Differentially Private Image Classification"
+    authors: "<b><u>Jinseong Park<sup>†</sup></u></b>, Yujin Choi<sup>†</sup>, Jaewook Lee"
+    venue: "[C] The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024"
+    selected: y
+
   - title: "Fair Sampling in Diffusion Models through Switching Mechanism"
     authors: "Yujin Choi<sup>†</sup>, <b><u>Jinseong Park<sup>†</sup></u></b>, Hoki Kim, Jaewook Lee, Saeroom Park"
     venue: "[C] Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024"
