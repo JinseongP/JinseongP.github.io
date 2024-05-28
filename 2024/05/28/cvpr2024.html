@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta charset="utf-8">
+  <title>Jinseong Park | [CVPR 2024] Data Synthesis for Privacy</title>
+  <meta name="author" content="Jinseong Park">
+  <meta property="og:website" content="Jinseong Park Personal Homepage">
+  
+  
+  <meta name="description" property="og:description" content="Industrial Enginerring">
+  
+
+  
+  <meta name="image" property="og:image" content="https://jinseongp.github.io/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail.png">
+  
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton/normalize.css>
+  <link rel="stylesheet" href=/libs/external/skeleton/skeleton.css>
+
+  <!-- preload fonts -->
+  <link rel="preload" href="/libs/external/fonts/Graphik-Regular.woff2"" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/libs/external/fonts/Graphik-Semibold.woff2"" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/libs/external/fonts/Tiempos-Headline-Semibold.woff2"" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href=/libs/custom/my_css.css>
+  <link rel="stylesheet" href=/libs/external/fonts/fonts.css>
+
+  <!-- hack for non critical css https://web.dev/defer-non-critical-css/ -->
+  <link rel="preload" href=/libs/custom/syntax.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href=/libs/custom/syntax.css></noscript>
+  
+  <!-- non critical lighthouse css -->
+  <link rel="preload" href=/libs/external/lightbox/lightbox.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href=/libs/external/lightbox/lightbox.css></noscript>
+
+  <!-- Fontello
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet"
+    href=/libs/external/fontello-bb2d1770/css/fontello.css>
+  
+  <!-- Font-Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/font-awesome-4.7.0/css/font-awesome.min.css>
+
+  <!-- Academicons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/academicons-1.8.6/css/academicons.min.css>
+
+  <!-- Skeleton tabs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton_tabs/skeleton-tabs.css>
+  <script src=/libs/external/skeleton_tabs/skeleton-tabs.js></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href=/libs/icon.png>
+  <link rel="shortcut icon" type="image/png" href=/libs/icon.png>
+
+ 
+  <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHYVFNF1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LMHYVFNF1J');
+</script>
+    <!-- Twitter cards -->
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:title" content="[CVPR 2024] Data Synthesis for Privacy">
+  
+  
+  <meta name="twitter:description" content="Industrial Enginerring">
+  
+  
+
+  
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="https://jinseongp.github.io/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail.png">
+  
+
+  <!-- end of Twitter cards -->
+  
+
+  <!-- Mathjax -->
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          processEscapes: true
+      }
+  });
+</script>
+  
+</head>
+
+<body>
+    <!-- <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#about>About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#news>News</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#posts>Posts</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#publications>Publications</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#vitae>Vitæ</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/index.html#experience>Experience</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <header class="the-post-header">
+    <div class="container">
+      <a href="/">
+        <h3>Jinseong Park</h3>
+      </a>
+      <div>
+        <a  href=/index.html#posts>
+         <h3 class="posts-link">Posts</h3>
+        </a>
+      </div>
+    </div>
+</header>
+
+<div class="the-post-title-placeholder">
+  <div class="offset">
+    <div class="the-post-title-text">
+      <span class="the-post-date">May 28, 2024 </span>
+      <h1 class="the-post-title">[CVPR 2024] Data Synthesis for Privacy</h1>
+      <p>In-distribution Public Data Synthesis with Diffusion Models for Differentially Private Image Classification</p>
+    </div>
+  </div>
+
+  <div class="the-post-title-image">
+    <img src="/generated/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail-746-0b93ce2cf.png" alt="[CVPR 2024] Data Synthesis for Privacy" srcset="/generated/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail-400-2173095a9.webp 400w, /generated/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail-600-2173095a9.webp 600w, /generated/assets/images/posts/2024-05-28-cvpr2024.assets/thumbnail-746-2173095a9.webp 746w" sizes="(max-width: 767px) 100vw, 50vw" width="746" height="376">
+
+  </div>
+</div>
+
+<div class="container the-post-content">
+
+  <p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/1.PNG" alt="Slide 1" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/2.PNG" alt="Slide 2" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/3.PNG" alt="Slide 3" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/4.PNG" alt="Slide 4" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/5.PNG" alt="Slide 5" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/6.PNG" alt="Slide 6" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/7.PNG" alt="Slide 7" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/8.PNG" alt="Slide 8" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/9.PNG" alt="Slide 9" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/10.PNG" alt="Slide 10" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/11.PNG" alt="Slide 11" /></p>
+
+<p><img src="/assets/images/posts/2024-05-28-cvpr2024.assets/12.PNG" alt="Slide 12" /></p>
+
+  
+</div>
+
+
+    <div class="footer">
+      <div class="footer-sign">
+      <p> <a  href=/index.html#top>Jinseong Park </a></p>
+      </div>
+
+      <div class="footer-thanks">
+        <p>based on  <a href="https://mmeendez8.github.io/" target="_blank" rel="noopener">Miguel Méndez templates</a><br>
+          (<a href="http://web.media.mit.edu/~msaveski" target="_blank" rel="noopener">Martin Saveski</a> and <a href='https://marinaaisa.com/' target="_blank" rel="noopener">Marina Aisa</a>)</p>
+      </div>
+
+      <div class="footer-icons">
+        <a href='https://linkedin.com/in/jinseongP' target="_blank" rel="noopener">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+  
+        <a href='https://github.com/jinseongP' target="_blank" rel="noopener">
+          <i class="fa fa-github-square" aria-hidden="true"></i>
+        </a>
+  
+        <a href='https://scholar.google.com/citations?user=o4-E5z0AAAAJ&hl=en&oi=ao' target="_blank" rel="noopener">
+          <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src=/libs/external/lightbox/lightbox.js defer></script>
+</body>
+
+</html>
