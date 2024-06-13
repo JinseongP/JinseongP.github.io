@@ -20,6 +20,7 @@ papers:
   - title: "In-distribution Public Data Synthesis with Diffusion Models for Differentially Private Image Classification"
     authors: "<b><u>Jinseong Park</u></b><sup>†</sup>, Yujin Choi<sup>†</sup>, Jaewook Lee"
     venue: "[C] The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024"
+    paper_pdf: "https://openaccess.thecvf.com/content/CVPR2024/html/Park_In-distribution_Public_Data_Synthesis_with_Diffusion_Models_for_Differentially_Private_CVPR_2024_paper.html"
     code: "https://github.com/JinseongP/DPTrainer"
     selected: y
 
