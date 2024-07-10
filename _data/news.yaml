@@ -1,4 +1,7 @@
 news:
+  - month: "July"
+    year: "2024"
+    text: "I am attending ICML 2024 in person. See you in Vienna!"
   - month: "March"
     year: "2024"
     text: "One paper concering differntial privacy with in-distribution public data synthesis using diffusion model is accepted by CVPR 2024. I am attending Seattle in person!"
