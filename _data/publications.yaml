@@ -1,8 +1,8 @@
 papers:
   - title: "Modeling Asset Price Process: An Approach for Imaging Price Chart with Generative Diffusion Models"
     authors: "<b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee"
-    venue: "[J] Computational Economics (under proofs), 2024"
-    paper_pdf: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4491342"
+    venue: "[J] Computational Economics, 2024"
+    paper_pdf: "https://link.springer.com/article/10.1007/s10614-024-10668-4"
     selected: y
 
   - title: "Stability Analysis of Sharpness-Aware Minimization"
