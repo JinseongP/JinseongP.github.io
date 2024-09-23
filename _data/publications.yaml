@@ -5,6 +5,12 @@ papers:
     paper_pdf: "https://link.springer.com/article/10.1007/s10614-024-10668-4"
     selected: y
 
+  - title: "Leveraging Priors via Diffusion Bridge for Time Series Generation"
+    authors: "<b><u>Jinseong Park</u></b>, Seungyun Lee, Woojin Jeong, Yujin Choi, Jaewook Lee"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2408.06672"
+    selected: n
+
   - title: "Stability Analysis of Sharpness-Aware Minimization"
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
     venue: "Preprint"
