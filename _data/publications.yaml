@@ -1,4 +1,10 @@
 papers:
+  - title: "Are Self-Attentions Effective for Time Series Forecasting?"
+    authors: "Dongbin Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim"
+    venue: "[C] Advances in Neural Information Processing Systems (NeurIPS), 2024"
+    paper_pdf: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/cf66f995883298c4db2f0dcba28fb211-Abstract-Conference.html"
+    selected: y
+
   - title: "Modeling Asset Price Process: An Approach for Imaging Price Chart with Generative Diffusion Models"
     authors: "<b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee"
     venue: "[J] Computational Economics, 2024"
