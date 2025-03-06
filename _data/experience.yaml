@@ -5,7 +5,7 @@ experiences:
     time: "Mar'20 - Feb'25"
     title: "M.S./Ph.D. in Industrial Engineering"
     image: "/assets/images/vitae/snu.webp"
-    description: "Advised by Prof. Jaewook Lee in Statistical Learning & Computational Finance (SLCF) Lab. <br />Ph.D. (Mar'22 - Feb'25) and  M.S. (Mar'20 - Feb'22)."
+    description: "Advised by Prof. Jaewook Lee in Statistical Learning & Computational Finance (SLCF) Lab. <br />Ph.D. (Mar'22 - Feb'25) and  M.S. (Mar'20 - Feb'22). <br />Thesis: Generalization Frameworks for Temporal and Private Deep Learning: From Synthetic Data Generation to Robust Optimization"
 
   - company: "Technische Universität Graz"
     url: "https://www.tugraz.at/en/home"
