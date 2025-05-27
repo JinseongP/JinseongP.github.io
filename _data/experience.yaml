@@ -1,4 +1,20 @@
 experiences:
+  - company: "University of British Columbia (UBC)"
+    url: "https://www.ubc.ca/"
+    location: "Vancouver, Canada"
+    time: "Jun'25 - Aug'25"
+    title: "(Visting) Postdoctoral Research Fellow"
+    image: "/assets/images/vitae/ubc.webp"
+    description: "Hosted by Prof. Mijung Park."
+
+  - company: "Korea Institute for Advanced Study (KIAS)"
+    url: "https://www.kias.re.kr/kias/cp/centrsPgmsMng/introduction.do?centrspgmsCd=AI&menuNo=403020"
+    location: "Seoul, Korea"
+    time: "Mar'25 - Present"
+    title: "AI Research Fellow, Center for AI and Natural Sciences"
+    image: "/assets/images/vitae/kias.webp"
+    description: "Advised by Prof. Jeong Han Kim."
+
   - company: "Seoul National University (SNU)"
     url: "https://en.snu.ac.kr/"
     location: "Seoul, Korea"
@@ -7,11 +23,11 @@ experiences:
     image: "/assets/images/vitae/snu.webp"
     description: "Advised by Prof. Jaewook Lee in Statistical Learning & Computational Finance (SLCF) Lab. <br />Ph.D. (Mar'22 - Feb'25) and  M.S. (Mar'20 - Feb'22). <br />Thesis: Generalization Frameworks for Temporal and Private Deep Learning: From Synthetic Data Generation to Robust Optimization"
 
-  - company: "Technische Universität Graz"
+  - company: "Technische Universität Graz (TU Graz)"
     url: "https://www.tugraz.at/en/home"
     location: "Graz, Austria"
     time: "Mar'19 - Aug'19"
-    title: "B.S. in Mechanical Engineering (Study Abroad)"
+    title: "Student Exchange Program, B.S. in Mechanical Engineering"
     image: "/assets/images/vitae/tugraz.webp"
 
   - company: "Pohang University of Science and Technology (POSTECH)"
