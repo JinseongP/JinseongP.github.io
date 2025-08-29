@@ -1,4 +1,10 @@
 papers:
+  - title: "Safeguarding Privacy of Retrieval Data against Membership Inference Attacks: Is This Query Too Close to Home?"
+    authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <b><u>Jinseong Park</u></b>"
+    venue: "[C] EMNLP Findings, 2025"
+    paper_pdf: "https://arxiv.org/abs/2505.22061"
+    selected: y
+
   - title: "Are Self-Attentions Effective for Time Series Forecasting?"
     authors: "Dongbin Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim"
     venue: "[C] Advances in Neural Information Processing Systems (NeurIPS), 2024"

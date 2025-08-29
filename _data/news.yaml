@@ -1,4 +1,7 @@
 news:
+  - month: "Aug"
+    year: "2025"
+    text: "My first paper on privacy in large language models has been accepted to EMNLP Findings 2025. It is also my first paper as a corresponding author."
   - month: "Jun"
     year: "2025"
     text: "I will visit UBC (Vancouver, Canada) as a visiting Postdoc from June to July 2025. I will also attend ICML 2025 in person :)"
