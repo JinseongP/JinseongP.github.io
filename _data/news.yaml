@@ -1,4 +1,7 @@
 news:
+  - month: "Sep"
+    year: "2025"
+    text: "One paper was accepted at NeurIPS 2025."
   - month: "Aug"
     year: "2025"
     text: "My first paper on privacy in large language models has been accepted to EMNLP Findings 2025. It is also my first paper as a corresponding author."

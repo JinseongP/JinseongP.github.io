@@ -1,4 +1,10 @@
 papers:
+  - title: "Multi-Class Support Vector Machine with Differential Privacy"
+    authors: "<b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
+    venue: "[C] Advances in Neural Information Processing Systems (NeurIPS), 2025"
+    paper_pdf: "https://neurips.cc/virtual/2025/poster/118680"
+    selected: y
+
   - title: "Safeguarding Privacy of Retrieval Data against Membership Inference Attacks: Is This Query Too Close to Home?"
     authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <b><u>Jinseong Park</u></b>"
     venue: "[C] EMNLP Findings, 2025"
@@ -17,24 +23,6 @@ papers:
     venue: "[J] Computational Economics, 2024"
     paper_pdf: "https://link.springer.com/article/10.1007/s10614-024-10668-4"
     selected: y
-
-  - title: "Leveraging Priors via Diffusion Bridge for Time Series Generation"
-    authors: "<b><u>Jinseong Park</u></b>, Seungyun Lee, Woojin Jeong, Yujin Choi, Jaewook Lee"
-    venue: "Preprint"
-    paper_pdf: "https://arxiv.org/abs/2408.06672"
-    selected: n
-
-  - title: "Stability Analysis of Sharpness-Aware Minimization"
-    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
-    venue: "Preprint"
-    paper_pdf: "https://arxiv.org/abs/2301.06308"
-    selected: n
-
-  - title: "Exploring the Effect of Multi-step Ascent in Sharpness-Aware Minimization"
-    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
-    venue: "Preprint"
-    paper_pdf: "https://arxiv.org/abs/2302.10181"
-    selected: n
 
   - title: "In-distribution Public Data Synthesis with Diffusion Models for Differentially Private Image Classification"
     authors: "<b><u>Jinseong Park</u></b><sup>†</sup>, Yujin Choi<sup>†</sup>, Jaewook Lee"
@@ -80,7 +68,7 @@ papers:
     authors: "Seungju Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee"
     venue: "[W] Korea Computer Congress (KCC) XAI Workshop, 2023, Best Paper Award (2/37)"
     paper_pdf: "http://xai.kaist.ac.kr/xai-workshop/2023/"
-    selected: n
+    selected: y
 
   - title: "Generating Transferable Adversarial Examples for Speech Classification"
     authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee"
@@ -99,7 +87,7 @@ papers:
     authors: "Yujin Choi, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim"
     venue: "[J] IEEE Access, 2023"
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10005309"
-    selected: n
+    selected: y
 
   - title: "Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples"
     authors: "Sungyoon Lee, Woojin Lee, <b><u>Jinseong Park</u></b>, Jaewook Lee"
