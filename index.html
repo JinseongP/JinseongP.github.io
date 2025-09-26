@@ -45,17 +45,16 @@ title: Personal Webpage
       (<a href="https://www.kias.re.kr/kias/cp/centrsPgmsMng/introduction.do?centrspgmsCd=AI&menuNo=403020&lang=en">KIAS</a>).
       <br>
       At KIAS, I serve as part of my alternative military service as a technical research personnel until February 2027.  
-      <br>
       <br><br>
       <b>Short BIO</b>: B.S. (<a href="https://ime.postech.ac.kr/en/">IME</a>, <a href="https://www.postech.ac.kr/eng/">POSTECH</a>) →
       M.S./Ph.D. (<a href="https://safeai.snu.ac.kr/">SCLF Lab</a> advised by <a href="https://safeai.snu.ac.kr/members/professor">Prof. Jaewook Lee</a>, <a href="https://ie.snu.ac.kr/en/">IE</a>, <a href="https://en.snu.ac.kr/">SNU</a>) →
       Postdoc (<a href="https://www.kias.re.kr/kias/cp/centrsPgmsMng/introduction.do?centrspgmsCd=AI&menuNo=403020&lang=en">CAINS</a> advised by <a href="https://www.kias.re.kr/kias/people/faculty/viewMember.do?memberId=10460&trget=listFaculty&menuNo=408002">Prof. Jeong Han Kim</a>, 
       <a href="https://www.kias.re.kr/kias/main/main.do">KIAS</a>) including a visiting Postdoc (<a href="https://parklabml.github.io/">ParkLabML</a> hosted by <a href="https://parklabml.github.io/people.html">Prof. Mi Jung Park</a>, 
       <a href="https://www.cs.ubc.ca/">UBC</a>) → ??
+      <br>
     </p>
-    I am always open to collaborations! Please refer to topics of interest below.
     <p>
-      <b>Topics of interest</b>:  
+      <b>Topics of interest</b>: I am always open to collaborations! Please refer to topics of interest below.  
     <ul>
       <li>
         <b>SAFE AI</b>
@@ -143,67 +142,50 @@ title: Personal Webpage
   </p>
 
   <!-- 탭 버튼 -->
-  <ul class="nav nav-tabs" id="papersTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="selected-tab" data-bs-toggle="tab" 
-              data-bs-target="#papers-selected" type="button" role="tab">
-        Selected
-      </button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="all-tab" data-bs-toggle="tab" 
-              data-bs-target="#papers-all" type="button" role="tab">
-        All
-      </button>
-    </li>
+  <ul class="tab-nav">
+    <li><a class="active" href="#papers-selected">Selected</a></li>
+    <li><a href="#papers-all">All</a></li>
   </ul>
 
   <!-- 탭 내용 -->
-  <div class="tab-content mt-3" id="papersTabContent">
-
+  <div class="tab-content">
     <!-- Selected Papers -->
-    <div class="tab-pane fade show active" id="papers-selected" role="tabpanel" aria-labelledby="selected-tab">
+    <div class="tab-pane active" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
-        <div class="paper mb-3">
+        <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p>{{ paper.authors }}</p>
           <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="btn btn-sm btn-outline-primary" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="btn btn-sm btn-outline-secondary" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-          </div>
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
 
     <!-- All Papers -->
-    <div class="tab-pane fade" id="papers-all" role="tabpanel" aria-labelledby="all-tab">
+    <div class="tab-pane" id="papers-all">
       {% assign all_papers = site.data.publications.papers %}
       {% for paper in all_papers %}
-        <div class="paper mb-3">
+        <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p>{{ paper.authors }}</p>
           <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="btn btn-sm btn-outline-primary" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="btn btn-sm btn-outline-secondary" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-          </div>
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
-
   </div>
 </div>
-
 
 
 <!-- ========== RESUME ========== -->
