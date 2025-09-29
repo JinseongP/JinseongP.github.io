@@ -6,7 +6,7 @@ papers:
     selected: y
 
   - title: "Safeguarding Privacy of Retrieval Data against Membership Inference Attacks: Is This Query Too Close to Home?"
-    authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <b><u>Jinseong Park</u></b>"
+    authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <b><u>Jinseong Park</u></b><sup>*</sup>"
     venue: "[C] EMNLP Findings, 2025"
     paper_pdf: "https://arxiv.org/abs/2505.22061"
     selected: y
