@@ -1,0 +1,37 @@
+
+  - title: "[J6] Differentially private upsampling for enhanced anomaly detection in imbalanced data"
+    authors: "Yujin Choi, <b><u>Jinseong Park</u></b>, Youngjoo Park, Jaewook Lee, Junyoung Byun"
+    venue: "Engineering Applications of Artificial Intelligence, 2026"
+    paper_pdf: "https://www.sciencedirect.com/science/article/abs/pii/S0952197625031550"
+    selected: y
+
+  - title: "[J5] Modeling Asset Price Process: An Approach for Imaging Price Chart with Generative Diffusion Models"
+    authors: "<b><u>Jinseong Park</u></b>, Hyungjin Ko, Jaewook Lee"
+    venue: "Computational Economics, 2024"
+    paper_pdf: "https://link.springer.com/article/10.1007/s10614-024-10668-4"
+    selected: y
+
+  - title: "[J4] Fast sharpness-aware training for periodic time series classification and forecasting"
+    authors: "<b><u>Jinseong Park</u></b>, Hoki Kim, Yujin Choi, Woojin Lee, Jaewook Lee"
+    venue: "Applied Soft Computing, 2023"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S1568494623004854"
+    selected: y
+
+  - title: "[J3] Generating Transferable Adversarial Examples for Speech Classification"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Jaewook Lee"
+    venue: "Pattern Recognition, 2023"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0031320322007658"
+    selected: y
+
+  - title: "[J2] Efficient differentially private kernel support vector classifier for multi-class classification"
+    authors: "<b><u>Jinseong Park</u></b>, Yujin Choi, Junyoung Byun, Jaewook Lee, Saerom Park"
+    venue: "Information Sciences, 2023"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0020025522011951"
+    code: "https://github.com/JinseongP/DP-SVDD"
+    selected: y
+
+  - title: "[J1] Exploring Diverse Feature Extractions for Adversarial Audio Detection"
+    authors: "Yujin Choi, <b><u>Jinseong Park</u></b>, Jaewook Lee, Hoki Kim"
+    venue: "IEEE Access, 2023"
+    paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10005309"
+    selected: y
