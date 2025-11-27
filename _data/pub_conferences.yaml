@@ -1,7 +1,7 @@
 papers:
   - title: "[C10] TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
     authors: "<b><u>Jinseong Park</u></b><sup>†</sup>, Seungyun Lee<sup>†</sup>, Woojin Jeong, Yujin Choi, Jaewook Lee"
-    venue: "Advances in Neural Information Processing Systems (NeurIPS), 2025"
+    venue: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2026"
     paper_pdf: "https://arxiv.org/abs/2408.06672"
     selected: y
 
