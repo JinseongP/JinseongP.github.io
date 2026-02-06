@@ -1,8 +1,14 @@
 papers:
-  - title: "[C10] TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
+  - title: "[C11] TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
     authors: "<b><u>Jinseong Park</u></b><sup>†</sup>, Seungyun Lee<sup>†</sup>, Woojin Jeong, Yujin Choi, Jaewook Lee"
     venue: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2026"
     paper_pdf: "https://arxiv.org/abs/2408.06672"
+    selected: y
+
+  - title: "[C10] Co-occurring Associated REtained concepts in Diffusion Unlearning"
+    authors: "Miso Kim, Georu Lee, Yunji Kim, Hoki Kim<sup>*</sup>, <b><u>Jinseong Park</u></b><sup>*</sup>, Woojin Lee<sup>*</sup>"
+    venue: "International Conference on Learning Representations (ICLR), 2026"
+    paper_pdf: "https://openreview.net/forum?id=Ryc7jKP6H9"
     selected: y
 
   - title: "[C9] Multi-Class Support Vector Machine with Differential Privacy"

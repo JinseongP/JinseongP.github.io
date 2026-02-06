@@ -1,4 +1,10 @@
 news:
+  - month: "Feb"
+    year: "2026"
+    text: "At KIAS, I have been promoted to AI Fellow, starting March 2026."
+  - month: "Jan"
+    year: "2026"
+    text: "One paper on \"diffusion unlearning\" was accepted at ICLR 2026."
   - month: "Nov"
     year: "2025"
     text: "One paper on \"time series diffusion\" was accepted at KDD 2026. See you in Jeju Island!"
