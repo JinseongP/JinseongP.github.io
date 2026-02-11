@@ -6,7 +6,7 @@ papers:
     selected: y
 
   - title: "[C10] Co-occurring Associated REtained concepts in Diffusion Unlearning"
-    authors: "Miso Kim, Georu Lee, Yunji Kim, Hoki Kim<sup>*</sup>, <b><u>Jinseong Park</u></b><sup>*</sup>, Woojin Lee<sup>*</sup>"
+    authors: "Miso Kim, Georu Lee, Yunji Kim, Hoki Kim, <b><u>Jinseong Park</u></b>, Woojin Lee"
     venue: "International Conference on Learning Representations (ICLR), 2026"
     paper_pdf: "https://openreview.net/forum?id=Ryc7jKP6H9"
     selected: y
