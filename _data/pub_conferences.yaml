@@ -1,8 +1,14 @@
 papers:
-  - title: "[C11] TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
+  - title: "[C12] TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
     authors: "<b><u>Jinseong Park</u></b><sup>†</sup>, Seungyun Lee<sup>†</sup>, Woojin Jeong, Yujin Choi, Jaewook Lee"
     venue: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2026"
     paper_pdf: "https://arxiv.org/abs/2408.06672"
+    selected: y
+
+  - title: "[C11] Stability Analysis of Sharpness-Aware Minimization"
+    authors: "Hoki Kim, <b><u>Jinseong Park</u></b>, Yujin Choi, Jaewook Lee"
+    venue: "International Conference on Machine Learning (ICML), 2026"
+    paper_pdf: "https://arxiv.org/abs/2301.06308"
     selected: y
 
   - title: "[C10] Co-occurring Associated REtained concepts in Diffusion Unlearning"
