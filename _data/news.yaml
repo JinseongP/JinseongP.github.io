@@ -1,7 +1,7 @@
 news:
   - month: "May"
     year: "2026"
-    text: " I will give a tutorial talk on diffusion models at KIAS CAC Summer School [<a href="https://cac.kias.re.kr/2026" target="_blank">Link</a>]."
+    text: " I will give a tutorial talk on diffusion models at KIAS CAC Summer School [<a href='https://cac.kias.re.kr/2026' target='_blank'>Link</a>]."
   - month: "May"
     year: "2026"
     text: "One paper on \"stability analysis on optimization\" was accepted at ICML 2026. See you in Seoul!"
@@ -10,7 +10,7 @@ news:
     text: "At KIAS, I have been promoted to AI Fellow (AI Assistant Professor), starting March 2026."
   - month: "Jan"
     year: "2026"
-    text: "I will serve as an organizer of KIAS Center for AI and Natural Sciences 2026 Winter Workshop. [<a href="https://symposia.kias.re.kr/cains-jan2026/" target="_blank">Link</a>]."
+    text: "I will serve as an organizer of KIAS Center for AI and Natural Sciences 2026 Winter Workshop. [<a href='https://symposia.kias.re.kr/cains-jan2026/' target='_blank'>Link</a>]."
   - month: "Jan"
     year: "2026"
     text: "One paper on \"diffusion unlearning\" was accepted at ICLR 2026."
