@@ -1033,6 +1033,57 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 2rem 0 3rem;
 }
 
+/* ── COLLABORATION SECTION ── */
+.collab-section {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-soft);
+}
+
+.collab-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 3.5rem;
+  margin-top: 1.75rem;
+}
+
+.collab-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: opacity 0.2s, filter 0.2s;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+.collab-logo-item:hover {
+  opacity: 0.9;
+  filter: grayscale(0%);
+  text-decoration: none;
+}
+.collab-logo-item img {
+  max-height: 52px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+/* POSTECH wordmark is very wide — give it more room */
+.collab-logo-item.logo-wide img {
+  max-width: 240px;
+  max-height: 36px;
+}
+
+@media (max-width: 640px) {
+  .collab-logos { gap: 1.5rem 2.5rem; }
+  .collab-logo-item { height: 52px; }
+  .collab-logo-item img { max-height: 40px; max-width: 120px; }
+  .collab-logo-item.logo-wide img { max-width: 180px; max-height: 28px; }
+}
+
 /* ── FOOTER ── */
 .footer {
   background: #111827;

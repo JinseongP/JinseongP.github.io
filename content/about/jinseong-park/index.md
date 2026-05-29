@@ -19,8 +19,7 @@ career:
     location: "Seoul, Korea"
     time: "Mar'25 - Present"
     title: "AI Fellow (AI Assistant Professor), Center for AI and Natural Sciences"
-    description: "AI Research Fellow (Mar'25 - Feb'26, Mentor: Prof. <a href=\"https://kias.re.kr/kias/people/faculty/viewMember.do?memberId=10460&menuNo=403021\" target=\"_blank\" rel=\"noopener\">Jeong Han Kim</a>)
-      <br/>AI Fellow (Mar'26 - Present)"
+    description: "AI Research Fellow (Mar'25 - Feb'26)<br/>AI Fellow (Mar'26 - Present)"
   - company: "University of British Columbia (UBC)"
     url: "https://www.ubc.ca/"
     location: "Vancouver, Canada"
