@@ -4,7 +4,7 @@ summary: "Evaluate privacy threats and security vulnerabilities in generative AI
 icon: "🔬"
 status: "Ongoing"
 project_type: "Academic"
-period: "2026. 3 – 2028. 2"
+period: "Mar 2025 – Feb 2027"
 funder: "MSIT (과학기술정보통신부)"
 role: "PI"
 weight: 1
