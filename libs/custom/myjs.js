@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(".see-more-link"),b=document.querySelectorAll(".post.hidden");a.addEventListener("click",function(c){c.preventDefault(),b.forEach(a=>{a.classList.remove("hidden")}),a.style.display="none"})});
