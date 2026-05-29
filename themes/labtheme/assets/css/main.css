@@ -142,9 +142,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--color-nav-text);
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 0 0.5rem 1rem;
-  border-left: 2.5px solid var(--color-primary);
-  margin-left: 0.25rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -1643,19 +1641,24 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .hero-desc { font-size: 0.875rem; }
 
-  /* ── PSI text banner (Research Overview): keep horizontal, scale down ── */
+  /* ── PSI text banner (Research Overview): logo+name on top row, summary below ── */
   .psi-text-banner {
+    flex-wrap: wrap;
     gap: 0.75rem;
     padding: 1.5rem 0;
     align-items: flex-start;
   }
   .psi-text-greek { font-size: 1.1rem; }
-  .psi-text-abbr { font-size: 2.5rem; }
-  .psi-text-divider { height: 3rem; }
+  .psi-text-abbr { font-size: 2rem; }
+  .psi-text-divider { height: 2.75rem; }
   .psi-text-name { font-size: 1rem; }
   .psi-text-summary {
-    padding-left: 0.75rem;
+    flex-basis: 100%;
+    padding-left: 0;
     margin-left: 0;
+    border-left: none;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(140,26,46,0.18);
     font-size: 0.82rem;
   }
 
