@@ -55,6 +55,24 @@
   </div>
 </section>
 
+<!-- Latest News -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="section-divider"></div>
+    <div class="news-list">
+      {{ $news := hugo.Data.news.news }}
+      {{ range first 5 $news }}
+      <div class="news-item">
+        <span class="news-date">{{ .month }} {{ .year }}</span>
+        <span class="news-text">{{ .text | safeHTML }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <a class="view-all-link" href="{{ "/news/" | relURL }}">View all news →</a>
+  </div>
+</section>
+
 <!-- Collaborations -->
 <section class="section collab-section">
   <div class="container">
@@ -89,24 +107,6 @@
         <img src="/images/collab/ubc.svg" alt="University of British Columbia" />
       </a>
     </div>
-  </div>
-</section>
-
-<!-- Latest News -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Latest News</h2>
-    <div class="section-divider"></div>
-    <div class="news-list">
-      {{ $news := hugo.Data.news.news }}
-      {{ range first 5 $news }}
-      <div class="news-item">
-        <span class="news-date">{{ .month }} {{ .year }}</span>
-        <span class="news-text">{{ .text | safeHTML }}</span>
-      </div>
-      {{ end }}
-    </div>
-    <a class="view-all-link" href="{{ "/news/" | relURL }}">View all news →</a>
   </div>
 </section>
 
