@@ -1072,15 +1072,15 @@ img { max-width: 100%; height: auto; display: block; }
 }
 /* Wide wordmarks — more horizontal room, smaller height */
 .collab-logo-item.logo-wide img {
-  max-width: 200px;
-  max-height: 32px;
+  max-width: 240px;
+  max-height: 40px;
 }
 
 @media (max-width: 640px) {
-  .collab-logos { gap: 1.5rem 2.5rem; }
+  .collab-logos { gap: 1.5rem 2rem; }
   .collab-logo-item { height: 52px; }
   .collab-logo-item img { max-height: 38px; max-width: 110px; }
-  .collab-logo-item.logo-wide img { max-width: 150px; max-height: 26px; }
+  .collab-logo-item.logo-wide img { max-width: 160px; max-height: 28px; }
 }
 
 /* ── FOOTER ── */
