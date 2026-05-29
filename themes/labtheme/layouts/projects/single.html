@@ -2,18 +2,20 @@
 
 <div class="project-hero">
   <div class="container">
-    <div class="project-hero-tags">
-      {{ with .Params.status }}<span class="proj-tag proj-tag-status">{{ . }}</span>{{ end }}
-      {{ with .Params.project_type }}<span class="proj-tag proj-tag-type">{{ . }}</span>{{ end }}
-      {{ with .Params.funder_short }}<span class="proj-tag proj-tag-funder">{{ . }}</span>{{ end }}
-    </div>
-    <h1 class="project-hero-title">{{ .Title }}</h1>
-    <p class="project-hero-summary">{{ .Params.summary }}</p>
-    <div class="project-hero-meta">
-      {{ with .Params.period }}<span><strong>Period</strong> {{ . }}</span>{{ end }}
-      {{ with .Params.funder }}<span><strong>Funded by</strong> {{ . }}</span>{{ end }}
-      {{ with .Params.partner }}<span><strong>Partner</strong> {{ . }}</span>{{ end }}
-      {{ with .Params.role }}<span><strong>Role</strong> {{ . }}</span>{{ end }}
+    <div class="project-inner">
+      <div class="project-hero-tags">
+        {{ with .Params.status }}<span class="proj-tag proj-tag-status">{{ . }}</span>{{ end }}
+        {{ with .Params.project_type }}<span class="proj-tag proj-tag-type">{{ . }}</span>{{ end }}
+        {{ with .Params.funder_short }}<span class="proj-tag proj-tag-funder">{{ . }}</span>{{ end }}
+      </div>
+      <h1 class="project-hero-title">{{ .Title }}</h1>
+      <p class="project-hero-summary">{{ .Params.summary }}</p>
+      <div class="project-hero-meta">
+        {{ with .Params.period }}<span><strong>Period</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.funder }}<span><strong>Funded by</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.partner }}<span><strong>Partner</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.role }}<span><strong>Role</strong> {{ . }}</span>{{ end }}
+      </div>
     </div>
   </div>
 </div>
