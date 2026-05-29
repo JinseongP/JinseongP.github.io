@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Research on Jinseong Park</title>
+		<link>https://YOUR_USERNAME.github.io/research/</link>
+		<description>Recent content in Research on Jinseong Park</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="https://YOUR_USERNAME.github.io/research/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Differential Privacy &amp; Machine Learning</title>
+				<link>https://YOUR_USERNAME.github.io/research/differential-privacy/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://YOUR_USERNAME.github.io/research/differential-privacy/</guid>
+				<description>Developing privacy-preserving machine learning algorithms with rigorous differential privacy (DP) guarantees, including DP-SGD optimization, private SVMs, and synthetic data generation.</description>
+			</item>
+			<item>
+				<title>Generative AI &amp; Diffusion Models</title>
+				<link>https://YOUR_USERNAME.github.io/research/generative-ai/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://YOUR_USERNAME.github.io/research/generative-ai/</guid>
+				<description>Studying the theory and applications of diffusion models, including time series generation, fairness-aware generation, machine unlearning, and financial modeling.</description>
+			</item>
+			<item>
+				<title>Adversarial Robustness</title>
+				<link>https://YOUR_USERNAME.github.io/research/adversarial-robustness/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://YOUR_USERNAME.github.io/research/adversarial-robustness/</guid>
+				<description>Understanding and improving the robustness of deep learning models against adversarial attacks, with focus on certifiable defenses, robust generalization measures, and audio security.</description>
+			</item>
+			<item>
+				<title>Time Series Analysis</title>
+				<link>https://YOUR_USERNAME.github.io/research/time-series/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://YOUR_USERNAME.github.io/research/time-series/</guid>
+				<description>Advancing time series forecasting and classification with modern deep learning, including self-attention analysis, sharpness-aware training, and data-driven anomaly detection.</description>
+			</item>
+	</channel>
+</rss>

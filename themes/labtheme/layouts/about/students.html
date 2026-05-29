@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Students</h1>
+    <p>{{ .Site.Params.lab_name }} · {{ .Site.Params.university }}</p>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom:4rem;">
+
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="font-size:1.25rem;">PhD Students</h2>
+    <div class="section-divider"></div>
+    <div class="coming-soon">
+      <span style="font-size:2rem;">🎓</span>
+      <p>We are recruiting PhD students starting Fall 2026!</p>
+      <p style="margin-top:0.5rem;">
+        Interested? <a href="{{ "/contact/" | relURL }}">Get in touch</a> with your CV and research interests.
+      </p>
+    </div>
+  </section>
+
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="font-size:1.25rem;">MS Students</h2>
+    <div class="section-divider"></div>
+    <div class="coming-soon">
+      <span style="font-size:2rem;">📚</span>
+      <p>Graduate student positions available.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="font-size:1.25rem;">Research Interns</h2>
+    <div class="section-divider"></div>
+    <div class="coming-soon">
+      <span style="font-size:2rem;">💡</span>
+      <p>Research intern positions available for undergraduate and graduate students.</p>
+    </div>
+  </section>
+
+</div>
+{{ end }}

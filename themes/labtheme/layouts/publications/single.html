@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <div class="pub-badges" style="margin-bottom:0.75rem;">
+      {{ if eq .Params.pub_type "conference" }}<span class="badge badge-conference">Conference</span>
+      {{ else if eq .Params.pub_type "journal" }}<span class="badge badge-journal">Journal</span>
+      {{ else if eq .Params.pub_type "workshop" }}<span class="badge badge-workshop">Workshop</span>
+      {{ end }}
+      {{ with .Params.year }}<span class="badge badge-year">{{ . }}</span>{{ end }}
+      {{ if .Params.award }}<span class="badge badge-highlight">🏆 {{ .Params.award }}</span>{{ end }}
+    </div>
+    <h1 style="font-size:1.6rem; max-width:800px; line-height:1.3;">{{ .Title }}</h1>
+    <p style="margin-top:0.5rem; color:var(--color-text-muted);">{{ .Params.authors | safeHTML }}</p>
+    <p style="margin-top:0.25rem; font-style:italic; color:var(--color-text-muted);">{{ .Params.venue }}</p>
+    <div class="pub-links" style="margin-top:1rem;">
+      {{ with .Params.paper_url }}<a class="btn btn-primary btn-sm" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+      {{ with .Params.code_url }}<a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
+    </div>
+  </div>
+</div>
+<div class="container section-sm">
+  {{ .Content }}
+  <div style="margin-top:2rem;">
+    <a href="{{ "/publications/" | relURL }}" style="color:var(--color-text-muted); font-size:0.875rem;">← Back to Publications</a>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,45 @@
+---
+title: "Research"
+areas:
+  - title: "Understanding of AI"
+    icon: "🧠"
+    description: "We study the theoretical foundations of modern AI — how generative models learn distributions, why certain minima generalize better than others, and how to rigorously characterize the generalization gap. Our goal is to build principled understanding that informs better algorithm design."
+    topics:
+      - name: "Generative Modeling"
+        icon: "🎨"
+        desc: "Developing diffusion bridges and flow-based models for controllable generation, with applications to time series and image synthesis."
+      - name: "Generalization Theory"
+        icon: "📊"
+        desc: "Analyzing loss landscape geometry and sharpness measures to understand when and why deep networks generalize."
+      - name: "Optimization"
+        icon: "⚡"
+        desc: "Designing and analyzing adaptive optimizers (SAM, DP-SAM) and studying their implicit regularization effects."
+
+  - title: "Privacy & Safety Issues of AI"
+    icon: "🔒"
+    description: "We develop rigorous methods to ensure that AI systems protect individual privacy and are robust against adversarial interference. Our work spans formal privacy guarantees via differential privacy, machine unlearning for generative AI, and defenses against adversarial attacks."
+    topics:
+      - name: "Differential Privacy"
+        icon: "🛡️"
+        desc: "Optimizing the utility-privacy tradeoff for ML models trained with DP-SGD, including private SVMs and synthetic data generation."
+      - name: "Machine Unlearning"
+        icon: "🗑️"
+        desc: "Efficiently removing specific data or concepts from trained models (including diffusion models) without full retraining."
+      - name: "Adversarial Robustness"
+        icon: "⚔️"
+        desc: "Understanding certified robustness, transferable adversarial examples in speech, and membership inference in RAG systems."
+
+  - title: "Industrial Applications"
+    icon: "📈"
+    description: "We apply trustworthy AI techniques to real-world industrial challenges. Our collaborations with industry partners span manufacturing quality prediction, financial time series modeling, and anomaly detection under data scarcity — always with safety and privacy in mind."
+    topics:
+      - name: "Time Series"
+        icon: "📉"
+        desc: "Robust forecasting and generation for noisy, scarce sequential data; self-attention analysis for time series transformers."
+      - name: "Finance"
+        icon: "💹"
+        desc: "Asset price modeling with generative diffusion models, portfolio insurance strategies, and volatility forecasting with XAI."
+      - name: "Manufacturing"
+        icon: "🏭"
+        desc: "Privacy-preserving anomaly detection for imbalanced industrial data; generative AI for cosmetics color prediction (COSMAX)."
+---

@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+      {{ with .Params.status }}<span class="badge {{ if eq . "Active" }}badge-journal{{ else }}badge-year{{ end }}">{{ . }}</span>{{ end }}
+      {{ with .Params.project_type }}<span class="badge badge-conference">{{ . }}</span>{{ end }}
+    </div>
+    <h1 style="font-size:1.75rem; max-width:800px; line-height:1.25;">{{ .Title }}</h1>
+    <p style="margin-top:0.5rem;">{{ .Params.summary }}</p>
+  </div>
+</div>
+
+<div class="container section-sm">
+  <!-- Meta grid -->
+  <div class="project-meta" style="background:var(--color-bg-soft); border:1px solid var(--color-border); border-radius:var(--radius-card); padding:1.5rem; margin-bottom:2rem;">
+    {{ with .Params.period }}
+    <div class="project-meta-item">
+      <span class="project-meta-label">Period</span>
+      <span class="project-meta-value">{{ . }}</span>
+    </div>
+    {{ end }}
+    {{ with .Params.funder }}
+    <div class="project-meta-item">
+      <span class="project-meta-label">Funded by</span>
+      <span class="project-meta-value">{{ . }}</span>
+    </div>
+    {{ end }}
+    {{ with .Params.role }}
+    <div class="project-meta-item">
+      <span class="project-meta-label">Role</span>
+      <span class="project-meta-value">{{ . }}</span>
+    </div>
+    {{ end }}
+    {{ with .Params.partner }}
+    <div class="project-meta-item">
+      <span class="project-meta-label">Partner</span>
+      <span class="project-meta-value">{{ . }}</span>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ .Content }}
+
+  {{ if .Params.related_papers }}
+  <div style="margin-top:2.5rem;">
+    <h2 style="font-size:1.05rem; font-weight:700; margin-bottom:1rem;">Related Publications</h2>
+    <div style="display:flex; flex-direction:column; gap:0.5rem;">
+      {{ range .Params.related_papers }}
+      <div style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); font-size:0.875rem;">
+        {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener" style="font-weight:600;">{{ .title }}</a>{{ else }}<span style="font-weight:600;">{{ .title }}</span>{{ end }}
+        <span style="color:var(--color-text-muted);"> · {{ .venue }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div style="margin-top:2.5rem;">
+    <a href="{{ "/projects/" | relURL }}" style="color:var(--color-text-muted); font-size:0.875rem;">← Back to Projects</a>
+  </div>
+</div>
+
+{{ end }}

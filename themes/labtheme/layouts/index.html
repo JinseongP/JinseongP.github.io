@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        {{ .Site.Params.pi_name }}
+      </h1>
+      <p style="font-size:1.05rem; color:#bfdbfe; font-weight:500; margin-bottom:0.75rem; letter-spacing:0.01em;">
+        AI Fellow · Korea Institute for Advanced Study (KIAS)
+      </p>
+      <p class="hero-desc">{{ .Site.Params.pi_bio }}</p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="{{ "/about/" | relURL }}">About</a>
+        <a class="btn btn-outline" href="{{ "/research/" | relURL }}">Research</a>
+        <a class="btn btn-outline" href="{{ "/publications/" | relURL }}">Publications</a>
+        <a class="btn btn-outline" href="{{ "/contact/" | relURL }}">Contact</a>
+      </div>
+    </div>
+    <div class="hero-psi-card">
+      <div class="hero-psi-left">
+        <div class="hero-psi-greek">Ψ</div>
+        <div class="hero-psi-abbr">PSI</div>
+      </div>
+      <div class="hero-psi-divider"></div>
+      <div class="hero-psi-name">Private<br>&amp; Safe<br>Intelligence</div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Areas Preview -->
+<section class="section" style="background: var(--color-bg-soft);">
+  <div class="container">
+    <h2 class="section-title">Research</h2>
+    <div class="section-divider"></div>
+    {{ $areas := .Site.GetPage "/research" }}
+    {{ if $areas }}
+    <div class="home-research-grid">
+      {{ range $areas.Params.areas }}
+      <div class="home-research-card">
+        <div class="home-research-icon">{{ .icon }}</div>
+        <h3 class="home-research-title">{{ .title }}</h3>
+        <p class="home-research-desc">{{ .description }}</p>
+        <div class="home-research-topics">
+          {{ range .topics }}
+          <span class="home-research-topic">{{ .name }}</span>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    <a class="view-all-link" href="{{ "/research/" | relURL }}">View full research overview →</a>
+  </div>
+</section>
+
+<!-- Latest News -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="section-divider"></div>
+    <div class="news-list">
+      {{ $news := hugo.Data.news.news }}
+      {{ range first 5 $news }}
+      <div class="news-item">
+        <span class="news-date">{{ .month }} {{ .year }}</span>
+        <span class="news-text">{{ .text | safeHTML }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <a class="view-all-link" href="{{ "/news/" | relURL }}">View all news →</a>
+  </div>
+</section>
+
+{{ end }}

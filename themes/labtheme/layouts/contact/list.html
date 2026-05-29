@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Contact</h1>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom: 4rem;">
+
+  <div class="contact-layout">
+    <!-- Info column -->
+    <div class="contact-info-col">
+      <h2 class="section-title" style="font-size:1.25rem;">Contact Information</h2>
+      <div class="section-divider"></div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <p>jinseong [AT] kias [dot] re [dot] kr</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-icon">🏛</span>
+          <div>
+            <strong>Affiliation</strong>
+            <p>{{ .Site.Params.department }}<br />{{ .Site.Params.university }}<br />Seoul, Korea</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>Office</strong>
+            <p>KIAS Building 8, Room 8215<br />85 Hoegiro, Dongdaemun-gu, Seoul 02455, Korea</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map column -->
+    <div class="contact-map-col">
+      <iframe
+        src="https://maps.google.com/maps?q=37.5928514,127.0457461&z=16&output=embed"
+        width="100%"
+        height="380"
+        style="border:0; border-radius:12px; display:block;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="KIAS Location">
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+{{ end }}

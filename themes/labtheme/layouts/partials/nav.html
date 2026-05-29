@@ -1,0 +1,59 @@
+{{ $cur := . }}
+<header class="nav">
+  <div class="nav-inner">
+    <a href="{{ "/" | relURL }}" class="nav-logo">
+      <span>{{ .Site.Params.lab_short }}</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="nav-links" style="list-style:none; display:flex; align-items:center; gap:0.25rem;">
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="nav-item" x-data="{ open: false }" @mouseenter="open=true" @mouseleave="open=false">
+            <a href="{{ .URL }}"
+               class="{{ if hasPrefix $cur.RelPermalink .URL }}active{{ end }}"
+               @click.prevent="open = !open"
+               :aria-expanded="open ? 'true' : 'false'">
+              {{ .Name }}<span class="nav-chevron">▾</span>
+            </a>
+            <div class="nav-dropdown-wrap" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" style="display:none;">
+              {{ range .Children }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
+          <li class="nav-item">
+            <a href="{{ .URL }}"
+               class="{{ if or (eq $cur.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $cur.RelPermalink .URL)) }}active{{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" x-data @click="$dispatch('toggle-mobile-nav')" aria-label="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" x-data="{ open: false }" @toggle-mobile-nav.window="open = !open" :class="{ 'open': open }">
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.5rem 0;">
+          <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#6b7280; padding: 0.4rem 0; display:block;">{{ .Name }}</span>
+          {{ range .Children }}
+            <a href="{{ .URL }}" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      {{ else }}
+        <a href="{{ .URL }}" @click="open=false">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+</header>

@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Research Overview</h1>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom:4rem;">
+  <div class="psi-text-banner">
+    <div class="psi-text-left">
+      <div class="psi-text-greek">Ψ</div>
+      <div class="psi-text-abbr">PSI</div>
+    </div>
+    <div class="psi-text-divider"></div>
+    <div class="psi-text-name">Private<br>&amp; Safe<br>Intelligence</div>
+    <div class="psi-text-summary">
+      We investigate the theory and algorithms of trustworthy machine learning.
+      Our research spans three pillars: <strong>theoretical foundations</strong> of generative models and optimization;
+      <strong>privacy &amp; safety</strong> via differential privacy, machine unlearning, and adversarial robustness;
+      and <strong>industrial applications</strong> in time series, manufacturing, and finance.
+      Our mission is to build AI that is simultaneously private, safe, and intelligent.
+    </div>
+  </div>
+  <div class="research-overview">
+    {{ range $i, $area := .Params.areas }}
+    <div class="research-area">
+      <div class="research-area-header">
+        <span class="research-area-num">{{ add $i 1 }}</span>
+        <span class="research-area-icon">{{ $area.icon }}</span>
+        <h2 class="research-area-title">{{ $area.title }}</h2>
+      </div>
+      <p class="research-area-desc">{{ $area.description }}</p>
+      <div class="topic-grid">
+        {{ range $area.topics }}
+        <div class="topic-card">
+          <span class="topic-icon">{{ .icon }}</span>
+          <h4>{{ .name }}</h4>
+          <p>{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

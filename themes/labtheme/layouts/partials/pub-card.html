@@ -1,0 +1,36 @@
+<article class="pub-card">
+  <div class="pub-badges">
+    {{ if eq .Params.pub_type "conference" }}
+      <span class="badge badge-conference">Conference</span>
+    {{ else if eq .Params.pub_type "journal" }}
+      <span class="badge badge-journal">Journal</span>
+    {{ else if eq .Params.pub_type "workshop" }}
+      <span class="badge badge-workshop">Workshop</span>
+    {{ end }}
+    {{ with .Params.year }}<span class="badge badge-year">{{ . }}</span>{{ end }}
+    {{ if .Params.award }}<span class="badge badge-highlight">🏆 {{ .Params.award }}</span>{{ end }}
+  </div>
+
+  <h3 class="pub-title">
+    {{ if .Params.paper_url }}
+      <a href="{{ .Params.paper_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  </h3>
+
+  <p class="pub-authors">{{ .Params.authors | safeHTML }}</p>
+  <p class="pub-venue">{{ .Params.venue }}</p>
+
+  <div class="pub-links">
+    {{ with .Params.paper_url }}
+      <a class="btn btn-primary btn-sm" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
+    {{ end }}
+    {{ with .Params.code_url }}
+      <a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Code</a>
+    {{ end }}
+    {{ with .Params.project_url }}
+      <a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Project</a>
+    {{ end }}
+  </div>
+</article>

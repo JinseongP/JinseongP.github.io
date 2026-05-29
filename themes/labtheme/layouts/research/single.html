@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">{{ .Params.icon }}</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.summary }}</p>
+  </div>
+</div>
+
+<div class="container section-sm">
+  {{ .Content }}
+
+  {{ if .Params.key_papers }}
+  <div style="margin-top: 2.5rem;">
+    <h2 style="font-size:1.1rem; font-weight:700; margin-bottom:1rem;">Representative Papers</h2>
+    <div style="display:flex; flex-direction:column; gap:0.5rem;">
+      {{ range .Params.key_papers }}
+      <div style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); font-size:0.875rem;">
+        <a href="{{ .url }}" target="_blank" rel="noopener" style="font-weight:600;">{{ .title }}</a>
+        <span style="color:var(--color-text-muted);"> · {{ .venue }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div style="margin-top: 2.5rem;">
+    <a href="{{ "/research/" | relURL }}" style="color:var(--color-text-muted); font-size:0.875rem;">← Back to Research</a>
+  </div>
+</div>
+
+{{ end }}

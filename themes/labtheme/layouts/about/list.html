@@ -1,0 +1,100 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>About</h1>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom:4rem;">
+
+  {{ range where .Site.RegularPages "Section" "about" }}
+  {{ if eq .Params.role "pi" }}
+
+  <!-- Profile card (box): avatar + bio + career -->
+  <div class="member-pi">
+    <img class="member-pi-avatar"
+         src="{{ .Params.avatar | default "/images/profile/jinseong.jpg" }}"
+         alt="{{ .Title }}" />
+    <div>
+      <h2 class="member-pi-name">{{ .Title }}</h2>
+      <div class="member-pi-title">{{ .Params.title_position }}</div>
+      <div class="member-pi-affiliation">{{ .Params.department }} · {{ .Params.university }}</div>
+      <div style="font-size:0.875rem; color:var(--color-text-muted); margin-top:-0.6rem; margin-bottom:0.9rem;">✉ jinseong [AT] kias [dot] re [dot] kr</div>
+      <p class="member-pi-bio">{{ .Params.bio }}</p>
+      <div class="member-social">
+        {{ with .Params.google_scholar }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">Scholar</a>{{ end }}
+        {{ with .Params.github }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with .Params.linkedin }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+        {{ with .Params.cv }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">CV</a>{{ end }}
+      </div>
+
+      <!-- Career & Education (inside box) -->
+      {{ if .Params.career }}
+      <div class="pi-section">
+        <div class="pi-section-title">Career & Education</div>
+        <div class="career-timeline">
+          {{ range .Params.career }}
+          <div class="career-item">
+            <span class="career-time">{{ .time }}</span>
+            <div>
+              <div class="career-org">
+                {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .company }}</a>{{ else }}{{ .company }}{{ end }}
+                <span class="career-location"> · {{ .location }}</span>
+              </div>
+              <div class="career-role">{{ .title }}</div>
+              {{ with .description }}<div class="career-desc">{{ . | safeHTML }}</div>{{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+  <!-- Invited Talks (outside box) -->
+  {{ if .Params.invited_talks }}
+  <div class="pi-section pi-section-outer">
+    <div class="pi-section-title">Invited Talks</div>
+    {{ range .Params.invited_talks }}
+    <div class="talks-group">
+      <div class="talks-group-title">{{ .group }}</div>
+      {{ range .talks }}
+      <div class="talk-item">
+        <span class="talk-date">{{ .date }}</span>
+        <span class="talk-venue">{{ .venue }}{{ if .location }}, {{ .location }}{{ end }}{{ if .url }} <a class="talk-link" href="{{ .url }}" target="_blank" rel="noopener">[link]</a>{{ end }}{{ if .note }} <span class="talk-note">({{ .note }})</span>{{ end }}</span>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Teaching & Courses (outside box) -->
+  {{ if .Params.courses }}
+  <div class="pi-section">
+    <div class="pi-section-title">Teaching</div>
+    <div style="display:flex; flex-direction:column; gap:0.75rem;">
+      {{ range .Params.courses }}
+      <div class="course-item">
+        <div class="course-semester">{{ .period }}</div>
+        <div>
+          <span class="course-role">{{ .role }}{{ if .institution }} — {{ .institution }}{{ end }}</span>
+          {{ range .courses }}
+          <div class="course-name">{{ .name | safeHTML }}</div>
+          {{ with .note }}<div class="course-note">{{ . }}</div>{{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ end }}
+  {{ end }}
+
+</div>
+{{ end }}

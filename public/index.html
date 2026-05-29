@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.162.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JinseongP</title>
+  <meta name="description" content="AI Fellow at KIAS (Korea Institute for Advanced Study), Center for AI and Natural Sciences." />
+  
+  <link rel="stylesheet" href="/css/main.min.332682510dd3ac1c3ea85e64adcc898ecec58475e21414c06978592717d75807.css" integrity="sha256-MyaCUQ3TrBw&#43;qF5krcyJjs7FhHXiFBTAaXhZJxfXWAc=" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon.ico" />
+</head>
+<body>
+  
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span>Jinseong Park</span>
+    </a>
+
+    
+    <ul class="nav-links" style="list-style:none; display:flex; align-items:center; gap:0.25rem;">
+      
+        
+          <li class="nav-item">
+            <a href="/"
+               class="active">
+              Home
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/about/"
+               class="">
+              About
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item" x-data="{ open: false }" @mouseenter="open=true" @mouseleave="open=false">
+            <a href="/research/"
+               class=""
+               @click.prevent="open = !open"
+               :aria-expanded="open ? 'true' : 'false'">
+              Research<span class="nav-chevron">▾</span>
+            </a>
+            <div class="nav-dropdown-wrap" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" style="display:none;">
+              
+                <a href="/research/">Overview</a>
+              
+                <a href="/projects/">Projects</a>
+              
+            </div>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/publications/"
+               class="">
+              Publications
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item" x-data="{ open: false }" @mouseenter="open=true" @mouseleave="open=false">
+            <a href="/news/"
+               class=""
+               @click.prevent="open = !open"
+               :aria-expanded="open ? 'true' : 'false'">
+              News<span class="nav-chevron">▾</span>
+            </a>
+            <div class="nav-dropdown-wrap" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" style="display:none;">
+              
+                <a href="/news/">News</a>
+              
+                <a href="/gallery/">Gallery</a>
+              
+            </div>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/contact/"
+               class="">
+              Contact
+            </a>
+          </li>
+        
+      
+    </ul>
+
+    
+    <button class="nav-hamburger" x-data @click="$dispatch('toggle-mobile-nav')" aria-label="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+
+  
+  <nav class="nav-mobile" x-data="{ open: false }" @toggle-mobile-nav.window="open = !open" :class="{ 'open': open }">
+    
+      
+        <a href="/" @click="open=false">Home</a>
+      
+    
+      
+        <a href="/about/" @click="open=false">About</a>
+      
+    
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.5rem 0;">
+          <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#6b7280; padding: 0.4rem 0; display:block;">Research</span>
+          
+            <a href="/research/" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">Overview</a>
+          
+            <a href="/projects/" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">Projects</a>
+          
+        </div>
+      
+    
+      
+        <a href="/publications/" @click="open=false">Publications</a>
+      
+    
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.5rem 0;">
+          <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#6b7280; padding: 0.4rem 0; display:block;">News</span>
+          
+            <a href="/news/" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">News</a>
+          
+            <a href="/gallery/" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">Gallery</a>
+          
+        </div>
+      
+    
+      
+        <a href="/contact/" @click="open=false">Contact</a>
+      
+    
+  </nav>
+</header>
+
+
+  <main>
+    
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Jinseong Park
+      </h1>
+      <p style="font-size:1.05rem; color:#bfdbfe; font-weight:500; margin-bottom:0.75rem; letter-spacing:0.01em;">
+        AI Fellow · Korea Institute for Advanced Study (KIAS)
+      </p>
+      <p class="hero-desc">I am an AI fellow (AI Assistant Professor) at Korea Institute for Advanced Study (KIAS). My research focuses on the theory and algorithms on Private &amp; Safe Intelligence (PSI).</p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="/about/">About</a>
+        <a class="btn btn-outline" href="/research/">Research</a>
+        <a class="btn btn-outline" href="/publications/">Publications</a>
+        <a class="btn btn-outline" href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="hero-psi-card">
+      <div class="hero-psi-left">
+        <div class="hero-psi-greek">Ψ</div>
+        <div class="hero-psi-abbr">PSI</div>
+      </div>
+      <div class="hero-psi-divider"></div>
+      <div class="hero-psi-name">Private<br>&amp; Safe<br>Intelligence</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background: var(--color-bg-soft);">
+  <div class="container">
+    <h2 class="section-title">Research</h2>
+    <div class="section-divider"></div>
+    
+    
+    <div class="home-research-grid">
+      
+      <div class="home-research-card">
+        <div class="home-research-icon">🧠</div>
+        <h3 class="home-research-title">Understanding of AI</h3>
+        <p class="home-research-desc">We study the theoretical foundations of modern AI — how generative models learn distributions, why certain minima generalize better than others, and how to rigorously characterize the generalization gap. Our goal is to build principled understanding that informs better algorithm design.</p>
+        <div class="home-research-topics">
+          
+          <span class="home-research-topic">Generative Modeling</span>
+          
+          <span class="home-research-topic">Generalization Theory</span>
+          
+          <span class="home-research-topic">Optimization</span>
+          
+        </div>
+      </div>
+      
+      <div class="home-research-card">
+        <div class="home-research-icon">🔒</div>
+        <h3 class="home-research-title">Privacy &amp; Safety Issues of AI</h3>
+        <p class="home-research-desc">We develop rigorous methods to ensure that AI systems protect individual privacy and are robust against adversarial interference. Our work spans formal privacy guarantees via differential privacy, machine unlearning for generative AI, and defenses against adversarial attacks.</p>
+        <div class="home-research-topics">
+          
+          <span class="home-research-topic">Differential Privacy</span>
+          
+          <span class="home-research-topic">Machine Unlearning</span>
+          
+          <span class="home-research-topic">Adversarial Robustness</span>
+          
+        </div>
+      </div>
+      
+      <div class="home-research-card">
+        <div class="home-research-icon">📈</div>
+        <h3 class="home-research-title">Industrial Applications</h3>
+        <p class="home-research-desc">We apply trustworthy AI techniques to real-world industrial challenges. Our collaborations with industry partners span manufacturing quality prediction, financial time series modeling, and anomaly detection under data scarcity — always with safety and privacy in mind.</p>
+        <div class="home-research-topics">
+          
+          <span class="home-research-topic">Time Series</span>
+          
+          <span class="home-research-topic">Finance</span>
+          
+          <span class="home-research-topic">Manufacturing</span>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+    <a class="view-all-link" href="/research/">View full research overview →</a>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="section-divider"></div>
+    <div class="news-list">
+      
+      
+      <div class="news-item">
+        <span class="news-date">May 2026</span>
+        <span class="news-text">I will give a tutorial talk on diffusion models at KIAS CAC Summer School [<a href='https://cac.kias.re.kr/2026' target='_blank'>Link</a>].</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">May 2026</span>
+        <span class="news-text">One paper on "stability analysis on optimization" was accepted at ICML 2026. See you in Seoul!</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text">At KIAS, I have been promoted to AI Fellow (AI Assistant Professor), starting March 2026.</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text">I will serve as an organizer of KIAS Center for AI and Natural Sciences 2026 Winter Workshop [<a href='https://symposia.kias.re.kr/cains-jan2026/' target='_blank'>Link</a>].</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text">One paper on "diffusion unlearning" was accepted at ICLR 2026.</span>
+      </div>
+      
+    </div>
+    <a class="view-all-link" href="/news/">View all news →</a>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Jinseong Park · Korea Institute for Advanced Study (KIAS)</span>
+      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+baseURL = "https://YOUR_USERNAME.github.io/"
+locale = "en-us"
+title = "Jinseong Park"
+theme = "labtheme"
+
+[params]
+  tab_title = "JinseongP"
+  lab_name = "Jinseong Park"
+  lab_short = "Jinseong Park"
+  lab_full_name = ""
+  university = "Korea Institute for Advanced Study (KIAS)"
+  department = "Center for AI and Natural Sciences (CAINS)"
+  pi_name = "Jinseong Park"
+  pi_title = "AI Fellow"
+  pi_email = "jinseong@kias.re.kr"
+  pi_bio = "I am an AI fellow (AI Assistant Professor) at Korea Institute for Advanced Study (KIAS). My research focuses on the theory and algorithms on Private & Safe Intelligence (PSI)."
+  description = "AI Fellow at KIAS (Korea Institute for Advanced Study), Center for AI and Natural Sciences."
+  google_scholar = "https://scholar.google.com/citations?user=o4-E5z0AAAAJ&hl=en&oi=ao"
+  github = "https://github.com/JinseongP"
+  linkedin = "https://linkedin.com/in/jinseongP"
+  cv = "/cv/CV_JinseongPark.pdf"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+  pub_type = "pub_types"
+
+# ── MENUS ──────────────────────────────────
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+  identifier = "home"
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+  identifier = "about"
+
+# Students menu entry — re-enable when lab starts
+# [[menus.main]]
+#   name = "Students"
+#   url = "/team/students/"
+#   parent = "team"
+#   weight = 2
+
+[[menus.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 3
+  identifier = "research"
+
+[[menus.main]]
+  name = "Overview"
+  url = "/research/"
+  parent = "research"
+  weight = 1
+
+[[menus.main]]
+  name = "Projects"
+  url = "/projects/"
+  parent = "research"
+  weight = 2
+
+[[menus.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 4
+  identifier = "publications"
+
+[[menus.main]]
+  name = "News"
+  url = "/news/"
+  weight = 5
+  identifier = "news-top"
+
+[[menus.main]]
+  name = "News"
+  url = "/news/"
+  parent = "news-top"
+  identifier = "news-list"
+  weight = 1
+
+[[menus.main]]
+  name = "Gallery"
+  url = "/gallery/"
+  parent = "news-top"
+  identifier = "gallery"
+  weight = 2
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 6
+  identifier = "contact"

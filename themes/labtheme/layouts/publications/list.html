@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Publications</h1>
+    {{ $all := .Pages }}
+    {{ $conf := where $all ".Params.pub_type" "conference" }}
+    {{ $jour := where $all ".Params.pub_type" "journal" }}
+    {{ $work := where $all ".Params.pub_type" "workshop" }}
+    <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.4rem;">
+      <sup>†</sup> Equal contribution &nbsp;·&nbsp; <sup>*</sup> Corresponding author
+    </p>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom:4rem;">
+
+  <div x-data="{ active: 'all' }">
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <button class="filter-btn" :class="{ active: active === 'all' }" @click="active = 'all'">All</button>
+      <button class="filter-btn" :class="{ active: active === 'conference' }" @click="active = 'conference'">Conference</button>
+      <button class="filter-btn" :class="{ active: active === 'journal' }" @click="active = 'journal'">Journal</button>
+      <button class="filter-btn" :class="{ active: active === 'workshop' }" @click="active = 'workshop'">Workshop</button>
+    </div>
+
+    <!-- Build sorted pages and unique years -->
+    {{ $pages := sort .Pages ".Params.sort_weight" "asc" }}
+    {{ $years := slice }}
+    {{ range $pages }}
+      {{ $y := string .Params.year }}
+      {{ if not (in $years $y) }}
+        {{ $years = $years | append $y }}
+      {{ end }}
+    {{ end }}
+
+    <!-- Render by year group -->
+    {{ range $years }}
+      {{ $year := . }}
+      <div class="pub-year-section"
+           x-show="active === 'all' || $el.querySelectorAll('.pub-box[data-type=\'' + active + '\']').length > 0">
+        <div class="pub-year-divider">
+          <span class="pub-year-label">{{ $year }}</span>
+        </div>
+        <div class="pub-box-list" style="margin-top:0.75rem;">
+          {{ range $pages }}
+            {{ if eq (string .Params.year) $year }}
+            <div class="pub-box" data-type="{{ .Params.pub_type }}"
+                 x-show="active === 'all' || active === '{{ .Params.pub_type }}'">
+
+              <div class="pub-box-label
+                {{ if eq .Params.pub_type "conference" }} pub-label-conf{{ end }}
+                {{ if eq .Params.pub_type "journal" }} pub-label-jour{{ end }}
+                {{ if eq .Params.pub_type "workshop" }} pub-label-work{{ end }}">
+                {{ .Params.label | default "—" }}
+              </div>
+
+              <div class="pub-box-body">
+                <div class="pub-box-title-row">
+                  <h3 class="pub-box-title">
+                    {{ if .Params.paper_url }}
+                      <a href="{{ .Params.paper_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
+                    {{ else }}
+                      {{ .Title }}
+                    {{ end }}
+                  </h3>
+                  <div class="pub-box-links">
+                    {{ with .Params.paper_url }}
+                      <a class="pub-link-btn" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
+                    {{ end }}
+                    {{ with .Params.code_url }}
+                      <a class="pub-link-btn pub-link-code" href="{{ . }}" target="_blank" rel="noopener">Code</a>
+                    {{ end }}
+                  </div>
+                </div>
+                <p class="pub-box-authors">{{ .Params.authors | safeHTML }}</p>
+                <div class="pub-box-venue-row">
+                  <span class="pub-box-venue">{{ .Params.venue }}</span>
+                  {{ with .Params.addendum }}
+                    <span class="pub-box-addendum">{{ . }}</span>
+                  {{ end }}
+                  {{ with .Params.award }}
+                    <span class="pub-box-addendum pub-box-award">🏆 {{ . }}</span>
+                  {{ end }}
+                </div>
+              </div>
+
+            </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+  </div>
+</div>
+
+{{ end }}

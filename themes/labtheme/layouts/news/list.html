@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>News</h1>
+  </div>
+</div>
+
+<div class="container" style="padding-bottom: 4rem;">
+  {{ $news := hugo.Data.news.news }}
+  {{ $years := slice }}
+  {{ range $news }}
+    {{ if not (in $years .year) }}
+      {{ $years = $years | append .year }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $years }}
+  {{ $year := . }}
+  <div style="margin-bottom: 2.5rem;">
+    <div style="font-size:1.1rem; font-weight:800; color:var(--color-text); border-bottom: 2px solid var(--color-primary); display:inline-block; padding-bottom:0.3rem; margin-bottom:0.75rem;">{{ $year }}</div>
+    <div class="news-list">
+      {{ range $news }}
+      {{ if eq .year $year }}
+      <div class="news-item">
+        <span class="news-date">{{ .month }}</span>
+        <span class="news-text">{{ .text | safeHTML }}</span>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
