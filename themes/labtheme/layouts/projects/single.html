@@ -1,63 +1,60 @@
 {{ define "main" }}
 
-<div class="page-header">
+<div class="project-hero">
   <div class="container">
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
-      {{ with .Params.status }}<span class="badge {{ if eq . "Active" }}badge-journal{{ else }}badge-year{{ end }}">{{ . }}</span>{{ end }}
-      {{ with .Params.project_type }}<span class="badge badge-conference">{{ . }}</span>{{ end }}
+    <div class="project-hero-tags">
+      {{ with .Params.status }}<span class="proj-tag proj-tag-status">{{ . }}</span>{{ end }}
+      {{ with .Params.project_type }}<span class="proj-tag proj-tag-type">{{ . }}</span>{{ end }}
+      {{ with .Params.funder_short }}<span class="proj-tag proj-tag-funder">{{ . }}</span>{{ end }}
     </div>
-    <h1 style="font-size:1.75rem; max-width:800px; line-height:1.25;">{{ .Title }}</h1>
-    <p style="margin-top:0.5rem;">{{ .Params.summary }}</p>
+    <h1 class="project-hero-title">{{ .Title }}</h1>
+    <p class="project-hero-summary">{{ .Params.summary }}</p>
+    <div class="project-hero-meta">
+      {{ with .Params.period }}<span><strong>Period</strong> {{ . }}</span>{{ end }}
+      {{ with .Params.funder }}<span><strong>Funded by</strong> {{ . }}</span>{{ end }}
+      {{ with .Params.partner }}<span><strong>Partner</strong> {{ . }}</span>{{ end }}
+      {{ with .Params.role }}<span><strong>Role</strong> {{ . }}</span>{{ end }}
+    </div>
   </div>
 </div>
 
-<div class="container section-sm">
-  <!-- Meta grid -->
-  <div class="project-meta" style="background:var(--color-bg-soft); border:1px solid var(--color-border); border-radius:var(--radius-card); padding:1.5rem; margin-bottom:2rem;">
-    {{ with .Params.period }}
-    <div class="project-meta-item">
-      <span class="project-meta-label">Period</span>
-      <span class="project-meta-value">{{ . }}</span>
+<div class="container">
+  <div class="project-body">
+    <div class="project-content">
+      {{ .Content }}
     </div>
-    {{ end }}
-    {{ with .Params.funder }}
-    <div class="project-meta-item">
-      <span class="project-meta-label">Funded by</span>
-      <span class="project-meta-value">{{ . }}</span>
-    </div>
-    {{ end }}
-    {{ with .Params.role }}
-    <div class="project-meta-item">
-      <span class="project-meta-label">Role</span>
-      <span class="project-meta-value">{{ . }}</span>
-    </div>
-    {{ end }}
-    {{ with .Params.partner }}
-    <div class="project-meta-item">
-      <span class="project-meta-label">Partner</span>
-      <span class="project-meta-value">{{ . }}</span>
-    </div>
-    {{ end }}
-  </div>
 
-  {{ .Content }}
-
-  {{ if .Params.related_papers }}
-  <div style="margin-top:2.5rem;">
-    <h2 style="font-size:1.05rem; font-weight:700; margin-bottom:1rem;">Related Publications</h2>
-    <div style="display:flex; flex-direction:column; gap:0.5rem;">
-      {{ range .Params.related_papers }}
-      <div style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); font-size:0.875rem;">
-        {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener" style="font-weight:600;">{{ .title }}</a>{{ else }}<span style="font-weight:600;">{{ .title }}</span>{{ end }}
-        <span style="color:var(--color-text-muted);"> · {{ .venue }}</span>
+    {{ if .Params.news_coverage }}
+    <div class="project-related">
+      <h2 class="project-related-title">Press Coverage</h2>
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+        {{ range .Params.news_coverage }}
+        <a class="news-card" href="{{ .url }}" target="_blank" rel="noopener">
+          <div class="news-card-source">{{ .source }}</div>
+          <div class="news-card-title">{{ .title }}</div>
+          {{ with .date }}<div class="news-card-date">{{ . }}</div>{{ end }}
+          <div class="news-card-cta">기사 보기 →</div>
+        </a>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
-  </div>
-  {{ end }}
+    {{ end }}
 
-  <div style="margin-top:2.5rem;">
-    <a href="{{ "/projects/" | relURL }}" style="color:var(--color-text-muted); font-size:0.875rem;">← Back to Projects</a>
+    {{ if .Params.related_papers }}
+    <div class="project-related">
+      <h2 class="project-related-title">Related Publications</h2>
+      <div class="project-related-list">
+        {{ range .Params.related_papers }}
+        <div class="project-related-item">
+          {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}<span>{{ .title }}</span>{{ end }}
+          <span class="project-related-venue">{{ .venue }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <a href="{{ "/projects/" | relURL }}" class="project-back">← Back to Projects</a>
   </div>
 </div>
 

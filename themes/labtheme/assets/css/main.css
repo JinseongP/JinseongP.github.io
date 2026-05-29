@@ -1221,7 +1221,146 @@ img { max-width: 100%; height: auto; display: block; }
 .project-card p { font-size: 0.83rem; color: var(--color-text-muted); line-height: 1.6; flex: 1; margin-bottom: 0.75rem; }
 .project-card-footer { margin-top: auto; }
 
-/* Project single page */
+/* Project single page — hero + article layout */
+.project-hero {
+  background: var(--color-bg-soft);
+  border-bottom: 1px solid var(--color-border);
+  padding: 3rem 0 2.5rem;
+  margin-bottom: 0;
+}
+.project-hero-tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.proj-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+}
+.proj-tag-status { background: #dcfce7; color: #166534; }
+.proj-tag-funder { background: #dbeafe; color: #1e40af; }
+.proj-tag-type { background: #f3f4f6; color: #374151; }
+.project-hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  max-width: 780px;
+}
+.project-hero-summary {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 1.75rem;
+}
+.project-hero-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+.project-hero-meta strong { color: var(--color-text); font-weight: 600; margin-right: 0.3rem; }
+.project-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+.project-content h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+.project-content h2:first-child { margin-top: 0; }
+.project-content p {
+  font-size: 0.93rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+  margin-bottom: 0.5rem;
+}
+.project-content strong { color: var(--color-text); }
+.project-related {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+.project-related-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+.project-related-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.project-related-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.85rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.project-related-item:last-child { border-bottom: none; }
+.project-related-item a { color: var(--color-primary); font-weight: 500; }
+.project-related-item a:hover { text-decoration: underline; }
+.project-related-venue { color: var(--color-text-muted); font-size: 0.78rem; white-space: nowrap; }
+.project-back {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+}
+.project-back:hover { color: var(--color-primary); }
+
+.news-card {
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1.1rem 1.3rem;
+  text-decoration: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  background: var(--color-bg);
+}
+.news-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: var(--color-card-shadow);
+  text-decoration: none;
+}
+.news-card-source {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+.news-card-title {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.45;
+  margin-bottom: 0.25rem;
+}
+.news-card-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+.news-card-cta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Project meta (old — kept for compat) */
 .project-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
 .project-meta-item { display: flex; flex-direction: column; gap: 0.1rem; }
 .project-meta-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
