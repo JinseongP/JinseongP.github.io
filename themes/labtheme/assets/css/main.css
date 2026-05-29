@@ -1693,7 +1693,9 @@ img { max-width: 100%; height: auto; display: block; }
 
   /* ── Hero: remove PSI card, text only ── */
   .hero-psi-card { display: none; }
-  .hero-inner { grid-template-columns: 1fr; }
+  /* minmax(0,1fr) prevents grid track from expanding to content min-width */
+  .hero-inner { grid-template-columns: minmax(0, 1fr); }
+  .hero-content { min-width: 0; overflow: hidden; }
   .hero { padding: 3.5rem 0 3rem; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .hero-desc { font-size: 0.875rem; }
@@ -1767,9 +1769,11 @@ img { max-width: 100%; height: auto; display: block; }
   .page-header h1 { font-size: 1.35rem; }
   .section-title { font-size: 1.3rem; }
 
-  /* Hero buttons: single row */
-  .hero-links { gap: 0.35rem; flex-wrap: nowrap; }
-  .hero-links .btn { padding: 0.5rem 0.7rem; font-size: 0.79rem; }
+  /* Hero: tighter padding gives ~346px at 375px — just enough for 4 buttons */
+  .hero-inner { padding: 0 0.85rem; }
+  /* Hero buttons: single row at 375px+, wrap gracefully on narrower */
+  .hero-links { gap: 0.35rem; flex-wrap: wrap; }
+  .hero-links .btn { padding: 0.5rem 0.65rem; font-size: 0.79rem; }
   .btn { font-size: 0.82rem; padding: 0.55rem 1rem; }
 
   /* member-pi: photo centered, stacked */
