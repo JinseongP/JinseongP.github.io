@@ -7,5 +7,6 @@ authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <strong><u>Jins
 venue: "EMNLP Findings, 2025"
 year: 2025
 pub_type: "conference"
-paper_url: "https://arxiv.org/abs/2505.22061"
+paper_url: "https://aclanthology.org/2025.findings-emnlp.438/"
+code_url: "https://github.com/nonalcohol-park/MIRABEL"
 ---

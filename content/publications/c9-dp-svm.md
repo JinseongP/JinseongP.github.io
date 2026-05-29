@@ -8,5 +8,6 @@ venue: "Advances in Neural Information Processing Systems (NeurIPS), 2025"
 year: 2025
 pub_type: "conference"
 paper_url: "https://neurips.cc/virtual/2025/poster/118680"
+code_url: "https://github.com/JinseongP/private_multiclass_svm"
 featured: true
 ---
