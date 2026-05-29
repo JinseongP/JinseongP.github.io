@@ -41,5 +41,5 @@ areas:
         desc: "Asset price modeling with generative diffusion models and applications of AI in financial fields."
       - name: "Manufacturing"
         icon: "🏭"
-        desc: "Generative AI for cosmetics color prediction (COSMAX) and privacy concerns for industrial data."
+        desc: "Generative AI for industrial domain and privacy concerns for industrial data."
 ---

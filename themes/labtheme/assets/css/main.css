@@ -1765,8 +1765,9 @@ img { max-width: 100%; height: auto; display: block; }
   .page-header h1 { font-size: 1.35rem; }
   .section-title { font-size: 1.3rem; }
 
-  /* Hero buttons: wrap */
-  .hero-links { gap: 0.5rem; }
+  /* Hero buttons: single row */
+  .hero-links { gap: 0.35rem; flex-wrap: nowrap; }
+  .hero-links .btn { padding: 0.5rem 0.7rem; font-size: 0.79rem; }
   .btn { font-size: 0.82rem; padding: 0.55rem 1rem; }
 
   /* member-pi: photo centered, stacked */
