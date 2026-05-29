@@ -1,3 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60">
-  <text x="0" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" fill="#002145" letter-spacing="-1">UBC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 148" width="580" height="148" fill="none">
+  <!-- Shield clip -->
+  <defs>
+    <clipPath id="sc">
+      <path d="M4 4 h96 v84 Q100 116 52 140 Q4 116 4 88 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shield border -->
+  <path d="M4 4 h96 v84 Q100 116 52 140 Q4 116 4 88 Z"
+        fill="none" stroke="#002145" stroke-width="5"/>
+
+  <!-- Horizontal rule below UBC text -->
+  <line x1="4" y1="38" x2="100" y2="38" stroke="#002145" stroke-width="2.5"/>
+
+  <!-- UBC serif text -->
+  <text x="52" y="33" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="24" font-weight="bold" fill="#002145">UBC</text>
+
+  <!-- 3 wave lines -->
+  <path d="M8 52 C15 46 21 58 28 52 C35 46 41 58 48 52 C55 46 61 58 68 52 C75 46 81 58 88 52 C95 46 100 52 100 52"
+        stroke="#002145" stroke-width="2.8" stroke-linecap="round" clip-path="url(#sc)"/>
+  <path d="M4 61 C11 55 17 67 24 61 C31 55 37 67 44 61 C51 55 57 67 64 61 C71 55 77 67 84 61 C91 55 97 61 100 61"
+        stroke="#002145" stroke-width="2.8" stroke-linecap="round" clip-path="url(#sc)"/>
+  <path d="M4 70 C11 64 17 76 24 70 C31 64 37 76 44 70 C51 64 57 76 64 70 C71 64 77 76 84 70 C91 64 97 70 100 70"
+        stroke="#002145" stroke-width="2.8" stroke-linecap="round" clip-path="url(#sc)"/>
+
+  <!-- Horizontal rule below waves -->
+  <line x1="4" y1="78" x2="100" y2="78" stroke="#002145" stroke-width="2.5"/>
+
+  <!-- Mountain / tree motif (lower shield) -->
+  <!-- Left diagonal branches -->
+  <path d="M52 136 L20 98" stroke="#002145" stroke-width="3" stroke-linecap="round" clip-path="url(#sc)"/>
+  <path d="M52 126 L12 90" stroke="#002145" stroke-width="2.5" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Right diagonal branches (mirror) -->
+  <path d="M52 136 L84 98" stroke="#002145" stroke-width="3" stroke-linecap="round" clip-path="url(#sc)"/>
+  <path d="M52 126 L92 90" stroke="#002145" stroke-width="2.5" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Left side branches (shorter) -->
+  <path d="M38 118 L10 94" stroke="#002145" stroke-width="2" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Right side branches -->
+  <path d="M66 118 L94 94" stroke="#002145" stroke-width="2" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Central stem -->
+  <line x1="52" y1="138" x2="52" y2="78" stroke="#002145" stroke-width="2.5" stroke-linecap="round" clip-path="url(#sc)"/>
+  <!-- Leaf / plant at bottom centre -->
+  <path d="M52 138 C44 124 36 116 28 112 M52 138 C60 124 68 116 76 112"
+        stroke="#002145" stroke-width="2.2" stroke-linecap="round" fill="none" clip-path="url(#sc)"/>
+
+  <!-- Wordmark text -->
+  <text x="118" y="56"
+        font-family="'Arial Narrow','Arial',Helvetica,sans-serif"
+        font-size="30" font-weight="800" letter-spacing="3.5" fill="#002145">THE UNIVERSITY</text>
+  <text x="118" y="100"
+        font-family="'Arial Narrow','Arial',Helvetica,sans-serif"
+        font-size="30" font-weight="800" letter-spacing="3.5" fill="#002145">OF BRITISH COLUMBIA</text>
 </svg>
