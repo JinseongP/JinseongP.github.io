@@ -1629,9 +1629,13 @@ img { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     padding: 0.75rem 1.25rem 1.25rem;
   }
-  .nav-mobile a {
+  .nav-mobile > a {
     padding: 0.65rem 0;
     font-size: 0.95rem;
+  }
+  .nav-mobile-child {
+    padding: 0.55rem 0 0.55rem 1.75rem;
+    font-size: 0.93rem;
   }
 
   /* ── Hero: remove PSI card, text only ── */
@@ -1645,11 +1649,12 @@ img { max-width: 100%; height: auto; display: block; }
   .psi-text-banner {
     flex-wrap: wrap;
     gap: 0.75rem;
-    padding: 1.5rem 0;
-    align-items: flex-start;
+    padding: 1.25rem 0;
+    margin-bottom: 1.5rem;
+    align-items: center;
   }
-  .psi-text-greek { font-size: 1.1rem; }
-  .psi-text-abbr { font-size: 2rem; }
+  .psi-text-greek { display: none; }
+  .psi-text-abbr { font-size: 2.2rem; }
   .psi-text-divider { height: 2.75rem; }
   .psi-text-name { font-size: 1rem; }
   .psi-text-summary {
@@ -1661,6 +1666,8 @@ img { max-width: 100%; height: auto; display: block; }
     border-top: 1px solid rgba(140,26,46,0.18);
     font-size: 0.82rem;
   }
+  /* ── Research area: less top/bottom padding on mobile ── */
+  .research-area { padding: 1.75rem 0; }
 
   /* ── Topic grid (Research overview cards): single column ── */
   .topic-grid { grid-template-columns: 1fr; }
