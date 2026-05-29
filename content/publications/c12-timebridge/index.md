@@ -7,6 +7,7 @@ authors: "<strong><u>Jinseong Park</u></strong><sup>†</sup>, Seungyun Lee<sup>
 venue: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2026"
 year: 2026
 pub_type: "conference"
-paper_url: "https://arxiv.org/abs/2408.06672"
+paper_url: "https://dl.acm.org/doi/10.1145/3770854.3780195"
+code_url: "https://github.com/JinseongP/TimeBridge"
 featured: true
 ---

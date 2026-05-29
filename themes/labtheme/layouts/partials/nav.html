@@ -6,7 +6,7 @@
     </a>
 
     <!-- Desktop nav -->
-    <ul class="nav-links" style="list-style:none; display:flex; align-items:center; gap:0.25rem;">
+    <ul class="nav-links">
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <li class="nav-item" x-data="{ open: false }" @mouseenter="open=true" @mouseleave="open=false">
@@ -45,10 +45,10 @@
   <nav class="nav-mobile" x-data="{ open: false }" @toggle-mobile-nav.window="open = !open" :class="{ 'open': open }">
     {{ range .Site.Menus.main }}
       {{ if .HasChildren }}
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.5rem 0;">
-          <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#6b7280; padding: 0.4rem 0; display:block;">{{ .Name }}</span>
+        <div class="nav-mobile-group">
+          <span class="nav-mobile-group-label">{{ .Name }}</span>
           {{ range .Children }}
-            <a href="{{ .URL }}" style="padding-left:0.75rem; font-size:0.875rem;" @click="open=false">{{ .Name }}</a>
+            <a href="{{ .URL }}" class="nav-mobile-child" @click="open=false">{{ .Name }}</a>
           {{ end }}
         </div>
       {{ else }}
