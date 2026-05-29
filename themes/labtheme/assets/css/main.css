@@ -1203,7 +1203,7 @@ img { max-width: 100%; height: auto; display: block; }
 .research-overview { display: flex; flex-direction: column; gap: 0; }
 
 .research-area {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 .research-area:last-child { border-bottom: none; }
@@ -1769,8 +1769,8 @@ img { max-width: 100%; height: auto; display: block; }
   .page-header h1 { font-size: 1.35rem; }
   .section-title { font-size: 1.3rem; }
 
-  /* Hero: tighter padding gives ~346px at 375px — just enough for 4 buttons */
-  .hero-inner { padding: 0 0.85rem; }
+  /* Hero: tighter side padding on small screens; buttons wrap gracefully if needed */
+  .hero-inner { padding: 0 clamp(0.75rem, 3vw, 1.5rem); }
   /* Hero buttons: single row at 375px+, wrap gracefully on narrower */
   .hero-links { gap: 0.35rem; flex-wrap: wrap; }
   .hero-links .btn { padding: 0.5rem 0.65rem; font-size: 0.79rem; }
