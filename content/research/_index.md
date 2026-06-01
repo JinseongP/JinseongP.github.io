@@ -13,7 +13,7 @@ areas:
         desc: "Analyzing loss landscape geometry to understand when and why deep networks generalize."
       - name: "Memorization"
         icon: "⚡"
-        desc: "Investigating why memorization happens in AI and how it is related to generalization."
+        desc: "Investigating why memorization happens and how it is related to generalization."
 
   - title: "Privacy & Safety Issues of AI"
     icon: "🔒"
@@ -21,13 +21,13 @@ areas:
     topics:
       - name: "Differential Privacy"
         icon: "🛡️"
-        desc: "Optimizing the utility-privacy tradeoff for ML models trained with DP-SGD, including private SVMs and synthetic data generation."
+        desc: "Optimizing the utility-privacy trade-off of differential privacy for machine learning models and deep learning optimization."
       - name: "Machine Unlearning"
         icon: "🗑️"
-        desc: "Efficiently removing specific data or concepts from trained models (including diffusion models) without full retraining."
+        desc: "Efficiently removing specific data or concepts from trained models for \"right to be forgotten\"."
       - name: "Attack Robustness"
         icon: "⚔️"
-        desc: "Understanding robustness and building resilience against attacks such as adversarial attacks and membership inference."
+        desc: "Understanding robustness and building defense methods against attacks such as adversarial attacks and membership inference."
 
   - title: "Industrial Applications"
     icon: "📈"
@@ -35,10 +35,10 @@ areas:
     topics:
       - name: "Time Series"
         icon: "📉"
-        desc: "Robust forecasting and synthetic data generation for noisy, scarce sequential data."
+        desc: "Robust forecasting and synthetic data generation for noisy and scarce sequential data."
       - name: "Finance"
         icon: "💹"
-        desc: "Asset price modeling with generative diffusion models and applications of AI in financial fields."
+        desc: "Asset price modeling with generative diffusion models and AI applications for finance."
       - name: "Manufacturing"
         icon: "🏭"
         desc: "Generative AI for industrial domain and privacy concerns for industrial data."
