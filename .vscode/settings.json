@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    // Hugo 빌드 출력물 — 직접 편집 금지, CI가 자동 생성
+    "public/": true,
+    // Hugo 캐시/임시 파일
+    "resources/": true,
+    ".hugo_build.lock": true
+  }
+}
