@@ -1,7 +1,7 @@
 ---
 label: "C9"
 sort_weight: 6
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Multi-Class Support Vector Machine with Differential Privacy"
 authors: "<strong><u>Jinseong Park</u></strong>, Yujin Choi, Jaewook Lee"
 venue: "Advances in Neural Information Processing Systems (NeurIPS), 2025"

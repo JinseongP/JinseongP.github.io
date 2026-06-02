@@ -1,7 +1,7 @@
 ---
 label: "C2"
 sort_weight: 16
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Implicit Jacobian Regularization Weighted with Impurity of Probability Output"
 authors: "Sungyoon Lee, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"
 venue: "International Conference on Machine Learning (ICML), 2023"

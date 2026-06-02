@@ -1,7 +1,7 @@
 ---
 label: "C3"
 sort_weight: 15
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Differentially Private Sharpness-Aware Training"
 authors: "<strong><u>Jinseong Park</u></strong>, Hoki Kim, Yujin Choi, Jaewook Lee"
 venue: "International Conference on Machine Learning (ICML), 2023"

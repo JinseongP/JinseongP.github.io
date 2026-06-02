@@ -1,7 +1,7 @@
 ---
 label: "C7"
 sort_weight: 8
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Are Self-Attentions Effective for Time Series Forecasting?"
 authors: "Dongbin Kim, <strong><u>Jinseong Park</u></strong>, Jaewook Lee, Hoki Kim"
 venue: "Advances in Neural Information Processing Systems (NeurIPS), 2024"

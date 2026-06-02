@@ -1,7 +1,7 @@
 ---
 label: "C4"
 sort_weight: 12
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Fantastic Robustness Measures: The Secrets of Robust Generalization"
 authors: "Hoki Kim, <strong><u>Jinseong Park</u></strong>, Yujin Choi, Jaewook Lee"
 venue: "Advances in Neural Information Processing Systems (NeurIPS), 2023"

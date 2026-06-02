@@ -1,7 +1,7 @@
 ---
 label: "C6"
 sort_weight: 10
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "In-distribution Public Data Synthesis with Diffusion Models for Differentially Private Image Classification"
 authors: "<strong><u>Jinseong Park</u></strong><sup>†</sup>, Yujin Choi<sup>†</sup>, Jaewook Lee"
 venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024"

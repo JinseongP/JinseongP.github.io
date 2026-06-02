@@ -1,7 +1,7 @@
 ---
 label: "C1"
 sort_weight: 20
-addendum: "BK21+ Top Conf. (IF 4)"
+addendum: "Top Conf. (BK21 IF 4)"
 title: "Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples"
 authors: "Sungyoon Lee, Woojin Lee, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"
 venue: "Advances in Neural Information Processing Systems (NeurIPS), 2021"
