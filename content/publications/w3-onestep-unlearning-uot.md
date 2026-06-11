@@ -1,6 +1,6 @@
 ---
 label: "W3"
-sort_weight: 5.2
+sort_weight: 4
 title: "Unlearning for One-Step Generative Models via Unbalanced Optimal Transport"
 authors: "Hyundo Choi, Junhyeong An, <strong><u>Jinseong Park</u></strong><sup>*</sup>, Jaewoong Choi<sup>*</sup>"
 venue: "ICML Workshop on Foundations of Deep Generative Models (FoGen), 2026"

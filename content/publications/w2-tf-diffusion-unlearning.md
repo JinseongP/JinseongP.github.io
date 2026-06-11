@@ -1,6 +1,6 @@
 ---
 label: "W2"
-sort_weight: 5.1
+sort_weight: 5
 title: "Not Every Time and Frequency Need to Be Forgotten in Diffusion Unlearning"
 authors: "<strong><u>Jinseong Park</u></strong>, Mijung Park"
 venue: "ICML Workshop on Foundations of Deep Generative Models (FoGen), 2026"

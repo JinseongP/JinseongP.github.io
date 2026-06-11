@@ -1,6 +1,6 @@
 ---
 label: "C2"
-sort_weight: 16
+sort_weight: 19
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Implicit Jacobian Regularization Weighted with Impurity of Probability Output"
 authors: "Sungyoon Lee, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"

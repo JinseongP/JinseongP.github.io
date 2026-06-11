@@ -1,6 +1,6 @@
 ---
 label: "C5"
-sort_weight: 11
+sort_weight: 14
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Fair Sampling in Diffusion Models through Switching Mechanism"
 authors: "Yujin Choi<sup>†</sup>, <strong><u>Jinseong Park</u></strong><sup>†</sup>, Hoki Kim, Jaewook Lee, Saerom Park"

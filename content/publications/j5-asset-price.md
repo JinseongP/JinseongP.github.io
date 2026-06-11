@@ -1,6 +1,6 @@
 ---
 label: "J5"
-sort_weight: 9
+sort_weight: 12
 addendum: "SCIE Top 30.5%, SSCI Top 30.4% (IF 2.2)"
 title: "Modeling Asset Price Process: An Approach for Imaging Price Chart with Generative Diffusion Models"
 authors: "<strong><u>Jinseong Park</u></strong>, Hyungjin Ko, Jaewook Lee"

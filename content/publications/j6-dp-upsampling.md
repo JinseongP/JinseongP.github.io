@@ -1,6 +1,6 @@
 ---
 label: "J6"
-sort_weight: 5
+sort_weight: 8
 addendum: "SCIE Top 2.5% (IF 8.0)"
 title: "Differentially Private Upsampling for Enhanced Anomaly Detection in Imbalanced Data"
 authors: "Yujin Choi, <strong><u>Jinseong Park</u></strong>, Youngjoo Park, Jaewook Lee, Junyoung Byun"

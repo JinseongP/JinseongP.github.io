@@ -1,6 +1,6 @@
 ---
 label: "C1"
-sort_weight: 20
+sort_weight: 23
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Towards Better Understanding of Training Certifiably Robust Models against Adversarial Examples"
 authors: "Sungyoon Lee, Woojin Lee, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"

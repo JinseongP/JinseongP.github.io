@@ -1,6 +1,6 @@
 ---
 label: "W1"
-sort_weight: 17
+sort_weight: 20
 title: "Enhancing Non-linear Asset Volatility Forecasting Models with Investor Sentiment and Explainable AI"
 authors: "Seungju Lee, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"
 venue: "Korea Computer Congress (KCC) XAI Workshop, 2023"

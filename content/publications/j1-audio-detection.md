@@ -1,6 +1,6 @@
 ---
 label: "J1"
-sort_weight: 19
+sort_weight: 22
 addendum: "SCIE Top 34.4% (IF 3.4)"
 title: "Exploring Diverse Feature Extractions for Adversarial Audio Detection"
 authors: "Yujin Choi, <strong><u>Jinseong Park</u></strong>, Jaewook Lee, Hoki Kim"
