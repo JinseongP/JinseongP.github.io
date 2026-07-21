@@ -1,4 +1,7 @@
 news:
+  - month: "Jul"
+    year: 2026
+    text: "One paper on \"diffusion bridge\" was accepted at KDD 2026. See you in Jeju!"
   - month: "May"
     year: 2026
     text: "I will give a tutorial talk on diffusion models at KIAS CAC Summer School [<a href='https://cac.kias.re.kr/2026' target='_blank'>Link</a>]."

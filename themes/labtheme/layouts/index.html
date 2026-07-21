@@ -7,7 +7,7 @@
       <h1 class="hero-title">
         {{ .Site.Params.pi_name }}
       </h1>
-      <p style="font-size:1.05rem; color:#bfdbfe; font-weight:500; margin-bottom:0.75rem; letter-spacing:0.01em;">
+      <p style="font-size:1.05rem; color:var(--color-primary); font-weight:600; margin-bottom:0.75rem; letter-spacing:0.01em;">
         AI Fellow · Korea Institute for Advanced Study (KIAS)
       </p>
       <p class="hero-desc">{{ .Site.Params.pi_bio }}</p>
@@ -18,13 +18,8 @@
         <a class="btn btn-outline" href="{{ "/contact/" | relURL }}">Contact</a>
       </div>
     </div>
-    <div class="hero-psi-card">
-      <div class="hero-psi-left">
-        <div class="hero-psi-greek">Ψ</div>
-        <div class="hero-psi-abbr">PSI</div>
-      </div>
-      <div class="hero-psi-divider"></div>
-      <div class="hero-psi-name">Private<br>&amp; Safe<br>Intelligence</div>
+    <div class="hero-photo">
+      <img src="/images/profile/jinseong.webp" alt="Jinseong Park" width="480" height="600" />
     </div>
   </div>
 </section>

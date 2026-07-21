@@ -186,21 +186,22 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── HOME HERO ── */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f8fd 55%, #eaf1fb 100%);
+  color: var(--color-text);
   padding: 5rem 0 4rem;
   position: relative;
   overflow: hidden;
 }
 
+/* Subtle low-poly mesh texture (fades in from the right, stays clear behind text) */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+  inset: 0;
+  z-index: 0;
+  background: url('/images/hero-mesh.svg') center right / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
   pointer-events: none;
 }
 
@@ -212,6 +213,8 @@ img { max-width: 100%; height: auto; display: block; }
   grid-template-columns: 1fr auto;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tag {
@@ -240,7 +243,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero-desc {
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: var(--color-text-light);
   line-height: 1.75;
   margin-bottom: 2rem;
   max-width: 580px;
@@ -273,11 +276,11 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-primary:hover { background: var(--color-primary-dark); color: #fff; }
 
 .btn-outline {
-  background: transparent;
-  border: 1.5px solid rgba(255,255,255,0.3);
-  color: #e2e8f0;
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted);
 }
-.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); color: #fff; }
+.btn-outline:hover { background: #fff; border-color: var(--color-primary); color: var(--color-primary); }
 
 .btn-ghost {
   background: transparent;
@@ -291,54 +294,21 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.8rem;
 }
 
-/* Hero PSI card — glassmorphism with CSS text layout */
-.hero-psi-card {
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 100%);
-  border: 1.5px solid rgba(255,255,255,0.22);
-  border-radius: 20px;
-  padding: 2.5rem 2.75rem;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.18);
-}
-.hero-psi-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Hero profile photo (replaces the old PSI card) */
+.hero-photo {
   flex-shrink: 0;
-  gap: 0.1rem;
+  width: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 14px 40px rgba(15,37,90,0.18), 0 2px 8px rgba(15,37,90,0.10);
 }
-.hero-psi-greek {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.55);
-  line-height: 1;
-  letter-spacing: 0;
-}
-.hero-psi-abbr {
-  font-size: 3rem;
-  font-weight: 900;
-  color: rgba(255,255,255,0.95);
-  letter-spacing: -0.04em;
-  line-height: 1;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
-}
-.hero-psi-divider {
-  width: 2px;
-  height: 3rem;
-  background: rgba(255,255,255,0.38);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-.hero-psi-name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.9);
-  line-height: 1.4;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
 }
 
 /* Research page PSI text banner — matches logo layout */
@@ -399,10 +369,7 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 768px) {
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero { padding: 3rem 0 2.5rem; }
-  .hero-psi-card { order: -1; padding: 1.5rem 2rem; gap: 1.25rem; }
-  .hero-psi-abbr { font-size: 3.5rem; }
-  .hero-psi-divider { height: 2.75rem; }
-  .hero-psi-name { font-size: 1rem; }
+  .hero-photo { order: -1; width: 180px; margin: 0 auto; }
 }
 
 /* ── PUBLICATION CARD ── */
@@ -674,7 +641,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── MEMBER CARD ── */
 .member-pi {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: start;
   background: var(--color-bg);
@@ -683,15 +650,6 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 2rem;
   box-shadow: var(--color-card-shadow);
   margin-bottom: 1.5rem;
-}
-
-.member-pi-avatar {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: contain;
-  border: 1px solid var(--color-border);
-  align-self: flex-start;
 }
 
 .member-pi-name {
@@ -741,11 +699,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .social-link:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); text-decoration: none; }
 
-@media (max-width: 640px) {
-  .member-pi { grid-template-columns: 1fr; text-align: center; }
-  .member-pi-avatar { margin: 0 auto; }
-  .member-social { justify-content: center; }
-}
 
 /* ── CAREER TIMELINE ── */
 .career-timeline { display: flex; flex-direction: column; gap: 0; }
@@ -1662,8 +1615,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 0.93rem;
   }
 
-  /* ── Hero: remove PSI card, text only ── */
-  .hero-psi-card { display: none; }
+  /* ── Hero: photo stacks above text on mobile ── */
   /* minmax(0,1fr) prevents grid track from expanding to content min-width */
   .hero-inner { grid-template-columns: minmax(0, 1fr); }
   .hero-content { min-width: 0; overflow: hidden; }
@@ -1748,9 +1700,10 @@ img { max-width: 100%; height: auto; display: block; }
   .btn { font-size: 0.82rem; padding: 0.55rem 1rem; }
 
   /* member-pi: photo centered, stacked */
-  .member-pi { grid-template-columns: 1fr; text-align: center; padding: 1.25rem; }
-  .member-pi-avatar { margin: 0 auto; width: 160px; }
-  .member-social { justify-content: center; }
+  .member-pi { padding: 1.25rem; }
+  /* keep the 4 social links on a single row on small screens */
+  .member-social { flex-wrap: nowrap; gap: 0.4rem; }
+  .social-link { padding: 0.32rem 0.55rem; font-size: 0.75rem; }
   .career-item { text-align: left; }
 
   /* PSI abbr smaller */

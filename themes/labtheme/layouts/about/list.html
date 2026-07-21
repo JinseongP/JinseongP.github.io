@@ -11,11 +11,8 @@
   {{ range where .Site.RegularPages "Section" "about" }}
   {{ if eq .Params.role "pi" }}
 
-  <!-- Profile card (box): avatar + bio + career -->
+  <!-- Profile card (box): bio + career (photo moved to home hero) -->
   <div class="member-pi">
-    <img class="member-pi-avatar"
-         src="{{ .Params.avatar | default "/images/profile/jinseong.jpg" }}"
-         alt="{{ .Title }}" />
     <div>
       <h2 class="member-pi-name">{{ .Title }}</h2>
       <div class="member-pi-title">{{ .Params.title_position }}</div>
