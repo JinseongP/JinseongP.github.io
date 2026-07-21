@@ -17,8 +17,8 @@
       <h2 class="member-pi-name">{{ .Title }}</h2>
       <div class="member-pi-title">{{ .Params.title_position }}</div>
       <div class="member-pi-affiliation">{{ .Params.department }} · {{ .Params.university }}</div>
-      <div style="font-size:0.875rem; color:var(--color-text-muted); margin-top:-0.6rem; margin-bottom:0.9rem;">✉ jinseong [AT] kias [dot] re [dot] kr</div>
       <p class="member-pi-bio">{{ .Params.bio }}</p>
+      <div style="font-size:0.875rem; color:var(--color-text-muted); margin-top:-0.6rem; margin-bottom:0.9rem;">✉ jinseong [AT] kias [dot] re [dot] kr</div>
       <div class="member-social">
         {{ with .Params.google_scholar }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">Scholar</a>{{ end }}
         {{ with .Params.github }}<a class="social-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}

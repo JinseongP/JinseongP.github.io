@@ -10,9 +10,8 @@ github: "https://github.com/JinseongP"
 linkedin: "https://linkedin.com/in/jinseongP"
 cv: "/cv/CV_JinseongPark.pdf"
 bio: |
-  I am an AI fellow (AI Assistant Professor) at Korea Institute for Advanced Study (KIAS). My research focuses on the theory and algorithms on Private & Safe Intelligence (PSI).
-
-  I received my Ph.D. from Seoul National University advised by Prof. Jaewook Lee.
+  I am an AI fellow (AI Assistant Professor) at Korea Institute for Advanced Study (KIAS).
+  I also spent my time as postdoctoral fellow in University of British Columbia (UBC), hosted by Mijung Park. Before joining KIAS, I received my M.S. and Ph.D. from Seoul National University advised by Jaewook Lee. 
 career:
   - company: "Korea Institute for Advanced Study (KIAS)"
     url: "https://www.kias.re.kr/"
