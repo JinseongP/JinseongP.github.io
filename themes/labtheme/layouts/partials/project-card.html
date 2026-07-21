@@ -1,0 +1,20 @@
+<a class="project-card" href="{{ .RelPermalink }}" style="text-decoration:none; color:inherit;">
+  <div class="project-card-thumb" style="background:{{ .Params.color | default "linear-gradient(135deg,#1e40af,#2563eb)" }};">
+    {{ if .Params.logo }}
+      <img class="project-card-logo" src="{{ .Params.logo }}" alt="{{ .Params.funder_short | default .Title }}" />
+    {{ else }}
+      {{ .Params.icon | default "🔬" }}
+    {{ end }}
+  </div>
+  <div class="project-card-body">
+    <div class="project-card-tags">
+      {{ with .Params.status }}<span class="badge {{ if eq . "Active" }}badge-journal{{ else }}badge-year{{ end }}">{{ . }}</span>{{ end }}
+      {{ with .Params.project_type }}<span class="badge badge-conference">{{ . }}</span>{{ end }}
+    </div>
+    <h3>{{ .Title }}</h3>
+    {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+    <div class="project-card-footer">
+      <span style="font-size:0.8rem; color:var(--color-text-muted);">{{ .Params.period }}</span>
+    </div>
+  </div>
+</a>

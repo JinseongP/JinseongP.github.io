@@ -3,23 +3,29 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        {{ .Site.Params.pi_name }}
-      </h1>
-      <p style="font-size:1.05rem; color:var(--color-primary); font-weight:600; margin-bottom:0.75rem; letter-spacing:0.01em;">
-        AI Fellow · Korea Institute for Advanced Study (KIAS)
-      </p>
-      <p class="hero-desc">{{ .Site.Params.pi_bio }}</p>
-      <div class="hero-links">
-        <a class="btn btn-outline" href="{{ "/about/" | relURL }}">About</a>
-        <a class="btn btn-outline" href="{{ "/research/" | relURL }}">Research</a>
-        <a class="btn btn-outline" href="{{ "/publications/" | relURL }}">Publications</a>
-        <a class="btn btn-outline" href="{{ "/contact/" | relURL }}">Contact</a>
+    <div class="hero-card">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          {{ .Site.Params.pi_name }}
+        </h1>
+        <p style="font-size:1.05rem; color:var(--color-primary); font-weight:600; margin-bottom:0.75rem; letter-spacing:0.01em;">
+          AI Fellow · Korea Institute for Advanced Study (KIAS)
+        </p>
+        <div class="hero-desc">
+          <p>Hi, I'm Jinseong Park. <span class="hero-highlight">Starting Spring 2027, I will be joining the <a href="https://security.korea.ac.kr/m01_03?sca=%EC%A0%84%EC%9E%84%EA%B5%90%EC%88%98" target="_blank" rel="noopener">School of Cybersecurity</a> at Korea University as an Assistant Professor.</span></p>
+          <p>Until then, I am spending my gap year as an AI Fellow (AI Assistant Professor) at the <a href="https://www.kias.re.kr/kias/people/faculty/listFaculty.do?menuNo=408002" target="_blank" rel="noopener">Korea Institute for Advanced Study (KIAS)</a>, where my work focuses on establishing a theoretical understanding of generative AI and developing advanced algorithms for Private &amp; Safe Intelligence (PSI, i.e., Ψ).</p>
+          <p>I am seeking highly motivated collaborators and researchers. If you are interested in joining our group in Spring 2027, please send me an email.</p>
+        </div>
+        <div class="hero-links">
+          <a class="btn btn-outline" href="{{ "/about/" | relURL }}">About</a>
+          <a class="btn btn-outline" href="{{ "/research/" | relURL }}">Research</a>
+          <a class="btn btn-outline" href="{{ "/publications/" | relURL }}">Publications</a>
+          <a class="btn btn-outline" href="{{ "/contact/" | relURL }}">Contact</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-photo">
-      <img src="/images/profile/jinseong.webp" alt="Jinseong Park" width="480" height="600" />
+      <div class="hero-photo">
+        <img src="/images/profile/jinseong.webp" alt="Jinseong Park" width="354" height="472" />
+      </div>
     </div>
   </div>
 </section>
@@ -81,7 +87,7 @@
         <img src="/images/collab/snu-emblem.png" alt="Seoul National University" />
       </a>
       <a class="collab-logo-item" href="https://www.korea.ac.kr/sites/en/index.do" target="_blank" rel="noopener" title="Korea University">
-        <img src="/images/collab/korea-univ.svg" alt="Korea University" />
+        <img src="/images/collab/korea-univ.png" alt="Korea University" />
       </a>
       <a class="collab-logo-item logo-wide" href="https://www.hanyang.ac.kr/" target="_blank" rel="noopener" title="Hanyang University">
         <img src="/images/collab/hanyang.png" alt="Hanyang University" />

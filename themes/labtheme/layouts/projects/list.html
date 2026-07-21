@@ -2,31 +2,35 @@
 
 <div class="page-header">
   <div class="container">
-    <h1>Projects</h1>
+    <h1>Projects &amp; Grants</h1>
   </div>
 </div>
 
 <div class="container" style="padding-bottom:4rem;">
-  <div class="project-grid">
-    {{ range .Pages.ByParam "weight" }}
-    <a class="project-card" href="{{ .RelPermalink }}" style="text-decoration:none; color:inherit;">
-      <div class="project-card-thumb" style="background:{{ .Params.color | default "linear-gradient(135deg,#1e40af,#2563eb)" }};">
-        {{ .Params.icon | default "🔬" }}
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-tags">
-          {{ with .Params.status }}<span class="badge {{ if eq . "Active" }}badge-journal{{ else }}badge-year{{ end }}">{{ . }}</span>{{ end }}
-          {{ with .Params.project_type }}<span class="badge badge-conference">{{ . }}</span>{{ end }}
-        </div>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Params.summary }}</p>
-        <div class="project-card-footer">
-          <span style="font-size:0.8rem; color:var(--color-text-muted);">{{ .Params.period }}</span>
-        </div>
-      </div>
-    </a>
+
+  {{ $grants := where .Pages "Params.category" "grant" }}
+  {{ $projects := where .Pages "Params.category" "project" }}
+
+  {{ if $grants }}
+  <h2 class="section-title">Grants</h2>
+  <div class="section-divider"></div>
+  <div class="project-grid" style="margin-bottom:3rem;">
+    {{ range $grants.ByParam "weight" }}
+      {{ partial "project-card.html" . }}
     {{ end }}
   </div>
+  {{ end }}
+
+  {{ if $projects }}
+  <h2 class="section-title">Projects</h2>
+  <div class="section-divider"></div>
+  <div class="project-grid">
+    {{ range $projects.ByParam "weight" }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </div>
+  {{ end }}
+
 </div>
 
 {{ end }}

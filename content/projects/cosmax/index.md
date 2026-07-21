@@ -4,10 +4,11 @@ summary: "Develop generative neural networks for predicting colors in cosmetic m
 icon: "💄"
 status: "Completed"
 project_type: "Industry"
+category: "project"
 period: "Dec 2023 – Sep 2024"
 partner: "COSMAX (코스맥스)"
 role: "Researcher"
-weight: 2
+weight: 1
 news_coverage:
   - source: "조선일보"
     title: "AI가 파우더 색 조합… 1초에 화장품 10.2개 생산"

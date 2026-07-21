@@ -3,11 +3,12 @@ title: "Development of Generative Models to Safe and Trustworthy AI (안전하�
 summary: "Evaluate privacy threats and security vulnerabilities in generative AI models, and develop algorithms to ensure safe AI usage."
 icon: "🔬"
 status: "Ongoing"
-project_type: "Academic"
+project_type: "Grants"
+category: "grant"
 period: "Mar 2025 – Feb 2027"
 funder: "MSIT (과학기술정보통신부)"
 role: "PI"
-weight: 1
+weight: 2
 ---
 
 ## 연구 배경 및 목적

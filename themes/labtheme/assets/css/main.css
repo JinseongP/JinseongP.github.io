@@ -218,23 +218,31 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2.25rem;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
 
-/* White card behind the intro text so it stays readable over the mesh */
-.hero-content {
-  background: rgba(255,255,255,0.82);
+/* Unified white card: intro text + photo share one box with matched heights */
+.hero-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: stretch;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.85);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,0.85);
   border-radius: 20px;
-  padding: 2.25rem 2.5rem;
   box-shadow: 0 10px 34px rgba(15,37,90,0.09);
+  overflow: hidden;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 2.75rem;
 }
 
 .hero-tag {
@@ -268,6 +276,11 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 2rem;
   max-width: 580px;
 }
+.hero-desc p { margin-bottom: 0.8rem; }
+.hero-desc p:last-child { margin-bottom: 0; }
+.hero-highlight { color: #8c1a2e; font-weight: 600; }
+.hero-highlight a { color: inherit; text-decoration: underline; }
+.hero-highlight a:hover { color: #6f1424; }
 
 .hero-links {
   display: flex;
@@ -314,21 +327,19 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.8rem;
 }
 
-/* Hero profile photo (replaces the old PSI card) */
+/* Hero profile photo — smaller framed portrait, centered in the card's right side */
 .hero-photo {
-  flex-shrink: 0;
-  width: 260px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 5px solid #fff;
-  box-shadow: 0 14px 40px rgba(15,37,90,0.18), 0 2px 8px rgba(15,37,90,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.9rem 0 0.25rem;
 }
 .hero-photo img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  width: 195px;
+  height: auto;
+  border-radius: 14px;
   display: block;
+  box-shadow: 0 8px 24px rgba(15,37,90,0.16);
 }
 
 /* Research page PSI text banner — matches logo layout */
@@ -387,9 +398,43 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero { padding: 3rem 0 2.5rem; }
-  .hero-photo { order: -1; width: 180px; margin: 0 auto; }
+  /* Split the unified card back into: rounded photo on top, text card below */
+  .hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: auto;
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .hero-photo { padding: 0; }
+  .hero-photo {
+    order: -1;
+    display: block;
+    padding: 0;
+    width: 180px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 14px 40px rgba(15,37,90,0.18);
+  }
+  .hero-photo img { width: 100%; height: auto; border-radius: 0; box-shadow: none; object-position: center; }
+  .hero-content {
+    background: rgba(255,255,255,0.85);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 34px rgba(15,37,90,0.09);
+  }
 }
 
 /* ── PUBLICATION CARD ── */
@@ -801,6 +846,9 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.6;
 }
 .news-text a { color: var(--color-primary); }
+.news-highlight { color: #8c1a2e; font-weight: 600; }
+.news-highlight a { color: inherit; text-decoration: underline; }
+.news-highlight a:hover { color: #6f1424; }
 
 /* ── FILTER BAR ── */
 .filter-bar {
@@ -1278,6 +1326,13 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
   font-size: 3rem;
 }
+.project-card-logo {
+  max-width: 74%;
+  max-height: 62%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
 .project-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .project-card-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
 .project-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.35; }
@@ -1682,8 +1737,6 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* ── Hero: photo stacks above text on mobile ── */
-  /* minmax(0,1fr) prevents grid track from expanding to content min-width */
-  .hero-inner { grid-template-columns: minmax(0, 1fr); }
   .hero-content { min-width: 0; overflow: hidden; padding: 1.75rem 1.75rem; }
   .hero { padding: 2.5rem 0 2rem; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }

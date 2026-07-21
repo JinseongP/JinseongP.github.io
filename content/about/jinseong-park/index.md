@@ -50,7 +50,6 @@ invited_talks:
       - venue: "International Conference for the 80th Anniversary of the Korean Mathematical Society (KMS)"
         location: "Seoul, Korea"
         date: "Jun 23, 2026"
-        note: "Scheduled"
   - group: "Data Privacy in (Generative) AI"
     talks:
       - venue: "Artificial Intelligence Graduate School, UNIST"
