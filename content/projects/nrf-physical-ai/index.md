@@ -1,7 +1,7 @@
 ---
 title: "Controllable Generative Models for Physical AI Alignment with Physical World"
 summary: "I participate as a researcher in a Basic Research Lab (BRL) of Sungyoon Lee, Hwijae Son, Jaewoong Choi, Sangwoong Yoon."
-logo: "/images/nrf.png"
+logo: "/images/project/nrf.png"
 color: "#ffffff"
 status: "Ongoing"
 project_type: "Grants"

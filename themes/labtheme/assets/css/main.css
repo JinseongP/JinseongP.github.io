@@ -225,11 +225,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* Unified white card: intro text + photo share one box with matched heights */
 .hero-card {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   align-items: stretch;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
   background: rgba(255,255,255,0.85);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);

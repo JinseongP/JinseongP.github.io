@@ -1,7 +1,7 @@
 ---
 title: "Prediction and Generative AI for Color Cosmetics"
 summary: "Develop generative neural networks for predicting colors in cosmetic manufacture."
-icon: "💄"
+logo: "/images/project/cosmax.png"
 status: "Completed"
 project_type: "Industry"
 category: "project"

@@ -1,7 +1,7 @@
 ---
 title: "Development of Generative Models to Safe and Trustworthy AI (안전하고 신뢰가능한 인공지능을 위한 생성 모델 개발)"
 summary: "Evaluate privacy threats and security vulnerabilities in generative AI models, and develop algorithms to ensure safe AI usage."
-icon: "🔬"
+logo: "/images/project/kias-cains.png"
 status: "Ongoing"
 project_type: "Grants"
 category: "grant"
