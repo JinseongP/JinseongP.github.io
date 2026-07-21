@@ -193,16 +193,25 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden;
 }
 
-/* Subtle low-poly mesh texture (fades in from the right, stays clear behind text) */
+/* Subtle low-poly mesh texture — slowly drifts, fades in from the right */
 .hero::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -10%;
   z-index: 0;
   background: url('/images/hero-mesh.svg') center right / cover no-repeat;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
           mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
   pointer-events: none;
+  will-change: transform;
+  animation: heroDrift 26s ease-in-out infinite alternate;
+}
+@keyframes heroDrift {
+  from { transform: translate3d(0, 0, 0) scale(1.02); }
+  to   { transform: translate3d(-2.5%, 1.8%, 0) scale(1.09); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
 }
 
 .hero-inner {
@@ -211,10 +220,21 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 4rem;
+  gap: 2.25rem;
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+/* White card behind the intro text so it stays readable over the mesh */
+.hero-content {
+  background: rgba(255,255,255,0.82);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 20px;
+  padding: 2.25rem 2.5rem;
+  box-shadow: 0 10px 34px rgba(15,37,90,0.09);
 }
 
 .hero-tag {
@@ -1664,7 +1684,7 @@ img { max-width: 100%; height: auto; display: block; }
   /* ── Hero: photo stacks above text on mobile ── */
   /* minmax(0,1fr) prevents grid track from expanding to content min-width */
   .hero-inner { grid-template-columns: minmax(0, 1fr); }
-  .hero-content { min-width: 0; overflow: hidden; }
+  .hero-content { min-width: 0; overflow: hidden; padding: 1.75rem 1.75rem; }
   .hero { padding: 2.5rem 0 2rem; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .hero-desc { font-size: 0.875rem; }
@@ -1740,6 +1760,7 @@ img { max-width: 100%; height: auto; display: block; }
 
   /* Hero: tighter side padding on small screens; buttons wrap gracefully if needed */
   .hero-inner { padding: 0 clamp(0.75rem, 3vw, 1.5rem); }
+  .hero-content { padding: 1.4rem 1.35rem; }
   /* Hero buttons: single row at 375px+, wrap gracefully on narrower */
   .hero-links { gap: 0.35rem; flex-wrap: wrap; }
   .hero-links .btn { padding: 0.5rem 0.65rem; font-size: 0.79rem; }
