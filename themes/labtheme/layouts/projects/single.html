@@ -7,7 +7,7 @@
         {{ with .Params.status }}<span class="proj-tag proj-tag-status">{{ . }}</span>{{ end }}
         {{ with .Params.project_type }}<span class="proj-tag proj-tag-type">{{ . }}</span>{{ end }}
         {{ with .Params.funder_short }}<span class="proj-tag proj-tag-funder">{{ . }}</span>{{ end }}
-        {{ with .Params.role }}<span><strong>Role</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.role }}<span class="proj-tag proj-tag-role">{{ . }}</span>{{ end }}
       </div>
       <h1 class="project-hero-title">{{ .Title }}</h1>
       <p class="project-hero-summary">{{ .Params.summary }}</p>
