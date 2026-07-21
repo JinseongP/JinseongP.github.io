@@ -809,6 +809,52 @@ img { max-width: 100%; height: auto; display: block; }
   color: #fff;
 }
 
+/* Ranking-tags toggle (pushed to the far right of the filter bar) */
+.rank-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s;
+}
+.rank-toggle:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.rank-toggle.active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+.rank-toggle-box {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.rank-toggle.active .rank-toggle-box {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.rank-toggle.active .rank-toggle-box::after {
+  content: '✓';
+  color: #fff;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
 /* ── CONTACT ── */
 .contact-info-list { display: flex; flex-direction: column; gap: 1rem; }
 
