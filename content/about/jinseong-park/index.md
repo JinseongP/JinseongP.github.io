@@ -23,7 +23,7 @@ career:
     location: "Seoul, Korea"
     time: "Mar 2025 - Feb 2027"
     title: "Center for AI and Natural Sciences"
-    description: "AI Research Fellow (Mar 2025 - Feb 2026)<br/>AI Fellow (Mar 2026 - Feb 2027)"
+    description: "AI Research Fellow (Mar 2025 - Feb 2026)<br/>AI Fellow (AI Assistant Professor) (Mar 2026 - Feb 2027)"
   - company: "University of British Columbia (UBC)"
     url: "https://www.ubc.ca/"
     location: "Vancouver, Canada"
