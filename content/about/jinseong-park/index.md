@@ -21,7 +21,7 @@ career:
   - company: "Korea Institute for Advanced Study (KIAS)"
     url: "https://www.kias.re.kr/"
     location: "Seoul, Korea"
-    time: "Mar 2025 - Feb 2026"
+    time: "Mar 2025 - Feb 2027"
     title: "Center for AI and Natural Sciences"
     description: "AI Research Fellow (Mar 2025 - Feb 2026)<br/>AI Fellow (Mar 2026 - Feb 2027)"
   - company: "University of British Columbia (UBC)"
