@@ -6,7 +6,7 @@ theme = "labtheme"
 [params]
   tab_title = "Jinseong Park"
   lab_name = "Jinseong Park"
-  lab_short = "TrustML"
+  lab_short = "TrustML Lab"
   lab_full_name = ""
   university = "Korea Institute for Advanced Study (KIAS)"
   department = "Center for AI and Natural Sciences (CAINS)"
