@@ -1,6 +1,6 @@
 ---
 label: "J2"
-sort_weight: 21
+sort_weight: 3
 addendum: "SCIE Top 7.9% (IF 6.8)"
 title: "Efficient Differentially Private Kernel Support Vector Classifier for Multi-Class Classification"
 authors: "<strong><u>Jinseong Park</u></strong>, Yujin Choi, Junyoung Byun, Jaewook Lee, Saerom Park"

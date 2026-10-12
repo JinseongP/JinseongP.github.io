@@ -1,6 +1,6 @@
 ---
 label: "C9"
-sort_weight: 9
+sort_weight: 15
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Multi-Class Support Vector Machine with Differential Privacy"
 authors: "<strong><u>Jinseong Park</u></strong>, Yujin Choi, Jaewook Lee"

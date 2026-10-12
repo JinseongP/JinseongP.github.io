@@ -1,6 +1,6 @@
 ---
 label: "J3"
-sort_weight: 17
+sort_weight: 7
 addendum: "SCIE Top 6.9% (IF 7.5)"
 title: "Generating Transferable Adversarial Examples for Speech Classification"
 authors: "Hoki Kim, <strong><u>Jinseong Park</u></strong>, Jaewook Lee"

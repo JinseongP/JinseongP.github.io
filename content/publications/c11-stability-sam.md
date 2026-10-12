@@ -1,6 +1,6 @@
 ---
 label: "C11"
-sort_weight: 2
+sort_weight: 22
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Stability Analysis of Sharpness-Aware Minimization"
 authors: "Hoki Kim, <strong><u>Jinseong Park</u></strong>, Yujin Choi, Jaewook Lee"

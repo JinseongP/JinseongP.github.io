@@ -1,6 +1,6 @@
 ---
 label: "C3"
-sort_weight: 18
+sort_weight: 6
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Differentially Private Sharpness-Aware Training"
 authors: "<strong><u>Jinseong Park</u></strong>, Hoki Kim, Yujin Choi, Jaewook Lee"

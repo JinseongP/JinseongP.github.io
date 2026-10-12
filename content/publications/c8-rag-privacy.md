@@ -1,6 +1,6 @@
 ---
 label: "C8"
-sort_weight: 10
+sort_weight: 14
 addendum: "Top Conf. (BK21 IF 3, Findings: 정보과학회 우수)"
 title: "Safeguarding Privacy of Retrieval Data against Membership Inference Attacks: Is This Query Too Close to Home?"
 authors: "Yujin Choi, Youngjoo Park, Junyoung Byun, Jaewook Lee, <strong><u>Jinseong Park</u></strong><sup>*</sup>"

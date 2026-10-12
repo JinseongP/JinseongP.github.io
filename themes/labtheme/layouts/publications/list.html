@@ -30,7 +30,7 @@
     </div>
 
     <!-- Build sorted pages and unique years -->
-    {{ $pages := sort .Pages ".Params.sort_weight" "asc" }}
+    {{ $pages := sort .Pages ".Params.sort_weight" "desc" }}
     {{ $years := slice }}
     {{ range $pages }}
       {{ $y := string .Params.year }}

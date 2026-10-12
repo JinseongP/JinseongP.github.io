@@ -1,6 +1,6 @@
 ---
 label: "J7"
-sort_weight: 6
+sort_weight: 18
 addendum: "SCIE Top 35.2% (IF 3.6)"
 title: "Exploring the Effect of Multi-step Ascent in Sharpness-Aware Minimization"
 authors: "Hoki Kim, <strong><u>Jinseong Park</u></strong>, Woojin Lee, Jaewook Lee, Yujin Choi"

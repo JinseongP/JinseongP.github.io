@@ -1,6 +1,6 @@
 ---
 label: "C12"
-sort_weight: 1
+sort_weight: 23
 addendum: "Top Conf. (BK21 IF 4)"
 title: "TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
 authors: "<strong><u>Jinseong Park</u></strong><sup>†</sup>, Seungyun Lee<sup>†</sup>, Woojin Jeong, Yujin Choi, Jaewook Lee"

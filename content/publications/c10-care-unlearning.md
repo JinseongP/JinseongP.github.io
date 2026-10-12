@@ -1,6 +1,6 @@
 ---
 label: "C10"
-sort_weight: 7
+sort_weight: 17
 addendum: "Top Conf. (정보과학회 최우수)"
 title: "Co-occurring Associated REtained concepts in Diffusion Unlearning"
 authors: "Miso Kim, Georu Lee, Yunji Kim, Hoki Kim<sup>*</sup>, <strong><u>Jinseong Park</u></strong><sup>*</sup>, Woojin Lee<sup>*</sup>"

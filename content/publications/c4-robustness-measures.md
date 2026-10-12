@@ -1,6 +1,6 @@
 ---
 label: "C4"
-sort_weight: 15
+sort_weight: 9
 addendum: "Top Conf. (BK21 IF 4)"
 title: "Fantastic Robustness Measures: The Secrets of Robust Generalization"
 authors: "Hoki Kim, <strong><u>Jinseong Park</u></strong>, Yujin Choi, Jaewook Lee"
