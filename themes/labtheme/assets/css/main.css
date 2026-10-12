@@ -1514,6 +1514,27 @@ img { max-width: 100%; height: auto; display: block; }
   object-fit: cover;
   display: block;
 }
+/* Play badge for video (link-out) gallery items */
+.gallery-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.2rem;
+  pointer-events: none;
+  transition: background 0.15s;
+}
+.gallery-slideshow:hover .gallery-play { background: #e62117; }
 .gallery-prev, .gallery-next {
   position: absolute;
   top: 50%;

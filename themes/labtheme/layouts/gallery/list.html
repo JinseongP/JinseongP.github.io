@@ -24,8 +24,9 @@
   <div class="gallery-grid">
     {{ range $items }}
     <div class="gallery-card" x-data='{ current: 0, images: {{ .images | jsonify }} }'>
-      <div class="gallery-slideshow" style="cursor:zoom-in;"
-           @click="$dispatch('open-lightbox', { images: images, current: current, title: '{{ .title }}', date: '{{ .date }}', location: '{{ .location }}' })">
+      <div class="gallery-slideshow" style="cursor:{{ if .url }}pointer{{ else }}zoom-in{{ end }};"
+           {{ if .url }}@click="window.open('{{ .url }}', '_blank', 'noopener')"{{ else }}@click="$dispatch('open-lightbox', { images: images, current: current, title: '{{ .title }}', date: '{{ .date }}', location: '{{ .location }}' })"{{ end }}>
+        {{ if .url }}<span class="gallery-play" aria-hidden="true">▶</span>{{ end }}
         <template x-for="(img, i) in images" :key="i">
           <img :src="img" x-show="current === i" class="gallery-slide-img" loading="lazy" />
         </template>

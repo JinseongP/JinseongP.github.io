@@ -1,4 +1,10 @@
 items:
+  - title: "KIAS Interview"
+    date: "Oct 2026"
+    location: "YouTube"
+    url: "https://youtu.be/rJIRHcYvmkU?si=hySLRLfFw-O1sZnu"
+    images:
+      - "/images/gallery/kias-interview.jpg"
   - title: "UBC Postdoc Visit"
     date: "Jul 2025"
     location: "Vancouver, Canada"
