@@ -4,7 +4,7 @@ icon: "🎨"
 weight: 2
 summary: "Studying the theory and applications of diffusion models, including time series generation, fairness-aware generation, machine unlearning, and financial modeling."
 key_papers:
-  - title: "TimeBridge: Leveraging Priors via Diffusion Bridge for Time Series Generation"
+  - title: "TimeBridge: Better Diffusion Prior Design with Bridge Models for Time Series Generation"
     venue: "KDD 2026"
     url: "https://arxiv.org/abs/2408.06672"
   - title: "Fair Sampling in Diffusion Models through Switching Mechanism"
