@@ -11,9 +11,6 @@ news:
   - month: "Oct"
     year: 2026
     text: "I will attend the Learning Theory (LeT) Workshop at POSTECH in Pohang, Korea (Oct 7–8) [<a href='https://let-workshop.github.io/2026/' target='_blank'>Link</a>]."
-  - month: "Jul"
-    year: 2026
-    text: "<span class='news-highlight'>Starting Spring 2027, I will be joining the <a href='https://security.korea.ac.kr/m01_03?sca=%EC%A0%84%EC%9E%84%EA%B5%90%EC%88%98' target='_blank'>School of Cybersecurity</a> at Korea University as an Assistant Professor.</span>"
   - month: "Jun"
     year: 2026
     text: "One paper on \"diffusion bridge\" was accepted at KDD 2026. See you in Jeju!"

@@ -13,17 +13,12 @@ bio: |
   I am an AI fellow (AI Assistant Professor) at Korea Institute for Advanced Study (KIAS).
   I also spent my time as postdoctoral fellow in University of British Columbia (UBC), hosted by Mijung Park. Before joining KIAS, I received my M.S. and Ph.D. from Seoul National University advised by Jaewook Lee. 
 career:
-  - company: "Korea University"
-    url: "https://www.korea.edu/sites/en/index.do"
-    location: "Seoul, Korea"
-    time: "Mar 2027 -     "
-    title: "(Incoming) Assistant Professor, School of Cybersecurity"
   - company: "Korea Institute for Advanced Study (KIAS)"
     url: "https://www.kias.re.kr/"
     location: "Seoul, Korea"
-    time: "Mar 2025 - Feb 2027"
+    time: "Mar 2025 - Present"
     title: "Center for AI and Natural Sciences"
-    description: "AI Research Fellow (Mar 2025 - Feb 2026)<br/>AI Fellow (AI Assistant Professor) (Mar 2026 - Feb 2027)"
+    description: "AI Research Fellow (Mar 2025 - Feb 2026)<br/>AI Fellow (AI Assistant Professor) (Mar 2026 - Present)"
   - company: "University of British Columbia (UBC)"
     url: "https://www.ubc.ca/"
     location: "Vancouver, Canada"
